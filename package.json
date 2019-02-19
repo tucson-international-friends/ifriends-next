@@ -1,0 +1,19 @@
+{
+  "name": "ifriends-next",
+  "version": "1.0.0",
+  "description": "The Next.js project for international friends",
+  "main": "index.js",
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "Youhao Wei",
+  "license": "MIT"
+}
