@@ -1,19 +1,34 @@
 {
-  "name": "ifriends-next",
-  "version": "1.0.0",
-  "description": "The Next.js project for international friends",
-  "main": "index.js",
-  "dependencies": {
-    "next": "^7.0.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  },
-  "author": "Youhao Wei",
-  "license": "MIT"
+	"name": "ifriends-next",
+	"version": "1.0.0",
+	"description": "The Next.js project for international friends",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tucson-international-friends/ifriends-next.git"
+	},
+	"dependencies": {
+		"@zeit/next-sass": "^1.0.1",
+		"bootstrap": "^4.3.1",
+		"next": "^7.0.3",
+		"node-sass": "^4.11.0",
+		"react": "^16.8.2",
+		"react-bootstrap": "^1.0.0-beta.5",
+		"react-dom": "^16.8.2"
+	},
+	"devDependencies": {
+		"babel-eslint": "^10.0.1",
+		"eslint": "^5.14.1",
+		"eslint-config-airbnb": "^17.1.0",
+		"eslint-plugin-import": "^2.16.0",
+		"eslint-plugin-jsx-a11y": "^6.2.1",
+		"eslint-plugin-react": "^7.12.4"
+	},
+	"scripts": {
+		"dev": "next --inspect",
+		"build": "next build",
+		"start": "next start"
+	},
+	"author": "Youhao Wei",
+	"license": "MIT"
 }
