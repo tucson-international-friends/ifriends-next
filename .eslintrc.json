@@ -20,6 +20,7 @@
 		"react/jsx-indent": [2, "tab"],
 		"react/jsx-indent-props": [2, "tab"],
 		"react/react-in-jsx-scope": "off",
-		"quotes": ["error", "double", { "avoidEscape": true }]
+		"quotes": ["error", "double", { "avoidEscape": true }],
+		"react/jsx-one-expression-per-line": ["error", { "allow": "literal"}]
 	}
 }

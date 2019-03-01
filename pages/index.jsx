@@ -1,4 +1,4 @@
-import MainLayout from "../components/layout/main";
+import MainLayout from "../layout/main";
 
 export default () => (
 	<MainLayout>

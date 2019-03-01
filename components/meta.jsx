@@ -1,10 +1,10 @@
-import NextHead from "next/head";
+import Head from "next/head";
 
-const Head = () => (
-	<NextHead>
+const Meta = () => (
+	<Head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta charSet="utf-8" />
-	</NextHead>
+	</Head>
 );
 
-export default Head;
+export default Meta;
