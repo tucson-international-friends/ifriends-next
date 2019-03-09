@@ -2,14 +2,15 @@ import React from "react";
 
 import Meta from "../components/meta";
 import Footer from "../components/footer";
+import Navbar from "../components/navbar";
 
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "bootstrap-css-only/css/bootstrap.min.css";
-import "mdbreact/dist/css/mdb.css";
+import "../styles/main.scss";
+
 
 const MainLayout = ({ children }) => (
 	<React.Fragment>
 		<Meta />
+		<Navbar />
 		{children}
 		<Footer />
 	</React.Fragment>

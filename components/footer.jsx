@@ -1,18 +1,20 @@
-import { MDBFooter, MDBContainer, MDBRow } from "mdbreact";
+import { Container, Row, Col } from "react-bootstrap";
 
 const Footer = () => (
-	<MDBFooter>
-		<MDBContainer>
-			<MDBRow md={6}>
-				<h4>Tucson International Friends</h4>
-				<p>
-					{`International Friends is an all-volunteer organization that brings
+	<footer>
+		<Container>
+			<Row>
+				<Col md={6}>
+					<h1>International Friends, Inc.</h1>
+					<p>
+						{`International Friends is an all-volunteer organization that brings
 					together international students attending the University of Arizona
 					and residents of Tucson.`}
-				</p>
-			</MDBRow>
-		</MDBContainer>
-	</MDBFooter>
+					</p>
+				</Col>
+			</Row>
+		</Container>
+	</footer>
 );
 
 export default Footer;

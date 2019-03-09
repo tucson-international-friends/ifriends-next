@@ -1,0 +1,19 @@
+footer {
+	padding-top: 5em;
+	margin-top: 2em;
+	flex: 0 1 auto;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	font-size: 0.75em;
+	background-color: theme-color("dark");
+	color: $light-shades;
+	h1 {
+		font-size: 1.2em;
+		font-weight: 700;
+	}
+	h2 {
+		font-size: 1.167em;
+		font-weight: 600;
+	}
+}

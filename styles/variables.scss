@@ -1,0 +1,25 @@
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+// variables
+$font-family-sans-serif: 'Open Sans', sans-serif;
+
+$light-shades: #F7F5F4; // DESERT STORM
+$light-accent: #8FAEBF; // NEPAL
+$main-brand: #497BA2; // WEDGEWOOD
+$dark-accent: #7D7C7C; // BOULDER
+$dark-shades: #212B40; // EBONY CLAY
+
+$highlight: #C2E078;
+$highmedium: #93B14C;
+$hightdark: #65841F;
+
+$off-white: #fefefe;
+
+$theme-colors: (
+	"dark": $dark-shades,
+	"primary": $main-brand, // oxford blue
+	"info": $light-accent, // Bastille
+	"success": #468e4f,
+	"warning": #c47e17,
+	"danger": #f44336
+);
