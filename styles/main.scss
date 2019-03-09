@@ -1,0 +1,16 @@
+
+@import './variables.scss';
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+body {
+	min-height: 100%;
+	background-color: $off-white;
+}
+
+#__next {
+	min-height: 100%;
+}
+@import './footer.scss';
+@import './header.scss';
+
