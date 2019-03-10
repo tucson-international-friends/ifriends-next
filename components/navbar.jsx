@@ -1,27 +1,14 @@
-import {
- Navbar, Nav, Row, Container 
-} from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaBars, FaGlobeAmericas } from "react-icons/fa";
-import Link from "next/link";
 
 export default () => (
 	<Navbar expand="md" variant="dark" bg="dark">
 		<Container>
 			<Navbar.Brand>
 				<FaGlobeAmericas size="2em" color="var(--info)" />
-				<img
-					src="/static/logo.svg"
-					alt="logo"
-					style={{
-						height: "2em"
-					}}
-				/>
+				<img src="/static/logo.svg" alt="logo" style={{ height: "2em" }} />
 			</Navbar.Brand>
-			<Navbar.Toggle
-				aria-controls="main-navbar-nav"
-				style={{
-					border: "none"
-				}}>
+			<Navbar.Toggle aria-controls="main-navbar-nav" style={{ border: "none" }}>
 				<FaBars />
 				<span
 					style={{

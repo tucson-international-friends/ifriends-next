@@ -6,7 +6,6 @@ import Navbar from "../components/navbar";
 
 import "../styles/main.scss";
 
-
 const MainLayout = ({ children }) => (
 	<React.Fragment>
 		<Meta />

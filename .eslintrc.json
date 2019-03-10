@@ -20,6 +20,9 @@
 		}],
 		"no-tabs": 0,
 		"comma-dangle": "off",
+		"object-curly-newline": ["error", {
+			"multiline": true
+		}],
 		"react/prop-types": 0,
 		"react/jsx-indent": [2, "tab"],
 		"react/jsx-indent-props": [2, "tab"],
