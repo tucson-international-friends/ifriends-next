@@ -1,38 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 
 // variables
-$font-family-sans-serif: 'Open Sans',
-sans-serif;
-$action-font: 'Poppins',
-sans-serif;
+$font-family-sans-serif: "Open Sans", sans-serif;
+$action-font: "Poppins", sans-serif;
 
-$light-shades: #F7F5F4; // DESERT STORM
-$light-accent: #8FAEBF; // NEPAL
-$main-brand: #497BA2; // WEDGEWOOD
-$dark-accent: #7D7C7C; // BOULDER
-$dark-shades: #212B40; // EBONY CLAY
+$light-shades: #f7f5f4; // DESERT STORM
+$light-accent: #8faebf; // NEPAL
+$main-brand: #497ba2; // WEDGEWOOD
+$dark-accent: #7d7c7c; // BOULDER
+$dark-shades: #212b40; // EBONY CLAY
 
-$highlight: #C2E078;
-$highmedium: #93B14C;
-$hightdark: #65841F;
+$highlight: #c2e078;
+$highmedium: #93b14c;
+$hightdark: #65841f;
 
 $white: #fff;
 $off-white: #fefefe;
 
-$theme-colors: ("dark": $dark-shades,
-"primary": $main-brand, // oxford blue
-"info": $light-accent, // Bastille
-"success": #468e4f,
-"warning": #c47e17,
-"danger": #f44336);
+$theme-colors: (
+	"dark": $dark-shades,
+	"primary": $main-brand,
+	// oxford blue
+		"info": $light-accent,
+	// Bastille
+		"success": #468e4f,
+	"warning": #c47e17,
+	"danger": #f44336
+);
 
-$grid-breakpoints: (xs: 0,
-sm: 480px,
-md: 800px,
-lg: 1080px);
+$grid-breakpoints: (
+	xs: 0,
+	sm: 480px,
+	md: 800px,
+	lg: 1080px
+);
 
-$container-max-widths: (sm: 450px,
-md: 750px,
-lg: 1000px);
+$container-max-widths: (
+	sm: 460px,
+	md: 750px,
+	lg: 1000px
+);
