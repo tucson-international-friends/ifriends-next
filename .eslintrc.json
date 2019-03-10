@@ -14,25 +14,34 @@
 	},
 	"plugins": ["react"],
 	"rules": {
-		"indent": [2, "tab", {
-			"SwitchCase": 1,
-			"VariableDeclarator": 1
-		}],
+		"indent": [
+			2,
+			"tab",
+			{
+				"SwitchCase": 1,
+				"VariableDeclarator": 1
+			}
+		],
 		"no-tabs": 0,
 		"comma-dangle": "off",
-		"object-curly-newline": ["error", {
-			"multiline": true
-		}],
+		"object-curly-newline": [
+			"error",
+			{
+				"multiline": true
+			}
+		],
 		"react/prop-types": 0,
 		"react/jsx-indent": [2, "tab"],
 		"react/jsx-indent-props": [2, "tab"],
 		"react/react-in-jsx-scope": "off",
-		"quotes": ["error", "double", {
-			"avoidEscape": true
-		}],
-		"react/jsx-one-expression-per-line": ["error", {
-			"allow": "single-child"
-		}],
+		"quotes": [
+			"error",
+			"double",
+			{
+				"avoidEscape": true
+			}
+		],
+		"react/jsx-one-expression-per-line": "off",
 		"react/jsx-closing-bracket-location": 0
 	}
 }
