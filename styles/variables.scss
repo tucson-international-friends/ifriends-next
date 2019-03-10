@@ -1,7 +1,12 @@
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 
 // variables
-$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-sans-serif: 'Open Sans',
+sans-serif;
+$action-font: 'Poppins',
+sans-serif;
 
 $light-shades: #F7F5F4; // DESERT STORM
 $light-accent: #8FAEBF; // NEPAL
@@ -13,13 +18,21 @@ $highlight: #C2E078;
 $highmedium: #93B14C;
 $hightdark: #65841F;
 
+$white: #fff;
 $off-white: #fefefe;
 
-$theme-colors: (
-	"dark": $dark-shades,
-	"primary": $main-brand, // oxford blue
-	"info": $light-accent, // Bastille
-	"success": #468e4f,
-	"warning": #c47e17,
-	"danger": #f44336
-);
+$theme-colors: ("dark": $dark-shades,
+"primary": $main-brand, // oxford blue
+"info": $light-accent, // Bastille
+"success": #468e4f,
+"warning": #c47e17,
+"danger": #f44336);
+
+$grid-breakpoints: (xs: 0,
+sm: 480px,
+md: 800px,
+lg: 1080px);
+
+$container-max-widths: (sm: 450px,
+md: 750px,
+lg: 1000px);
