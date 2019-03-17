@@ -1,7 +1,10 @@
+@import "./variables.scss";
 
-@import './variables.scss';
+@import "~bootstrap/scss/bootstrap.scss";
 
-@import '~bootstrap/scss/bootstrap.scss';
+@function elavation($height) {
+	@return 0px ($height * 2px) ($height * 4px) rgba(0, 0, 0, 0.15);
+}
 
 body {
 	min-height: 100%;
@@ -11,7 +14,6 @@ body {
 #__next {
 	min-height: 100%;
 }
-@import './footer.scss';
-@import './header.scss';
-@import './navbar.scss';
-
+@import "./footer.scss";
+@import "./header.scss";
+@import "./navbar.scss";
