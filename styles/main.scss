@@ -3,7 +3,7 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
 @function elavation($height) {
-	@return 0px ($height * 2px) ($height * 4px) rgba(0, 0, 0, 0.15);
+	@return 0px ($height * 2px) (abs($height) * 4px) rgba(0, 0, 0, 0.15);
 }
 
 body {
@@ -17,3 +17,4 @@ body {
 @import "./footer.scss";
 @import "./header.scss";
 @import "./navbar.scss";
+@import "./banner.scss";
