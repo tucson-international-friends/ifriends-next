@@ -3,7 +3,7 @@ import { FaBars } from "react-icons/fa";
 import Logo from "./logo";
 
 export default () => (
-	<Navbar expand="md" variant="dark" bg="dark">
+	<Navbar expand="md" variant="dark" bg="dark" fixed>
 		<Container>
 			<Navbar.Brand>
 				<Logo className="d-none d-sm-block" />

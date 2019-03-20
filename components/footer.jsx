@@ -21,7 +21,7 @@ const Footer = () => (
 						&copy; {moment().year()} International Friends, Inc. All Rights
 						Reserved. Web Design by
 						<Link href="https://webreview.octaviamedia.com/">
-							{" Octavia Media "}
+							<a> Octavia Media </a>
 						</Link>
 						{"and enhanced by Youhao Wei"}
 					</p>

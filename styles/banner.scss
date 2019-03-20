@@ -1,0 +1,17 @@
+.banner {
+	text-align: center;
+	text-transform: uppercase;
+	height: 40vh;
+	position: relative;
+	box-shadow: inset elavation(-1);
+	.container {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		right: 50%;
+		transform: translate(-50%, -50%);
+		vertical-align: bottom;
+		padding-bottom: 3em;
+		text-align: center;
+	}
+}
