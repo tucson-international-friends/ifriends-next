@@ -1,9 +1,11 @@
 import { Container, Row, Col } from "react-bootstrap";
-import Link from "next/link";
 import moment from "moment";
+import Link from "next/link";
+
+import styles from "./styles.scss";
 
 const Footer = () => (
-	<footer>
+	<footer classes={styles.footer}>
 		<Container>
 			<Row>
 				<Col md={6}>
@@ -18,12 +20,13 @@ const Footer = () => (
 			<Row className="mt-5">
 				<Col>
 					<p className="copyright">
-						&copy; {moment().year()} International Friends, Inc. All Rights
-						Reserved. Web Design by
-						<Link href="https://webreview.octaviamedia.com/">
-							<a> Octavia Media </a>
-						</Link>
-						{"and enhanced by Youhao Wei"}
+						&copy;
+						{` ${moment().year()} International Friends, Inc. All Rights
+						Reserved. Web Design by `}
+						<a href="https://webreview.octaviamedia.com/">
+							Octavia Digital Media
+						</a>
+						{" and enhanced by Youhao Wei"}
 					</p>
 				</Col>
 			</Row>

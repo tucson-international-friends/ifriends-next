@@ -41,3 +41,10 @@ $container-max-widths: (
 	md: 750px,
 	lg: 1000px
 );
+
+@function elavation($height) {
+	@return 0px ($height * 2px) (abs($height) * 4px) rgba(0, 0, 0, 0.15);
+}
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";

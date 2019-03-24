@@ -1,9 +1,10 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaBars } from "react-icons/fa";
-import Logo from "./logo";
+import Logo from "../logo";
+import styles from "./styles.scss";
 
 export default () => (
-	<Navbar expand="md" variant="dark" bg="dark" fixed>
+	<Navbar expand="md" variant="dark" bg="dark" fixed className={styles.navbar}>
 		<Container>
 			<Navbar.Brand>
 				<Logo className="d-none d-sm-block" />
@@ -31,9 +32,8 @@ export default () => (
 				<Nav className="ml-md-auto ml-lg-0 mr-lg-auto order-md-1 order-lg-0">
 					<Nav.Link active>Home</Nav.Link>
 					<Nav.Link>About Us</Nav.Link>
-					<Nav.Link>Hosts</Nav.Link>
-					<Nav.Link>Students</Nav.Link>
-					<Nav.Link>Events</Nav.Link>
+					<Nav.Link>Host a Student</Nav.Link>
+					<Nav.Link>Meet Our Students</Nav.Link>
 					<Nav.Link>News</Nav.Link>
 				</Nav>
 				<Nav className="ml-auto order-md-0 order-lg-1">
