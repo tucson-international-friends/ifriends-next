@@ -1,16 +1,16 @@
 import React from "react";
 
 import Meta from "../components/meta";
-import Footer from "../components/footer";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-import "../styles/main.scss";
+import "../styles/global.scss";
 
 const MainLayout = ({ children }) => (
 	<React.Fragment>
 		<Meta />
 		<Navbar />
-		{children}
+		<div className="page">{children}</div>
 		<Footer />
 	</React.Fragment>
 );

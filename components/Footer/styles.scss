@@ -1,12 +1,12 @@
+@import "../../styles/variables.scss";
+
 footer {
 	padding-top: 5em;
-	margin-top: 2em;
-	flex: 0 1 auto;
-	position: absolute;
-	bottom: 0px;
+	bottom: 0;
 	width: 100%;
 	font-size: 0.75em;
 	background-color: theme-color("dark");
+	position: absolute;
 	color: $light-shades;
 	h1 {
 		font-size: 1.2em;
@@ -15,5 +15,11 @@ footer {
 	h2 {
 		font-size: 1.167em;
 		font-weight: 600;
+	}
+	a {
+		color: $light-accent;
+		&:hover {
+			color: lighten($light-accent, 10%);
+		}
 	}
 }
