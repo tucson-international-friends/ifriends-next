@@ -4,11 +4,11 @@ import Logo from "../logo";
 import styles from "./styles.scss";
 
 export default () => (
-	<Navbar expand="md" variant="dark" bg="dark" fixed className={styles.navbar}>
+	<Navbar expand="md" variant="dark" bg="dark" fixed="top">
 		<Container>
-			<Navbar.Brand>
+			<Navbar.Brand className={styles.brand}>
 				<Logo className="d-none d-sm-block" />
-				<Logo className="d-block d-sm-none" size={1} />
+				<Logo className="d-block d-sm-none" size="sm" />
 			</Navbar.Brand>
 			<Navbar.Toggle
 				aria-controls="main-navbar-nav"

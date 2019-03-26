@@ -9,7 +9,7 @@ body {
 #__next {
 	min-height: 100vh;
 	position: relative;
-	padding-bottom: 20rem;
+	padding-bottom: 20rem; // footer
 }
 
 h1,
@@ -21,4 +21,10 @@ h6 {
 	font-family: $action-font;
 	text-transform: uppercase;
 	font-weight: 700;
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+	}
 }

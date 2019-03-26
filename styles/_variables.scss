@@ -20,6 +20,7 @@ $off-white: #fefefe;
 
 $theme-colors: (
 	"dark": $dark-shades,
+	"important": $highlight,
 	"primary": $main-brand,
 	// oxford blue
 		"info": $light-accent,
@@ -31,20 +32,27 @@ $theme-colors: (
 
 $grid-breakpoints: (
 	xs: 0,
-	sm: 480px,
-	md: 800px,
-	lg: 1080px
+	sm: 460px,
+	md: 780px,
+	lg: 1024px,
+	xl: 1440px
 );
 
 $container-max-widths: (
-	sm: 460px,
+	sm: 450px,
 	md: 750px,
-	lg: 1000px
+	lg: 1000px,
+	xl: 1320px
 );
 
 @function elavation($height) {
 	@return 0px ($height * 2px) (abs($height) * 4px) rgba(0, 0, 0, 0.15);
 }
 
+$enable-shadows: true;
+$enable-gradients: true;
+$enable-responsive-font-sizes: true;
+
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
