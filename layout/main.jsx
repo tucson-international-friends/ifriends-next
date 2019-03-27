@@ -1,8 +1,10 @@
 import React from "react";
-import "../styles/global.scss";
+
 import Meta from "../components/meta";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+
+import "../styles/global.scss";
 
 const MainLayout = ({ children }) => (
 	<React.Fragment>

@@ -34,16 +34,18 @@ export default class Index extends React.Component {
 * Help new students adjust to American culture.
 * Have fun and help others!
 						`,
+						image: "http://ifriendstucson.org/images/zipline.jpg",
 						readMore: { href: "/host-a-student" }
 					},
 					{
 						title: "What's Expected?",
+						image: "http://ifriendstucson.org/images/host.jpg",
 						content: `
-						* Commit to one academic year.
-						* Contact your student within one week (students are eager to get acquainted).
-						* Communicate with your student at least once a month to plan activities you would both enjoy.
-						* Approach your student with an open mind and learn from each other.
-						* Understand and follow the organization’s guidelines.
+* Commit to one academic year.
+* Contact your student within one week (students are eager to get acquainted).
+* Communicate with your student at least once a month to plan activities you would both enjoy.
+* Approach your student with an open mind and learn from each other.
+* Understand and follow the organization’s guidelines.
 						`,
 						readMore: { href: "/host-a-student" }
 					}
@@ -66,8 +68,9 @@ export default class Index extends React.Component {
 							<TextBlock {...sections[0][1]} />
 						</Col>
 					</Row>
+					<ImageTextBlock {...sections[1][0]} />
+					<ImageTextBlock {...sections[1][1]} revert />
 				</Container>
-				<ImageTextBlock {...sections[1][0]} />
 			</MainLayout>
 		);
 	}

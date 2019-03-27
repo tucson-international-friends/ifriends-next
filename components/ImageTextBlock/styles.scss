@@ -1,0 +1,120 @@
+@import "../../styles/variables";
+
+$smHeight: 300px;
+$smHeightDouble: $smHeight + $smHeight;
+$lgHeight: 400px;
+$xlHeight: 500px;
+
+.container {
+	height: $smHeightDouble;
+	@include media-breakpoint-up(md) {
+		height: $smHeight;
+	}
+	@include media-breakpoint-up(lg) {
+		height: $lgHeight;
+	}
+	@include media-breakpoint-up(xl) {
+		height: $xlHeight;
+	}
+}
+
+.backdrop {
+	height: $smHeightDouble;
+	@include media-breakpoint-up(md) {
+		height: $smHeight;
+	}
+	@include media-breakpoint-up(lg) {
+		height: $lgHeight;
+	}
+	@include media-breakpoint-up(xl) {
+		height: $xlHeight;
+	}
+	position: absolute;
+	left: 0;
+	right: 0;
+	&.light {
+		background-image: linear-gradient(
+			to top,
+			#497ba2,
+			#5a88aa,
+			#6c95b1,
+			#7ea2b970,
+			#90afc100
+		);
+		@include media-breakpoint-up(md) {
+			background-image: linear-gradient(
+				to right,
+				#497ba2,
+				#5a88aa,
+				#6c95b1,
+				#7ea2b970,
+				#90afc100
+			);
+		}
+	}
+	&.dark {
+		background-image: linear-gradient(
+			to top,
+			#212b40,
+			#30404f,
+			#45555d,
+			#5f6a6c70,
+			#7c7e7e00
+		);
+		@include media-breakpoint-up(md) {
+			background-image: linear-gradient(
+				to left,
+				#212b40,
+				#30404f,
+				#45555d,
+				#5f6a6c70,
+				#7c7e7e00
+			);
+		}
+	}
+}
+
+.imageCol {
+	height: $smHeight;
+	@include media-breakpoint-up(lg) {
+		height: $lgHeight;
+	}
+	@include media-breakpoint-up(xl) {
+		height: $xlHeight;
+	}
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	padding: 0;
+	img {
+		height: auto;
+		width: 100%;
+		opacity: 0.5;
+	}
+	&.light {
+	}
+}
+
+.textCol {
+	height: $smHeight;
+	@include media-breakpoint-up(lg) {
+		height: $lgHeight;
+	}
+	@include media-breakpoint-up(xl) {
+		height: $xlHeight;
+	}
+	overflow: hidden;
+	position: relative;
+	margin-top: $smHeight;
+	@include media-breakpoint-up(md) {
+		margin-top: 0;
+	}
+	color: $off-white;
+}
+
+.textContainer {
+	position: absolute;
+	margin: 0 auto;
+	top: 50%;
+	transform: translateY(-50%);
+}
