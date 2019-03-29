@@ -7,11 +7,10 @@ module.exports = withSass({
 	cssModules: true,
 	cssLoaderOptions: {
 		getLocalIdent: (loaderContext, localIdentName, localName, options) => {
-			const fileName = path.basename(loaderContext.resourcePath);
-			if (
-				fileName.indexOf("global.scss") !== -1
-				|| fileName.indexOf("node_modules") !== -1
-			) {
+			const { resourcePath } = loaderContext;
+			const fileName = path.basename(resourcePath);
+			const dirName = path.dirname(resourcePath);
+			if (dirName.indexOf("global") >= 0 || fileName.indexOf("global") >= 0) {
 				return localName;
 			}
 			return defaultGetLocalIdent(

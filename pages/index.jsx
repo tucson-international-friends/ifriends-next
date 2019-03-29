@@ -68,8 +68,8 @@ export default class Index extends React.Component {
 							<TextBlock {...sections[0][1]} />
 						</Col>
 					</Row>
-					<ImageTextBlock {...sections[1][0]} />
-					<ImageTextBlock {...sections[1][1]} revert />
+					<ImageTextBlock {...sections[1][0]} invert />
+					<ImageTextBlock {...sections[1][1]} color="light" />
 				</Container>
 			</MainLayout>
 		);
