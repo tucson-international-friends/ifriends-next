@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import "../../styles/global";
 
 $smHeight: 300px;
 $smHeightDouble: $smHeight + $smHeight;
@@ -33,43 +33,21 @@ $xlHeight: 500px;
 	left: 0;
 	right: 0;
 	&.light {
-		background-image: linear-gradient(
-			to top,
-			#497ba2,
-			#5a88aa,
-			#6c95b1,
-			#7ea2b970,
-			#90afc100
-		);
+		@include linear-grandient(to top, $primary-to-light-transparent);
 		@include media-breakpoint-up(md) {
-			background-image: linear-gradient(
-				to right,
-				#497ba2,
-				#5a88aa,
-				#6c95b1,
-				#7ea2b970,
-				#90afc100
-			);
+			@include linear-grandient(to left, $primary-to-light-transparent);
+			&.invert {
+				@include linear-grandient(to right, $primary-to-light-transparent);
+			}
 		}
 	}
 	&.dark {
-		background-image: linear-gradient(
-			to top,
-			#212b40,
-			#30404f,
-			#45555d,
-			#5f6a6c70,
-			#7c7e7e00
-		);
+		@include linear-grandient(to top, $dark-to-accent-transparent);
 		@include media-breakpoint-up(md) {
-			background-image: linear-gradient(
-				to left,
-				#212b40,
-				#30404f,
-				#45555d,
-				#5f6a6c70,
-				#7c7e7e00
-			);
+			@include linear-grandient(to left, $dark-to-accent-transparent);
+			&.invert {
+				@include linear-grandient(to right, $dark-to-accent-transparent);
+			}
 		}
 	}
 }

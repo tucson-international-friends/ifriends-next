@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import "../../styles/global";
 
 .banner {
 	text-align: center;
@@ -14,7 +14,7 @@
 	@include media-breakpoint-up(xl) {
 		height: 600px;
 	}
-	box-shadow: inset elavation(-1);
+	@include box-shadow(inset elavation(-1));
 }
 
 .container {

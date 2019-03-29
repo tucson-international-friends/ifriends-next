@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,700");
-
 // variables
 $font-family-sans-serif: "Open Sans", sans-serif;
 $action-font: "Poppins", sans-serif;
@@ -10,6 +7,9 @@ $light-accent: #90afc1; // NEPAL
 $main-brand: #497ba2; // WEDGEWOOD
 $dark-accent: #7c7e7e; // BOULDER
 $dark-shades: #212b40; // EBONY CLAY
+
+$primary-to-light-transparent: #497ba2, #5a88aa, #6c95b1, #7ea2b970, #90afc100;
+$dark-to-accent-transparent: #212b40, #30404f, #45555d, #5f6a6c70, #7c7e7e00;
 
 $highlight: #c2e078;
 $highmedium: #93b14c;
@@ -45,14 +45,9 @@ $container-max-widths: (
 	xl: 1320px
 );
 
-@function elavation($height) {
-	@return 0px ($height * 2px) (abs($height) * 4px) rgba(0, 0, 0, 0.15);
-}
-
 $enable-shadows: true;
 $enable-gradients: true;
 $enable-responsive-font-sizes: true;
 
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
