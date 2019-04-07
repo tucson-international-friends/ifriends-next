@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import "../../styles/global";
 
 footer {
 	padding-top: 5em;
@@ -9,12 +9,11 @@ footer {
 	position: absolute;
 	color: $light-shades;
 	h1 {
-		font-size: 1.2em;
+		font-size: 1.5em;
 		font-weight: 700;
 	}
 	h2 {
-		font-size: 1.167em;
-		font-weight: 600;
+		font-size: 1.25em;
 	}
 	a {
 		color: $light-accent;

@@ -1,6 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
 import moment from "moment";
-import Link from "next/link";
 
 import styles from "./styles.scss";
 
