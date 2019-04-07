@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700");
+@import "../global";
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+body {
+  background-color: $off-white;
+}
+
+#__next {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 10rem; // footer
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $action-font;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.btn {
+  font-family: $action-font;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}

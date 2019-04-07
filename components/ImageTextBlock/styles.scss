@@ -1,0 +1,120 @@
+@import "../../styles/global";
+
+$smHeight: 400px;
+$smHeightDouble: $smHeight+$smHeight;
+$lgHeight: 500px;
+$xlHeight: 600px;
+
+.container {
+    height: $smHeightDouble;
+
+    @include media-breakpoint-up(md) {
+        height: $smHeight;
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: $lgHeight;
+    }
+
+    @include media-breakpoint-up(xl) {
+        height: $xlHeight;
+    }
+}
+
+.backdrop {
+    height: $smHeightDouble;
+
+    @include media-breakpoint-up(md) {
+        height: $smHeight;
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: $lgHeight;
+    }
+
+    @include media-breakpoint-up(xl) {
+        height: $xlHeight;
+    }
+
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    &.light {
+        @include linear-grandient(to top, $primary-to-light-transparent);
+
+        @include media-breakpoint-up(md) {
+            @include linear-grandient(to left, $primary-to-light-transparent);
+
+            &.invert {
+                @include linear-grandient(to right, $primary-to-light-transparent);
+            }
+        }
+    }
+
+    &.dark {
+        @include linear-grandient(to top, $dark-to-accent-transparent);
+
+        @include media-breakpoint-up(md) {
+            @include linear-grandient(to left, $dark-to-accent-transparent);
+
+            &.invert {
+                @include linear-grandient(to right, $dark-to-accent-transparent);
+            }
+        }
+    }
+}
+
+.imageCol {
+    height: $smHeight;
+
+    @include media-breakpoint-up(lg) {
+        height: $lgHeight;
+    }
+
+    @include media-breakpoint-up(xl) {
+        height: $xlHeight;
+    }
+
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    padding: 0;
+
+    img {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+
+    &.light {}
+}
+
+.textCol {
+    height: $smHeight;
+
+    @include media-breakpoint-up(lg) {
+        height: $lgHeight;
+    }
+
+    @include media-breakpoint-up(xl) {
+        height: $xlHeight;
+    }
+
+    overflow: hidden;
+    position: relative;
+    margin-top: $smHeight;
+
+    @include media-breakpoint-up(md) {
+        margin-top: 0;
+    }
+
+    color: $off-white;
+}
+
+.textContainer {
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
