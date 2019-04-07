@@ -4,12 +4,13 @@ $action-font: "Poppins", sans-serif;
 
 $light-shades: #f7f5f4; // DESERT STORM
 $light-accent: #90afc1; // NEPAL
-$main-brand: #497ba2; // WEDGEWOOD
+$main-brand: #47789e; // WEDGEWOOD
 $dark-accent: #7c7e7e; // BOULDER
 $dark-shades: #212b40; // EBONY CLAY
 
-$primary-to-light-transparent: #497ba2, #5a88aa, #6c95b1, #7ea2b970, #90afc100;
-$dark-to-accent-transparent: #212b40, #30404f, #45555d, #5f6a6c70, #7c7e7e00;
+$primary-to-light-transparent: #497ba2, #5a88aa, #6c95b1, #7ea2b970, #90afc125;
+$dark-to-accent-transparent: #212b40, #30404f, #45555d, #5f6a6c70, #7c7e7e25;
+$light-to-accent: #f7f5f4, #90afc1;
 
 $highlight: #c2e078;
 $highmedium: #93b14c;
@@ -19,30 +20,30 @@ $white: #fff;
 $off-white: #fefefe;
 
 $theme-colors: (
-	"dark": $dark-shades,
-	"important": $highlight,
-	"primary": $main-brand,
-	// oxford blue
-		"info": $light-accent,
-	// Bastille
-		"success": #468e4f,
-	"warning": #c47e17,
-	"danger": #f44336
+  "dark": $dark-shades,
+  "important": $highlight,
+  "primary": $main-brand,
+  // oxford blue
+    "info": $light-accent,
+  // Bastille
+    "success": #468e4f,
+  "warning": #c47e17,
+  "danger": #f44336
 );
 
 $grid-breakpoints: (
-	xs: 0,
-	sm: 460px,
-	md: 820px,
-	lg: 1024px,
-	xl: 1440px
+  xs: 0,
+  sm: 460px,
+  md: 850px,
+  lg: 1024px,
+  xl: 1440px
 );
 
 $container-max-widths: (
-	sm: 450px,
-	md: 850px,
-	lg: 1000px,
-	xl: 1320px
+  sm: 450px,
+  md: 850px,
+  lg: 1000px,
+  xl: 1400px
 );
 
 $enable-shadows: true;

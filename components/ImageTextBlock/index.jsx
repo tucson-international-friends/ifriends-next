@@ -1,18 +1,23 @@
-import { Row, Col, Image, Button } from "react-bootstrap";
+import { Row, Col, Image } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 import classNames from "classnames/bind";
-import Link from "next/link";
 import styles from "./styles.scss";
+import { renderActions } from "../Action";
 
 const cx = classNames.bind(styles);
+
+export const COLORS = {
+	DARK: "dark",
+	LIGHT: "light"
+};
 
 const ImageTextBlock = ({
 	title,
 	content,
 	image,
 	invert,
-	color = "dark",
-	readMore
+	color = COLORS.DARK,
+	actions
 }) => (
 	<Row className="container">
 		<Col
@@ -27,9 +32,7 @@ const ImageTextBlock = ({
 			<div className={cx("textContainer")}>
 				<h2>{title}</h2>
 				<ReactMarkdown source={content} />
-				<Link href={readMore.href}>
-					<Button variant="outline-light">Learn More</Button>
-				</Link>
+				{actions && renderActions(actions, { variant: "outline-light", label: "Learn More" })}
 			</div>
 		</Col>
 	</Row>

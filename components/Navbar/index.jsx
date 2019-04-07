@@ -1,11 +1,15 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
 import { FaBars } from "react-icons/fa";
+import classNames from "classnames";
 import Logo from "../logo";
 import styles from "./styles.scss";
+import { Signup } from "../Button";
 
-export default () => (
-	<Navbar expand="md" variant="dark" bg="dark" fixed="top">
-		<Container>
+export default () => {
+	const navbar = (
+		<>
 			<Navbar.Brand className={styles.brand}>
 				<Logo className="d-none d-sm-block" />
 				<Logo className="d-block d-sm-none" size="sm" />
@@ -37,10 +41,20 @@ export default () => (
 					<Nav.Link>News</Nav.Link>
 				</Nav>
 				<Nav className="ml-auto order-md-0 order-lg-1">
-					<Nav.Link>Login</Nav.Link>
-					<Nav.Link>Signup</Nav.Link>
+					<Signup />
 				</Nav>
 			</Navbar.Collapse>
-		</Container>
-	</Navbar>
-);
+		</>
+	);
+
+	return (
+		<Navbar expand="md" variant="dark" bg="dark" fixed="top">
+			<Container fluid className={classNames("d-lg-none")}>
+				{navbar}
+			</Container>
+			<Container className={classNames("d-none d-lg-flex")}>
+				{navbar}
+			</Container>
+		</Navbar>
+	);
+};
