@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+
+.textButton {
+  border: 0;
+  font-weight: bold;
+  font-family: $action-font;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-right: 2em;
+  span {
+    vertical-align: middle;
+    padding-right: 0.25em;
+  }
+}

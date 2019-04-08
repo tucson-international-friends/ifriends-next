@@ -11,7 +11,12 @@ body {
 #__next {
   min-height: 100vh;
   position: relative;
-  padding-bottom: 10rem; // footer
+  padding-bottom: 15rem; // footer
+}
+
+.container {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 h1,
