@@ -1,15 +1,15 @@
-@import "../../styles/global";
+@import "../../styles/mixins";
 
 nav {
-	@include box-shadow(elavation(1));
-	z-index: 1;
-	a {
-		font-family: $action-font;
-		font-weight: 400;
-	}
+  @include box-shadow(elavation(1));
+  z-index: 1;
+  a {
+    font-family: $action-font;
+    font-weight: 400;
+  }
 }
 
 .brand {
-	margin-right: 0;
-	font-size: 1rem;
+  margin-right: 0;
+  font-size: 1rem;
 }

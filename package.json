@@ -35,7 +35,7 @@
 		"eslint-plugin-react": "^7.12.4"
 	},
 	"scripts": {
-		"dev": "next",
+		"dev": "next --inspect",
 		"build": "next build",
 		"start": "next start"
 	},
