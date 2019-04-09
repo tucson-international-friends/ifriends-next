@@ -28,6 +28,7 @@ International Friends became an Arizona corporation in February 2004 and also re
 				},
 				{
 					title: "Board Meetings",
+					textAlign: "justify",
 					content: `
 Board Meetings are held five times a year to evaluate the program and plan events. Future initiatives and strategies are discussed at a Spring Planning Meeting. The Board is composed of students, Tucson hosts and a representative from the University of Arizona office of International Students. Anyone who is interested can become a member of one of the Committees of the Board, including Special Events, Fund Raising, and Public Relations. Often times committee members move on to the Board of Directors when a vacancy occurs on the Board. You can learn more about the board by visiting the links below.
 `,
