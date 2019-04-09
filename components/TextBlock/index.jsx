@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 
 export const VARIANTS = { CALLOUT: "callout" };
 
-const TextBlock = ({ title, content, readMore, actions, variant, textAlign = "left" }) => {
+const TextBlock = ({ title, content, actions, variant, textAlign = "left" }) => {
 	const isCallout = variant === VARIANTS.CALLOUT;
 	const component = (
 		<div className={cx("textBlock", { callout: isCallout })}>
