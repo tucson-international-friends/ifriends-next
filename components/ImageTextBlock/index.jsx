@@ -17,18 +17,19 @@ const ImageTextBlock = ({
 	image,
 	invert,
 	color = COLORS.DARK,
-	actions
+	actions,
+	extraHeight
 }) => (
 	<Row className="container">
 		<Col
 			md={{ span: 6, offset: invert ? 6 : 0 }}
-			className={cx("imageCol", color)}>
+			className={cx("imageCol", color, { xh: extraHeight })}>
 			<Image src={image} />
 		</Col>
-		<div className={cx("backdrop", color, { invert })} />
+		<div className={cx("backdrop", color, { invert }, { xh: extraHeight })} />
 		<Col
 			md={{ span: 6, offset: invert ? 0 : 6 }}
-			className={cx("textCol", styles[color])}>
+			className={cx("textCol", styles[color], { xh: extraHeight })}>
 			<div className={cx("textContainer")}>
 				<h2>{title}</h2>
 				<ReactMarkdown source={content} />
