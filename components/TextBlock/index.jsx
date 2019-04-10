@@ -9,14 +9,14 @@ const cx = classNames.bind(styles);
 
 export const VARIANTS = { CALLOUT: "callout" };
 
-const TextBlock = ({ title, content, actions, variant, textAlign = "left" }) => {
+const TextBlock = ({ title, content, actions, variant, headerAlign, textAlign = "left" }) => {
 	const isCallout = variant === VARIANTS.CALLOUT;
 	const component = (
-		<div className={cx("textBlock", { callout: isCallout })}>
-			<h2 className={styles.title}>{title}</h2>
+		<div className={`${cx("textBlock", { callout: isCallout })} text-${textAlign}`}>
+			<h2 className={`${styles.title} text-${headerAlign || textAlign}`}>{title}</h2>
 			<ReactMarkDown
 				source={content}
-				className={`text-${textAlign}`} />
+			/>
 			{actions && renderActions(actions, { variant: "text-primary", label: "Read More", icon: GoArrowRight() })}
 		</div>
 	);

@@ -6,7 +6,7 @@ import classNames from "classnames";
 import { withRouter } from "next/router";
 import Logo from "../logo";
 
-import styles from "./styles.scss";
+import styles from "./navbar.scss";
 import { renderActions } from "../Action";
 
 const MainNavbar = ({ router, navItems, navActions }) => {
@@ -36,7 +36,14 @@ const MainNavbar = ({ router, navItems, navActions }) => {
 				id="main-navbar-nav"
 				className="flex-md-column flex-lg-row">
 				<Nav className="ml-md-auto ml-lg-0 mr-lg-auto order-md-1 order-lg-0">
-					{navItems && navItems.map((navItem, i) => <Nav.Link href={navItem.route} key={navItem.name || navItem.route || i} active={navItem.route === router.route}>{navItem.label}</Nav.Link>)}
+					{navItems
+						&& navItems.map((navItem, i) => (
+							<Nav.Link
+								href={navItem.route}
+								key={navItem.name || navItem.route || i}
+								active={navItem.route === router.route}>{navItem.label}
+							</Nav.Link>
+						))}
 				</Nav>
 				<Nav className="ml-auto order-md-0 order-lg-1">
 					{navActions && renderActions(navActions)}

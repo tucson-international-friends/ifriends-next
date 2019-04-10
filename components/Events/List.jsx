@@ -1,18 +1,22 @@
 import Table from "react-bootstrap/Table";
+import { wrapFormatValue } from "../../lib/common/format";
+import styles from "./styles.scss";
 
-const EventListItem = (event, columns) => (
-	<tr>
-		{columns.map(column => <td>{wrapFormatValue(event[column.name], column.format)}</td>)}
+const EventListItem = ({ event, columns }) => (
+	<tr key={`row-${event.name}`}>
+		{columns.map(column => <td key={`${event.name}-${column.name}`}>{wrapFormatValue(event[column.name], column.format)}</td>)}
 	</tr>
 );
 
-const EventList = (events, columns) => (
-	<Table striped>
+const EventList = ({ events, columns }) => (
+	<Table striped className={styles.table}>
 		<thead>
-			{columns.map(column => <th>{column.label}</th>)}
+			<tr>
+				{columns.map(column => <th key={`head-${column.name}`}>{column.label}</th>)}
+			</tr>
 		</thead>
 		<tbody>
-			{events.map(event => EventListItem(event, columns))}
+			{events.map(event => EventListItem({ event, columns }))}
 		</tbody>
 	</Table>
 );
