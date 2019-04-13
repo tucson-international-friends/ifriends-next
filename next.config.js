@@ -4,6 +4,7 @@ const path = require("path");
 const defaultGetLocalIdent = require("css-loader/lib/getLocalIdent");
 
 module.exports = withSass({
+	target: 'serverless',
 	cssModules: true,
 	cssLoaderOptions: {
 		getLocalIdent: (loaderContext, localIdentName, localName, options) => {
