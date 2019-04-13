@@ -49,23 +49,27 @@ $lgHeight: 600px;
 
 .imageCol {
   height: $smHeight;
-
+  width: 100vw;
   @include media-breakpoint-up(md) {
     height: $lgHeight;
+    width: 50vw;
   }
 
   overflow: hidden;
   position: absolute;
-  left: 0;
+  &.not_invert {
+    left: 0;
+  }
+  &.invert {
+    right: 0;
+  }
+
   padding: 0;
 
   img {
     min-width: 100%;
-    min-height: 100%;
+    min-height: 101%;
     object-fit: cover;
-  }
-
-  &.light {
   }
 }
 

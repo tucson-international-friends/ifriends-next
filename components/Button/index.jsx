@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
-import TextButton from "./textButton";
 import Signup from "./signup";
+import TextButton from "./textButton";
 
 export default (props) => {
 	const { variant, icon, label, children } = props;
