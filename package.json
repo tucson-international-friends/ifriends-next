@@ -8,7 +8,6 @@
 		"url": "https://github.com/tucson-international-friends/ifriends-next.git"
 	},
 	"dependencies": {
-		"@zeit/next-css": "^1.0.1",
 		"@zeit/next-sass": "^1.0.1",
 		"acorn": "^6.1.1",
 		"bootstrap": "^4.3.1",
@@ -17,11 +16,11 @@
 		"isomorphic-unfetch": "^3.0.0",
 		"jquery": "^3.3.1",
 		"moment": "^2.24.0",
-		"next": "^7.0.3",
+		"next": "^8.0.4",
 		"node-sass": "^4.11.0",
-		"react": "^16.8.2",
+		"react": "^16.8.6",
 		"react-bootstrap": "^1.0.0-beta.5",
-		"react-dom": "^16.8.2",
+		"react-dom": "^16.8.6",
 		"react-icons": "^3.5.0",
 		"react-markdown": "^4.0.6",
 		"url-loader": "^1.1.2",
@@ -38,6 +37,7 @@
 	"scripts": {
 		"dev": "next --inspect",
 		"build": "next build",
+		"now-build": "next build",
 		"start": "next start"
 	},
 	"author": "Youhao Wei",
