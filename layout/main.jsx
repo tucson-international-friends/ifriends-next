@@ -3,12 +3,12 @@ import React from "react";
 import Meta from "../components/meta";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
 import navItems from "./navbarItems.json";
-
-import "../styles/global/main.scss";
 import { getPageByName } from "../lib/page";
 import { ACTIONS } from "../components/Action";
+
+import "../styles/global/main.scss";
+
 
 const MainLayout = ({ children }) => (
 	<React.Fragment>
@@ -20,5 +20,4 @@ const MainLayout = ({ children }) => (
 		<Footer />
 	</React.Fragment>
 );
-
 export default MainLayout;

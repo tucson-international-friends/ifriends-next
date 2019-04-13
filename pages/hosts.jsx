@@ -8,6 +8,10 @@ import MainLayout from "../layout/main";
 import { ACTIONS } from "../components/Action";
 import Banner from "../components/Banner";
 import TextBlock from "../components/TextBlock";
+import Header from "../components/Header";
+import { FAQList } from "../components/FAQ";
+import Testimonial from "../components/Testimonial";
+import { Signup } from "../components/Button";
 
 export default class HostPage extends React.Component {
 	static async getInitialProps() {
@@ -56,12 +60,81 @@ Any student queries regarding the following should be referred to the office of 
 					type: ACTIONS.READMORE,
 					href: "/guidelines"
 				}]
-			}]]
+			}]],
+			faqs: [{
+				question: " Who belongs to International Friends?",
+				answer: `
+* **STUDENTS** - Any non-immigrant student enrolled at the University of Arizona may choose to participate. Preference is given to students in their first year of study.
+* **FRIENDSHIP PARTNERS (HOSTS)** - Anyone in the Tucson area who is interested in international friendship and is willing to exchange customs and ideas with a student can participate.`
+			}, {
+				question: " Why do students participate?",
+				answer: `
+* To become better acquainted with Americans on a personal basis
+* To learn about our many cultures and way of life
+* To share their own culture with others
+* To participate in the life of the Tucson community`
+			}, {
+				question: "Why do Tucsonans participate?",
+				answer: `
+* To become better acquainted with Americans on a personal basis
+* To learn about our many cultures and way of life
+* To share their own culture with others
+* To participate in the life of the Tucson community`
+			}, {
+				question: "Who coordinates activities and how do I learn about them?",
+				answer: `
+International Friends has a governing body, the Board of Directors, composed of past and present hosts, graduate and undergraduate students and a representative from [International Student Services](http://internationalstudents.arizona.edu/).
+
+Group activities and other items of interest are communicated through the International Friends newsletter, emails, telephone calls and our website.`
+			}, {
+				question: "What is required of a community host?",
+				answer: `
+* Contact student(s) within one week of assignment. Students are most eager to meet hosts and get acquainted!
+* Continue monthly contact the first year the student is here. Plan to have a meal together, participate in community events, go sightseeing, attend International Friends activities, or just share coffee and conversation!
+* Participate as often as possible in International Friends group activities.`
+			}, {
+				question: "What is required of a student?",
+				answer: `Contact your host within one week of assignment if you have not yet heard from them.
+Invite your host to share a special time of celebration with you and your friends, or just invite them for coffee.
+Share information about your country, family, and traditions.
+If you find you do not have time to participate in the program or do not wish to continue for any reason, please notify [International Student Services](http://internationalstudents.arizona.edu/).`
+			}, {
+				question: "What other opportunities are available in International Friends?",
+				answer: `
+* Positions on the Board of Directors and Committees such as Fund-Raising, Hospitality, and Public Relations
+* Hosts for welcome dinners for small groups of arriving students
+* Assistants for luncheons, picnics, and other events
+* Providing food for special events`
+			}, {
+				question: "Is there a cost to become a member?",
+				answer: "There is no fee associated with the organization. Costs of meals or activities sponsored by the host would be at the host‘s expense, unless previously agreed upon by the student."
+			}, {
+				question: "Is it possible to host more than one student?",
+				answer: "Yes, several Tucson International Friends host two or three students and some even host up to seven or eight. It depends on your ability to provide quality time."
+			}],
+			testimonials: [
+				{
+					quote: "“Serving as a host with International Friends has enriched my life and broadened my horizons immeasurably. It is a real joy to interact with bright, energetic young people from widely divergent cultures and to learn firsthand about the fascinating world we live in.”",
+					from: "Robert Woerner, Host"
+				},
+				{
+					quote: "“We have been involved with hosting international students for about 15 years. It has been such a fun and enriching time for us that I can’t imagine why everyone would not want to participate in the experience!”",
+					from: "Deanne & Bill Lesley, Hosts"
+				},
+				{
+					quote: "“We are relatively new to International Friends and enjoying it tremendously. Our Chinese student has been with us for a year and we can already see him growing and maturing. He provides a connection to the university, as well as to the world. It takes so little to host that it seems like everyone would want a student.”",
+					from: "Holly & Michael Berryhill, Hosts"
+				},
+				{
+					quote: "“My student and I have explored the beautiful mountain canyons and desert trails surrounding Tucson. More importantly, we started learning about our unique backgrounds and experiences. I was able to help him with the transition to life in America and he has enriched my life by becoming part of my family.”",
+					from: "George Binder, Host"
+				},
+			]
 		};
 	}
 
 	render() {
-		const { banner, sections } = this.props;
+		const { banner, sections, faqs, testimonials } = this.props;
 		return (
 			<MainLayout>
 				<Banner {...banner} />
@@ -71,8 +144,20 @@ Any student queries regarding the following should be referred to the office of 
 							<TextBlock {...sections[0][0]} />
 						</Col>
 					</Row>
+					<Header title="Frequently Asked Questions" />
+					<FAQList data={faqs} />
 					<ImageTextBlock {...sections[1][0]} color={COLORS.LIGHT} invert />
 					<ImageTextBlock {...sections[1][1]} />
+
+					<Header className="mt-5 text-center py-5" title="WHAT OUR HOSTS SAY..." />
+					<Row>
+						{
+							// eslint-disable-next-line react/no-array-index-key
+							testimonials.map((testimonial, i) => <Col key={i} className="mb-4" md={6}><Testimonial {...testimonial} /></Col>)}
+					</Row>
+					<div className="text-center py-5 mb-5">
+						<Signup size="lg" label="join us today" />
+					</div>
 				</Container>
 			</MainLayout>
 		);

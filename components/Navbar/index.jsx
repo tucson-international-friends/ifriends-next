@@ -5,9 +5,8 @@ import { FaBars } from "react-icons/fa";
 import classNames from "classnames";
 import { withRouter } from "next/router";
 import Logo from "../logo";
-
-import styles from "./navbar.scss";
 import { renderActions } from "../Action";
+import styles from "./navbar.scss";
 
 const MainNavbar = ({ router, navItems, navActions }) => {
 	const navbar = (

@@ -1,0 +1,13 @@
+@import "../../styles/variables";
+
+.question {
+  cursor: pointer;
+}
+
+.caret {
+  transition: 0.5s;
+  &.expanded {
+    color: $main-brand;
+    transform: rotate(90deg);
+  }
+}

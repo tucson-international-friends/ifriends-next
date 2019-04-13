@@ -11,6 +11,7 @@ import Banner from "../components/Banner";
 import TextBlock from "../components/TextBlock";
 import EventList from "../components/Events/List";
 import BoardList from "../components/BoardList";
+import Header from "../components/Header";
 
 export default class About extends React.Component {
 	static async getInitialProps() {
@@ -144,9 +145,9 @@ Board Meetings are held five times a year to evaluate the program and plan event
 							<TextBlock {...sections[0][1]} />
 						</Col>
 					</Row>
-					<h2 className="text-center py-4">Upcomming Events</h2>
+					<Header title="Events" />
 					<EventList columns={eventColumns} events={events} />
-					<h2 className="text-center py-5">Board Members</h2>
+					<Header title="Board Members" />
 					<BoardList members={boardMembers} />
 				</Container>
 			</MainLayout>
