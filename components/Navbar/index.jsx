@@ -3,11 +3,12 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { FaBars } from "react-icons/fa";
 import classNames from "classnames";
+import { withRouter } from "next/router";
 import Logo from "../logo";
-import styles from "./styles.scss";
-import { Signup } from "../Button";
+import { renderActions } from "../Action";
+import styles from "./navbar.scss";
 
-export default () => {
+const MainNavbar = ({ router, navItems, navActions }) => {
 	const navbar = (
 		<>
 			<Navbar.Brand className={styles.brand}>
@@ -34,14 +35,17 @@ export default () => {
 				id="main-navbar-nav"
 				className="flex-md-column flex-lg-row">
 				<Nav className="ml-md-auto ml-lg-0 mr-lg-auto order-md-1 order-lg-0">
-					<Nav.Link active>Home</Nav.Link>
-					<Nav.Link>About Us</Nav.Link>
-					<Nav.Link>Host a Student</Nav.Link>
-					<Nav.Link>Meet Our Students</Nav.Link>
-					<Nav.Link>News</Nav.Link>
+					{navItems
+						&& navItems.map((navItem, i) => (
+							<Nav.Link
+								href={navItem.route}
+								key={navItem.name || navItem.route || i}
+								active={navItem.route === router.route}>{navItem.label}
+							</Nav.Link>
+						))}
 				</Nav>
 				<Nav className="ml-auto order-md-0 order-lg-1">
-					<Signup />
+					{navActions && renderActions(navActions)}
 				</Nav>
 			</Navbar.Collapse>
 		</>
@@ -58,3 +62,5 @@ export default () => {
 		</Navbar>
 	);
 };
+
+export default withRouter(MainNavbar);

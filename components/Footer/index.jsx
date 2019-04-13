@@ -1,10 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
 import moment from "moment";
 
-import styles from "./styles.scss";
+import styles from "./footer.scss";
 
 const Footer = () => (
-	<footer classes={styles.footer}>
+	<div className={styles.footer}>
 		<Container>
 			<Row>
 				<Col md={6}>
@@ -30,7 +30,7 @@ const Footer = () => (
 				</Col>
 			</Row>
 		</Container>
-	</footer>
+	</div>
 );
 
 export default Footer;

@@ -23,6 +23,7 @@ export default class Index extends React.Component {
 				[
 					{
 						title: "Who We Are",
+						textAlign: "justify",
 						content:
 							"International Friends provides opportunities for international students and hosts to develop close friendships, and an understanding of and appreciation for each other's culture. We offer activities through which international students may participate in the life of the community. We subscribe to the national guidelines set forth by [NAFSA: Association of International Educators](http://www.nafsa.org/) on the rights of international students.",
 						actions: [{
@@ -32,11 +33,12 @@ export default class Index extends React.Component {
 					},
 					{
 						title: "What We Do",
+						textAlign: "justify",
 						content:
 							"Our goal is simple but important: Give international students a stronger sense of place and community while they're studying in Tucson. International students and local Friends (hosts) get together periodically throughout the year. Participation is open to any Tucson-area resident interested in a respectful exchange of customs and ideas. We are not a live-in hosting program and have no religious affiliation.",
 						actions: [{
 							type: ACTIONS.READMORE,
-							href: "/host"
+							href: "/hosts"
 						}]
 					}
 				],
@@ -52,7 +54,7 @@ export default class Index extends React.Component {
 						image: "/static/images/zipline.jpg",
 						actions: [{
 							type: ACTIONS.READMORE,
-							href: "/host"
+							href: "/hosts"
 						}]
 					},
 					{
@@ -66,12 +68,13 @@ export default class Index extends React.Component {
 * Understand and follow the organization’s guidelines.`,
 						actions: [{
 							type: ACTIONS.READMORE,
-							href: "/host"
+							href: "/hosts"
 						}]
 					}
 				],
 				{
 					title: "Get Involved",
+					textAlign: "center",
 					content: `
 Make a "world of difference" in the life of a student or local host. 
 It's fun, it's easy, and it changes lives.`,
@@ -99,8 +102,8 @@ It's fun, it's easy, and it changes lives.`,
 							<TextBlock {...sections[0][1]} />
 						</Col>
 					</Row>
-					<ImageTextBlock {...sections[1][0]} invert />
-					<ImageTextBlock {...sections[1][1]} color={COLORS.LIGHT} />
+					<ImageTextBlock {...sections[1][0]} extraHeight invert />
+					<ImageTextBlock {...sections[1][1]} extraHeight color={COLORS.LIGHT} />
 					<TextBlock
 						{...sections[2]}
 						variant={VARIANTS.CALLOUT}

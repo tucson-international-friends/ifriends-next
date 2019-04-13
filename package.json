@@ -24,7 +24,8 @@
 		"react-dom": "^16.8.2",
 		"react-icons": "^3.5.0",
 		"react-markdown": "^4.0.6",
-		"url-loader": "^1.1.2"
+		"url-loader": "^1.1.2",
+		"webpack-filter-warnings-plugin": "^1.2.1"
 	},
 	"devDependencies": {
 		"babel-eslint": "^10.0.1",
@@ -35,7 +36,7 @@
 		"eslint-plugin-react": "^7.12.4"
 	},
 	"scripts": {
-		"dev": "next",
+		"dev": "next --inspect",
 		"build": "next build",
 		"start": "next start"
 	},
