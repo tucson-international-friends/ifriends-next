@@ -1,10 +1,9 @@
 import Button from "react-bootstrap/Button";
-import TextButton from "./textButton";
 import Signup from "./signup";
+import TextButton from "./textButton";
 
 export default (props) => {
 	const { variant, icon, label, children } = props;
-	console.log(icon);
 	if (variant.startsWith("text-")) {
 		const type = variant.split("-")[1];
 		return <TextButton type={type} icon={icon}>{children || label}</TextButton>;

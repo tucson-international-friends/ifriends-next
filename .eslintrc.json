@@ -12,7 +12,9 @@
 		},
 		"ecmaVersion": 2018
 	},
-	"plugins": ["react"],
+	"plugins": [
+		"react"
+	],
 	"rules": {
 		"indent": [
 			2,
@@ -30,9 +32,16 @@
 				"multiline": true
 			}
 		],
+		"no-param-reassign": "off",
 		"react/prop-types": 0,
-		"react/jsx-indent": [2, "tab"],
-		"react/jsx-indent-props": [2, "tab"],
+		"react/jsx-indent": [
+			2,
+			"tab"
+		],
+		"react/jsx-indent-props": [
+			2,
+			"tab"
+		],
 		"react/react-in-jsx-scope": "off",
 		"quotes": [
 			"error",

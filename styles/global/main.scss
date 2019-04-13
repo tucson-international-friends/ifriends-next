@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700");
 @import "../global";
 
@@ -11,7 +11,12 @@ body {
 #__next {
   min-height: 100vh;
   position: relative;
-  padding-bottom: 10rem; // footer
+  padding-bottom: 15rem; // footer
+}
+
+.container {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 h1,

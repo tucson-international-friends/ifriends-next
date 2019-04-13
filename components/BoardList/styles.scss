@@ -1,0 +1,32 @@
+@import "../../styles/global";
+
+.contact {
+  transition: 1s;
+  text-align: center;
+  height: 320px;
+  margin-bottom: 2em;
+  padding: 1em;
+  @include box-shadow(elavation(1));
+  cursor: pointer;
+  &:hover {
+    @include box-shadow(elavation(4));
+  }
+}
+
+.profilePictureWrapper {
+  width: auto;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.profilePicture {
+  height: auto;
+  margin-bottom: 1em;
+  width: 100%;
+  @include media-breakpoint-up(sm) {
+    width: 50%;
+  }
+  @include media-breakpoint-up(md) {
+    width: 90%;
+  }
+}

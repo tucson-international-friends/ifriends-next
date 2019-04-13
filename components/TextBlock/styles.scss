@@ -1,18 +1,17 @@
-@import "../../styles/global";
+@import "../../styles/variables";
 
 .textBlock {
-	padding: 2em 0;
+  padding: 2em 0;
 }
 
 .callout {
-	background: transparent;
-	text-align: center;
-	font-size: 1.25em;
-	p {
-		color: $main-brand;
-	}
+  background: transparent;
+  font-size: 1.25em;
+  p {
+    color: $main-brand;
+  }
 }
 
 .title {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
