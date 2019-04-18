@@ -17,6 +17,9 @@ export function wrapValue(value, format) {
 }
 
 export function formatValue(value, format) {
+	if (!value) {
+		return value;
+	}
 	switch (format) {
 		case FORMATS.DATE:
 			return moment(value).format("ll");
