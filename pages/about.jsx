@@ -66,11 +66,54 @@ Board Meetings are held five times a year to evaluate the program and plan event
 				label: "Location"
 			}],
 			events: [{
-				name: "Board Planning Meeting",
-				startDatetime: "2019-04-13 09:00",
-				endDatetime: "2019-04-13 12:00",
-				date: "2019-04-13",
-				location: "St. Andrew's Church, 545 S. 5th Ave"
+				key: "board-meeting-jun",
+				name: "Board Meeting",
+				startDatetime: "2019-06-27 17:30",
+				date: "2019-06-27",
+				location: "ISS Office"
+			}, {
+				name: "Welcome Luncheon",
+				date: "2019-08-24",
+				startDatetime: "2019-08-24 10:00",
+				endDatetime: "2019-08-24 14:00",
+				location: "First United Methodist Church"
+			}, {
+				name: "New Host Orientation",
+				date: "2019-09-14",
+				location: "Tucson Visitor's Center"
+			}, {
+				key: "board-meeting-sep",
+				name: "Board Meeting",
+				startDatetime: "2019-09-16 17:30",
+				date: "2019-09-16",
+				location: "ISS Office"
+			}, {
+				name: "Turquoise Trail",
+				placeholder: "Nov TBA"
+			}, {
+				name: "International Students Talent Show",
+				placeholder: "Nov TBA"
+			}, {
+				key: "board-meeting-dec",
+				name: "Board Meeting",
+				startDatetime: "2019-12-02 17:30",
+				date: "2019-12-02",
+				location: "ISS Office"
+			}, {
+				name: "Welcome Brunch",
+				date: "2020-01-12",
+				location: "Tucson Visitor's Center"
+			}, {
+				name: "Rodeo Picnic",
+				date: "2020-02-23"
+			}, {
+				name: "Annual Board Meeting",
+				date: "2020-03-02",
+				startDatetime: "2020-03-02 17:30",
+				location: "ISS Office"
+			}, {
+				name: "Planning Meeting",
+				date: "2020-04-18"
 			}],
 			boardMembers: [
 				{
