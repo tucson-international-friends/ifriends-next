@@ -2,15 +2,17 @@ import Button from "react-bootstrap/Button";
 import Signup from "./signup";
 import TextButton from "./textButton";
 
-export default (props) => {
-	const { variant, icon, label, children } = props;
+const ButtonWrapper = (props) => {
+	const { variant, icon, label, children, onClick } = props;
 	if (variant.startsWith("text-")) {
 		const type = variant.split("-")[1];
-		return <TextButton type={type} icon={icon}>{children || label}</TextButton>;
+		return <TextButton onClick={onClick} type={type} icon={icon}>{children || label}</TextButton>;
 	}
 	const buttonProps = { ...props };
 	delete buttonProps.icon;
 	return <Button {...buttonProps}>{label}{icon}</Button>;
 };
+
+export default ButtonWrapper;
 
 export { TextButton, Signup };

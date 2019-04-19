@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import { FaBars } from "react-icons/fa";
 import classNames from "classnames";
 import { withRouter } from "next/router";
+import Link from "next/link";
 import Logo from "../logo";
 import { renderActions } from "../Action";
 import styles from "./navbar.scss";
@@ -37,11 +38,11 @@ const MainNavbar = ({ router, navItems, navActions }) => {
 				<Nav className="ml-md-auto ml-lg-0 mr-lg-auto order-md-1 order-lg-0">
 					{navItems
 						&& navItems.map((navItem, i) => (
-							<Nav.Link
-								href={navItem.route}
-								key={navItem.name || navItem.route || i}
-								active={navItem.route === router.route}>{navItem.label}
-							</Nav.Link>
+							<Link passHref href={navItem.route} key={navItem.name || navItem.route || i}>
+								<Nav.Link
+									active={navItem.route === router.route}>{navItem.label}
+								</Nav.Link>
+							</Link>
 						))}
 				</Nav>
 				<Nav className="ml-auto order-md-0 order-lg-1">

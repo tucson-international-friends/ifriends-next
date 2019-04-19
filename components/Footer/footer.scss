@@ -1,5 +1,18 @@
 @import "../../styles/global";
 
+.headerIcon {
+  vertical-align: sub;
+  height: 1.25em;
+  width: 1.25em;
+  padding: 0;
+  margin-right: 0.5em;
+}
+
+.menu {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 .footer {
   padding-top: 5em;
   bottom: 0;
@@ -14,6 +27,9 @@
   }
   h2 {
     font-size: 1.25em;
+  }
+  h6 {
+    font-size: 1em;
   }
   a {
     color: $light-accent;
