@@ -37,11 +37,11 @@ Board Meetings are held five times a year to evaluate the program and plan event
 `,
 					actions: [{
 						type: ACTIONS.READMORE,
-						href: "/about/by-laws",
+						href: "/by-laws",
 						label: "By Laws"
 					}, {
 						type: ACTIONS.READMORE,
-						href: "/about/letter",
+						href: "/letter",
 						label: "Chairperson Letter"
 					}]
 				},

@@ -1,8 +1,12 @@
 import classNames from "classnames";
 import styles from "./button.scss";
 
-const TextButton = ({ type, icon, children }) => (
-	<a className={classNames(styles.textButton, `text-${type}`)}>
+const TextButton = ({ type, icon, onClick, children }) => (
+	// eslint-disable-next-line jsx-a11y/click-events-have-key-events
+	<a
+		role="button"
+		className={classNames(styles.textButton, `text-${type}`)}
+		onClick={onClick}>
 		<span>{children}</span>
 		{icon}
 	</a>

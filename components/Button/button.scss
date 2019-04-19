@@ -1,5 +1,20 @@
 @import "../../styles/global";
 
+.social {
+  color: $light-shades !important;
+  font-weight: bold;
+  font: $action-font;
+  svg {
+    vertical-align: text-bottom;
+  }
+}
+
+.facebook {
+  &:hover {
+    color: $light-accent !important;
+  }
+}
+
 .textButton {
   border: 0;
   font-weight: bold;
