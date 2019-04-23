@@ -16,8 +16,13 @@ const MainLayout = ({ children }) => (
 		<Meta />
 		<Navbar
 			navItems={navItems.map(value => getPageByName(value))}
-			navActions={[{ type: ACTIONS.SIGNUP }]} />
-		<div className="page">{children}</div>
+			navActions={[
+				{ type: ACTIONS.SIGNUP },
+				{ type: ACTIONS.LOGIN }]} />
+		<div
+			className="page"
+		>{children}
+		</div>
 		<Footer menuItems={footerNavItems.map(value => getPageByName(value))} />
 	</React.Fragment>
 );

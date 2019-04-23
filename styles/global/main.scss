@@ -10,13 +10,17 @@ body {
 
 #__next {
   min-height: 100vh;
-  position: relative;
-  padding-bottom: 15rem; // footer
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
   padding-left: 25px;
   padding-right: 25px;
+}
+
+.page {
+  flex: 1 0 auto;
 }
 
 h1,

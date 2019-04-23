@@ -22,6 +22,10 @@
 			{
 				"label": "Letter from Chair",
 				"name": "letter"
+			},
+			{
+				"label": "Guiding Principles",
+				"name": "guidelines"
 			}
 		]
 	}
