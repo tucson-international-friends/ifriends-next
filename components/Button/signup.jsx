@@ -2,7 +2,7 @@ import Button from "react-bootstrap/Button";
 
 const SignupButton = (props) => {
 	const handleSignup = () => {
-		console.log("currently under construction");
+		window.open("https://forms.gle/5t7WxJZydsZJJKRX6", "_blank");
 	};
 	const { label, size } = props;
 	return (
