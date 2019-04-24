@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Button, { Signup } from "../Button";
+import Auth from "../../lib/auth";
 
 export const ACTIONS = {
 	SIGNUP: "signup",
@@ -25,7 +26,16 @@ export const renderAction = (actionParam, key, defaultValue) => {
 				</Link>
 			);
 		case ACTIONS.LOGIN:
-			return <Button variant="outline-light" key={key} label={action.label || "Log in"} />;
+			return (
+				<Button
+					variant="outline-light"
+					key={key}
+					label={action.label || "Log in"}
+					onClick={() => {
+						const auth = new Auth();
+						auth.login();
+					}} />
+			);
 		default:
 			return (
 				<Link href={href} key={key}>
