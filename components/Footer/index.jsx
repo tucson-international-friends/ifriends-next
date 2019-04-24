@@ -53,14 +53,14 @@ const Footer = ({ menuItems }) => (
 					together international students attending the University of Arizona
 					and residents of Tucson.`}
 					</p>
-					<div className="pt-1">
-						<FacebookButton link="https://www.facebook.com/groups/298210727017/" />
-					</div>
 					<Row className="mt-4 mb-2">
 						<Col sm={5}><Address /></Col>
 						<Col sm={4}><Phone /></Col>
 						<Col sm={3}><Email /></Col>
 					</Row>
+					<div className="pt-1">
+						<FacebookButton link="https://www.facebook.com/groups/298210727017/" />
+					</div>
 				</Col>
 				<Col md={4} className="pl-5">
 					<h2>Menu</h2>
