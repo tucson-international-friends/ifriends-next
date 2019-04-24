@@ -6,6 +6,7 @@
 
 body {
   background-color: $off-white;
+  transition: 1s ease;
 }
 
 #__next {
@@ -38,7 +39,7 @@ h6 {
   font-family: $action-font;
   font-weight: bold;
   text-transform: uppercase;
-  border: none;
+  border-width: 2px;
 }
 
 a {
