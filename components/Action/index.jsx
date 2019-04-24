@@ -25,7 +25,7 @@ export const renderAction = (actionParam, key, defaultValue) => {
 				</Link>
 			);
 		case ACTIONS.LOGIN:
-			return <Button variant="outline" key={key} label={action.label || "Log in"} />;
+			return <Button variant="outline-light" key={key} label={action.label || "Log in"} />;
 		default:
 			return (
 				<Link href={href} key={key}>
