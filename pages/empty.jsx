@@ -11,8 +11,6 @@ import { ACTIONS } from "../components/Action";
 export default class Index extends Component {
 	render() {
 		const { sections, banner } = this.props;
-		return (
-			<MainLayout />
-		);
+		return <MainLayout />;
 	}
 }
