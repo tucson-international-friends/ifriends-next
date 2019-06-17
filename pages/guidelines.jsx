@@ -7,101 +7,102 @@ import MainLayout from "../layout/main";
 export default class GuidelinePage extends Component {
 	static async getInitialProps() {
 		return {
-			guidelines: [{
-				name: "host",
-				label: "For Host",
-				content: `
-* Students are assigned to hosts for a period of one year as long as it is mutually satisfying. Although the relationships may continue well beyond the year, we hope hosts will make themselves available to other first year students
+			guidelines: [
+				{
+					name: "host",
+					label: "For Host",
+					content: `
+* Students are matched with hosts for a period of one year, as long as it is mutually satisfying, with an obligation to get together a minimum of once a month.  Although the relationships may continue well beyond the year, we hope hosts will make themselves available to other first year students in subsequent years.
 
-* Any student queries regarding the following should be referred to *International Student Services (ISS)*:
+* Call or email your student to introduce yourself within one week of being matched.
+
+* Any student inquiries regarding the following should be referred to the International Student Services (ISS) office, 520 621-4627:
   * Employment instructions
   * Immigration and Visa Issues
   * Academic problems with professors, advisors and administrators
   * Financial problems
   * Major medical problems
 
-* Studies are the first priority.
+* School work and study are every student’s first priority.
 
-* Proselytizing is not allowed. If you invite your student to a religious activity, make the nature and sponsorship of the activity clear in advance. Respect their wishes if they choose not to go.
+* Proselytizing is not allowed. If you invite your student to a religious activity, make the nature and sponsorship of the activity clear in advance.  Respect their wishes if they choose not to go. International Friends (IF) is about mutual respect and friendship.
 
-* Do not offer financial loans, guarantees for visas, or loans for purchasing cars, leasing apartments, etc. And, do not ask for loans from students.
+* Do not offer financial loans, guarantees for visas, or loans for purchasing cars, leasing apartments, etc. And, do not ask for loans from students. It is strongly recommended that you do not establish a landlord/tenant relationship with your student.
 
 * It is strongly recommended that you do not establish a landlord/tenant relationship with your student.
 
-* Obey US laws, including those governing alcohol, employment, etc. Sexual harassment is not tolerated and must be reported to the International Friends chairperson.
+* Obey US laws, including those governing alcohol, employment, etc.  Sexual harassment is not tolerated and must be reported to International Friends, info@ifriendstucson.org, or the ISS office, 520 621-4627.
 
-* Do not take students into Mexico unless cleared by ISS. *Visa status is at risk*.
+* Do not take student into Mexico unless cleared by the ISS office, 520 621-4627. Visa status could be put at risk.
 
-* Traveling anywhere, even on day trips, it is wise for students to carry their paperwork.
+* Clarify special requirements, such as dietary, religious, or other customary practices to avoid problems and confusion.
 
-* Clarify special requirements, such as dietary, religious or other customary practices to avoid problems and confusion.
+* Consider inviting student to your home within the first month or two.  Provide transportation for the student’s first visit, if possible.
 
-* Call your student(s) or email to introduce yourself within 1 week of assignment. If you have problems in establishing a relationship or no longer wish to participate, please notify the *International Friends (IF)* chair.
-
-* Provide transportation for the student's first visit.
-
-* Advise students of the types of pets you own.
+* Advise student of the types of pets you own.
 
 * Invite student to your home within the first month or two if possible.
 
-* Research and become familiar with your student's country. Find out about attitudes, ethnic groups, language, food, gift giving.
+* Research and become familiar with your student’s country and culture.  Find out about attitudes, ethnic groups, language, food, gift giving, etc.
 
-* Share views on each other's economic and political systems. Talk about current news events, but do not alienate.
+* Share views on each other’s economic and political systems.  Talk about current news events, but do not pontificate or alienate.
 
-* Spend time with your student answering questions about traditions and customs in the US. Ask your students to share stories and show pictures about their countries, friends, families.
+* Spend time with your student answering questions about traditions and customs in the US.  Ask your student to share stories and show pictures of home countries, families, and friends.
 
-* Invite your student to picnics, celebrations (birthdays, anniversaries, graduations), schools, day trips, city and surrounding area sites, hospitals, your office.
+* Invite your student to picnics, sporting events, your workplace, and celebrations such as birthdays, anniversaries, graduations, holidays, and local festivals.  Take day trips, visit city and surrounding area sites, museums, and attractions.
 
-* Advise the ISS if your student seems to be having a difficult time adjusting.
+* Advise the ISS office, 520 621-4627, if your student seems to be having a difficult time adjusting.  If you have problems in establishing a relationship or no longer wish to participate, please notify International Friends, info@ifriendstucson.org.
 
-* Promotion of non-IF organizations, programs, events, membership and sales of non-IF-related materials are strictly prohibited at official IF events, such as luncheons, receptions and picnics, unless such participation has been requested/approved by the IF board.
+* While graduate and undergraduate students may not serve as IF hosts, they are welcome to participate as volunteers at IF events.
 
-* Because IF's intent is to connect students with residents of Tucson outside of the UA campus environment, undergraduate and graduate students may not serve as IF hosts. However, opportunities exist for students to get involved as "junior hosts" and as volunteers at IF events.
-				`
-			}, {
-				name: "student",
-				label: "For Students",
-				content: `
-* The period of assignment to a host is for one year as long as it is mutually satisfying. Your relationship may continue well beyond the year. In fact, you and your host may want to welcome another student at the beginning of the next winter semester.
+* Promotion of non-International Friends organizations, programs, events, membership, and sales of non-IF-related materials are strictly prohibited at IF events unless participation has been requested/approved by the IF board.`
+				},
+				{
+					name: "student",
+					label: "For Students",
+					content: `
+* The period of matching to a host is for one year, as long as it is mutually satisfying.  Your relationship may continue well beyond the year.  In fact, you and your host may want to welcome another student at the beginning of the next academic year.
 
-* Any student queries regarding the following should be referred to *International Student Services (ISS)*:
+* Call or email your host to introduce yourself within one week of assignment.
+
+* If you have any questions regarding the following, contact the International Student Services (ISS) office, 520 621-4627:
   * Employment instructions
   * Immigration and Visa Issues
   * Academic problems with professors, advisors and administrators
   * Financial problems
   * Major medical problems
 
-* Studies are the first priority.
+* School work and study are every student’s first priority.
 
-* No proselytizing unless by mutual consent.
+* Proselytizing is not allowed. If you invite your host to a religious activity, make the nature and sponsorship of the activity clear in advance.  Respect their wishes if they choose not to go.  International Friends is about mutual respect and friendship.
 
-* Do not ask for financial loans, guarantees for visas, purchasing cars, leasing apartments, etc. This is an imposition and places hosts in an uncomfortable position, especially since hosts may not be able to afford this risk and cannot offer this for every student.
+* Do not ask for financial loans, guarantees for visas, or loans for purchasing cars, leasing apartments, etc.  This is an imposition and places hosts in an uncomfortable position, especially since hosts may not be able to afford this risk and cannot offer this for every student.
 
-* Obey US laws, including those governing alcohol, employment, etc. Sexual harassment is not tolerated and must be reported to the ISS; (520) 621-4627.
+* Obey US laws, including those governing alcohol, employment, etc.  Sexual harassment is not tolerated and must be reported to International Friends, info@ifriendstucson.org, or the ISS office, 520 621-4627.
 
-* Clarify special requirements, such as dietary, religious or other customary practices to avoid problems and confusion.
+* Advise your host and the ISS office of any address, email address, or phone number change.
 
-* Call your host or email to introduce yourself within 1 week of assignment.
+* Clarify special requirements, such as dietary, religious, or other customary practices to avoid problems and confusion.
 
-* Return your hosts calls and emails.
+* Return your host’s calls and emails in a timely manner.
 
-* Be prompt and remember that saying "no" is OK and better than not responding.
+* Advise your host if you are allergic to or afraid of any pets.
 
-* Advise your host if you are allergic or afraid of any pets.
+* Feel free to ask your host about traditions and customs in the US, and share your own country’s traditions and pictures and stories of your family and friends with your host.
 
-* Spend time with you host family asking about the customs in the US and share stories and pictures about your family and friends.
 
-* Research and get acquainted with some important holidays, such as Independence Day (July 4) and Thanksgiving. Learn about Halloween, St. Patrick's Day and other fun holidays. Remember, the United States is comprised of people from many cultures, races, religions and ethnic groups.
+* Become familiar with important holidays, and remember that the United States is comprised of people from many different cultures, races, religions, and ethnic groups.
 
-* Share views on each others economic and political systems. Talk about current news events, but do not alienate.
+* Share views on each other’s economic and political systems.  Talk about current news events, but do not pontificate or alienate.
 
-* Don't ignore your host! Spend time with them and learn about life in Tucson and in the USA. If you find you have no time to participate, notify the ISS so another student can be assigned.
+* Cook a traditional meal for your host.  Ask if you can use your host’s kitchen if you do not have space.
 
-* Cook a traditional meal for your host. Ask if you can use their kitchen if you do not have space.
+* Don’t ignore your host!  Spend time with them and learn about life in Tucson and in the US.  If you find you do not have time to participate, notify International Friends, info@ifriendstucson.org, so another student can be matched with your host.
 
-* If you have problems in establishing a relationship with your host or no longer wish to participate, please notify the ISS.
+* If you have problems establishing a relationship with your host or no longer wish to participate, please notify International Friends, info@ifriendstucson.org.
 `
-			}]
+				}
+			]
 		};
 	}
 
@@ -109,7 +110,6 @@ export default class GuidelinePage extends Component {
 		super(props);
 		this.state = { active: "host" };
 	}
-
 
 	render() {
 		const { guidelines } = this.props;
@@ -128,15 +128,18 @@ export default class GuidelinePage extends Component {
 						}}>
 						{guidelines.map(({ name, label, content }) => (
 							<Nav.Item key={name}>
-								<Nav.Link
-									eventKey={name}
-									key={name}>
+								<Nav.Link eventKey={name} key={name}>
 									{label}
 								</Nav.Link>
 							</Nav.Item>
 						))}
 					</Nav>
-					<ReactMarkdown className="p-2 mt-2" source={guidelines.find(guildline => guildline.name === active).content} />
+					<ReactMarkdown
+						className="p-2 mt-2"
+						source={
+							guidelines.find(guildline => guildline.name === active).content
+						}
+					/>
 				</Container>
 			</MainLayout>
 		);

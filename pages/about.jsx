@@ -20,155 +20,190 @@ export default class About extends React.Component {
 				message: "LEARN ABOUT EACH OTHER'S CULTURE",
 				image: "/static/images/about-banner.jpg"
 			},
-			sections: [[
-				{
-					title: "Our History",
-					textAlign: "justify",
-					content: `
-International Friends was founded in July 1952 by the wife of UA President Richard A. Harville and a group of other women from the local community. At the time, there were just 63 international students at the University. The fledgling group was first called Families for International Friendship. It grew slowly through the years, relying on small donations from a variety of local individuals and organizations.
+			sections: [
+				[
+					{
+						title: "Our History",
+						textAlign: "justify",
+						content: `
+International Friends was founded in 1952 by George Lee Garner Harvill, wife of University of Arizona President Richard A. Harvill, and a group of women from Tucson.  At the time, there were just 63 international students at the University. The fledgling group was first called Families for International Friendship. The organization grew slowly through the years, relying on small donations from a variety of local individuals and organizations.
 
-International Friends became an Arizona corporation in February 2004 and also received official 501(c)(3) tax exempt status from the IRS. This—along with the support and encouragement of our students, community hosts, and Board members—provides a solid foundation for the future.`
+nternational Friends became an Arizona corporation in 2004 and also received official 501(c)(3) tax-exempt status from the IRS. This, along with the support and encouragement of international students, community hosts, and board members, provides a solid foundation for the future.`
+					},
+					{
+						title: "International Friends Board",
+						textAlign: "justify",
+						content: `
+The all-volunteer board is composed of past and present hosts, international students, and an ex-officio representative from the UA International Student Services office. Board meetings are held five times a year to evaluate the program and plan events. 
+`,
+						actions: [
+							{
+								type: ACTIONS.READMORE,
+								href: "/by-laws",
+								label: "By Laws"
+							},
+							{
+								type: ACTIONS.READMORE,
+								href: "/letter",
+								label: "Chairperson Letter"
+							}
+						]
+					}
+				]
+			],
+			eventColumns: [
+				{
+					name: "date",
+					label: "Date",
+					format: FORMATS.DATE
 				},
 				{
-					title: "Board Meetings",
-					textAlign: "justify",
-					content: `
-Board Meetings are held five times a year to evaluate the program and plan events. Future initiatives and strategies are discussed at a Spring Planning Meeting. The Board is composed of students, Tucson hosts and a representative from the University of Arizona office of International Students. Anyone who is interested can become a member of one of the Committees of the Board, including Special Events, Fund Raising, and Public Relations. Often times committee members move on to the Board of Directors when a vacancy occurs on the Board. You can learn more about the board by visiting the links below.
-`,
-					actions: [{
-						type: ACTIONS.READMORE,
-						href: "/by-laws",
-						label: "By Laws"
-					}, {
-						type: ACTIONS.READMORE,
-						href: "/letter",
-						label: "Chairperson Letter"
-					}]
+					name: "startDatetime",
+					label: "Start Time",
+					format: FORMATS.TIME
 				},
-			]],
-			eventColumns: [{
-				name: "date",
-				label: "Date",
-				format: FORMATS.DATE
-			}, {
-				name: "startDatetime",
-				label: "Start Time",
-				format: FORMATS.TIME
-			}, {
-				name: "endDatetime",
-				label: "End Time",
-				format: FORMATS.TIME
-			}, {
-				name: "name",
-				label: "Event",
-			}, {
-				name: "location",
-				label: "Location"
-			}],
-			events: [{
-				key: "board-meeting-jun",
-				name: "Board Meeting",
-				startDatetime: "2019-06-27 17:30",
-				date: "2019-06-27",
-				location: "ISS Office"
-			}, {
-				name: "Welcome Luncheon",
-				date: "2019-08-24",
-				startDatetime: "2019-08-24 10:00",
-				endDatetime: "2019-08-24 14:00",
-				location: "First United Methodist Church"
-			}, {
-				name: "New Host Orientation",
-				date: "2019-09-14",
-				location: "Tucson Visitor's Center"
-			}, {
-				key: "board-meeting-sep",
-				name: "Board Meeting",
-				startDatetime: "2019-09-16 17:30",
-				date: "2019-09-16",
-				location: "ISS Office"
-			}, {
-				name: "Turquoise Trail",
-				placeholder: "Nov TBA"
-			}, {
-				name: "International Students Talent Show",
-				placeholder: "Nov TBA"
-			}, {
-				key: "board-meeting-dec",
-				name: "Board Meeting",
-				startDatetime: "2019-12-02 17:30",
-				date: "2019-12-02",
-				location: "ISS Office"
-			}, {
-				name: "Welcome Brunch",
-				date: "2020-01-12",
-				location: "Tucson Visitor's Center"
-			}, {
-				name: "Rodeo Picnic",
-				date: "2020-02-23"
-			}, {
-				name: "Annual Board Meeting",
-				date: "2020-03-02",
-				startDatetime: "2020-03-02 17:30",
-				location: "ISS Office"
-			}, {
-				name: "Planning Meeting",
-				date: "2020-04-18"
-			}],
+				{
+					name: "endDatetime",
+					label: "End Time",
+					format: FORMATS.TIME
+				},
+				{
+					name: "name",
+					label: "Event"
+				},
+				{
+					name: "location",
+					label: "Location"
+				}
+			],
+			events: [
+				{
+					key: "board-meeting-jun",
+					name: "Board Meeting",
+					startDatetime: "2019-06-27 17:30",
+					date: "2019-06-27",
+					location: "ISS Office"
+				},
+				{
+					name: "Welcome Luncheon",
+					date: "2019-08-24",
+					startDatetime: "2019-08-24 10:00",
+					endDatetime: "2019-08-24 14:00",
+					location: "First United Methodist Church"
+				},
+				{
+					name: "New Host Orientation",
+					date: "2019-09-14",
+					location: "Tucson Visitor's Center"
+				},
+				{
+					key: "board-meeting-sep",
+					name: "Board Meeting",
+					startDatetime: "2019-09-16 17:30",
+					date: "2019-09-16",
+					location: "ISS Office"
+				},
+				{
+					name: "Turquoise Trail",
+					placeholder: "Nov TBA"
+				},
+				{
+					name: "International Students Talent Show",
+					placeholder: "Nov TBA"
+				},
+				{
+					key: "board-meeting-dec",
+					name: "Board Meeting",
+					startDatetime: "2019-12-02 17:30",
+					date: "2019-12-02",
+					location: "ISS Office"
+				},
+				{
+					name: "Welcome Brunch",
+					date: "2020-01-12",
+					location: "Tucson Visitor's Center"
+				},
+				{
+					name: "Rodeo Picnic",
+					date: "2020-02-23"
+				},
+				{
+					name: "Annual Board Meeting",
+					date: "2020-03-02",
+					startDatetime: "2020-03-02 17:30",
+					location: "ISS Office"
+				},
+				{
+					name: "Planning Meeting",
+					date: "2020-04-18"
+				}
+			],
 			boardMembers: [
 				{
 					firstName: "Patricia",
 					lastName: "Gilman",
-					title: "Co-Chair",
-				}, {
+					title: "Co-Chair"
+				},
+				{
 					firstName: "Randy",
 					lastName: "Spalding",
-					title: "Co-Chair",
-				}, {
+					title: "Co-Chair"
+				},
+				{
 					firstName: "Pam",
 					lastName: "Obando",
-					title: "Secretary",
-				}, {
+					title: "Secretary"
+				},
+				{
 					firstName: "Robert",
 					lastName: "Woerner",
-					title: "Treasurer",
-				}, {
+					title: "Treasurer"
+				},
+				{
 					firstName: "Jody",
 					lastName: "Friend",
-					title: "Community Member",
-				}, {
+					title: "Community Member"
+				},
+				{
 					firstName: "Doug",
 					lastName: "Cline",
-					title: "Community Member",
-				}, {
+					title: "Community Member"
+				},
+				{
 					firstName: "LuAnn",
 					lastName: "Haley",
-					title: "Community Member",
-				}, {
+					title: "Community Member"
+				},
+				{
 					firstName: "Michelle",
 					lastName: "Morden",
-					title: "Community Member",
-				}, {
+					title: "Community Member"
+				},
+				{
 					firstName: "Momoka",
 					lastName: "Sugimura",
-					title: "Student Representative",
-				}, {
+					title: "Student Representative"
+				},
+				{
 					firstName: "Francisco",
 					lastName: "Villegas",
-					title: "Student Representative",
-				}, {
+					title: "Student Representative"
+				},
+				{
 					firstName: "Siyu",
 					lastName: "Wang",
-					title: "Student Representative",
-				}, {
+					title: "Student Representative"
+				},
+				{
 					firstName: "Youhao",
 					lastName: "Wei",
 					title: "Technical Advisor",
 					email: "youhaowei@ifriends.org"
-				}, {
+				},
+				{
 					firstName: "Sylvia",
 					lastName: "Ahanonu",
-					title: "ISS Liason",
+					title: "ISS Liason"
 				}
 			]
 		};
