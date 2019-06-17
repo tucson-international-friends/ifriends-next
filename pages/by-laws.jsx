@@ -7,8 +7,7 @@ export default class ByLaws extends Component {
 	static async getInitialProps() {
 		return {
 			bylaws: {
-				header:
-					`
+				header: `
 # International Friends, Inc.
 
 ### Coperate bylaws
@@ -110,7 +109,7 @@ If included in the annual budget or otherwise approved by the Board, receipts fo
 
 #### Article VIII – BOOKS, RECORDS AND REPORTS
 ###### Section 1 – Annual Report.  
-The Treasurer of the corporation shall cause annual or other reports to be prepared as required by law and shall provide copies to the Board.
+The co-chairs of the corporation shall cause annual or other reports to be prepared as required by law and shall provide copies to the Board.
 ###### Section 2 – Permanent Records.  
 The corporation shall keep current and correct records of the accounts, minutes of the meetings, and proceedings of the corporation.  Such records shall be kept at the registered office or the principal place of business of the corporation or as otherwise determined by the Board.  Any such records shall be in written form or in a form capable of being converted into written form.
 
@@ -135,13 +134,14 @@ Proceedings of the corporation shall be conducted in accordance with the latest 
 	}
 
 	render() {
-		const { bylaws: { header, content } } = this.props;
+		const {bylaws: { header, content }} = this.props;
 		return (
 			<MainLayout>
-				<Container style={{
-					paddingTop: "10em",
-					paddingBottom: "10em"
-				}}>
+				<Container
+					style={{
+						paddingTop: "10em",
+						paddingBottom: "10em"
+					}}>
 					<ReactMarkDown source={header} className="text-center" />
 					<ReactMarkDown source={content} />
 				</Container>

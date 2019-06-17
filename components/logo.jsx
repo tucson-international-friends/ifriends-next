@@ -8,8 +8,11 @@ export default ({ size, className }) => {
 	}
 	return (
 		<span className={className}>
-			<FaGlobeAmericas size={logoSize} color="var(--info)" />
-			<img src="/static/logo.svg" alt="logo" style={{ height: logoSize }} />
+			<img
+				src="/static/logo_revised 2.jpg"
+				alt="logo"
+				style={{ height: logoSize }}
+			/>
 		</span>
 	);
 };
