@@ -29,7 +29,7 @@ export default class Index extends Component {
 						title: "Who We Are",
 						textAlign: "justify",
 						content:
-							"International Friends provides opportunities for international students and local hosts to develop close friendships, and an understanding of and appreciation for each other's cultures. We offer activities through which international students may participate in the life of the community. We subscribe to the national guidelines set forth by [NAFSA: Association of International Educators](http://www.nafsa.org/) on the rights of international students.",
+							"International Friends provides opportunities for international students and local hosts to develop close friendships and an understanding of and appreciation for each other's cultures. We offer activities through which international students may participate in the life of the community. We subscribe to the national guidelines set forth by [NAFSA: Association of International Educators](http://www.nafsa.org/) on the rights of international students.",
 						actions: [
 							{
 								type: ACTIONS.READMORE,

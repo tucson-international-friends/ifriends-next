@@ -53,9 +53,9 @@ I will take the liberty to thank all the Board Members and hosts in the name of 
 						image: "/static/images/fall-fiesta.jpg"
 					},
 					{
-						title: "SPRING WELCOME LUNCHES",
+						title: "SPRING WELCOME Brunch",
 						content:
-							"Before the spring semester begins, International Friends sponsors a brunch for incoming international students and hosts.  This meet-and-greet event is a great opportunity to welcome the new spring semester students.  While at the brunch, students are encouraged to sign up for an International Friends host.  The matching process begins after the lunch.",
+							"Before the spring semester begins, International Friends sponsors a brunch for incoming international students and hosts.  This meet-and-greet event is a great opportunity to welcome the new spring semester students.  While at the brunch, students are encouraged to sign up for an International Friends host. The matching process begins after the brunch.",
 						image: "/static/images/welcome-dinner.jpg"
 					},
 					{

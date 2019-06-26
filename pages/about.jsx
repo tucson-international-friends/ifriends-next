@@ -28,7 +28,7 @@ export default class About extends React.Component {
 						content: `
 International Friends was founded in 1952 by George Lee Garner Harvill, wife of University of Arizona President Richard A. Harvill, and a group of women from Tucson.  At the time, there were just 63 international students at the University. The fledgling group was first called Families for International Friendship. The organization grew slowly through the years, relying on small donations from a variety of local individuals and organizations.
 
-nternational Friends became an Arizona corporation in 2004 and also received official 501(c)(3) tax-exempt status from the IRS. This, along with the support and encouragement of international students, community hosts, and board members, provides a solid foundation for the future.`
+International Friends became an Arizona corporation in 2004 and also received official 501(c)(3) tax-exempt status from the IRS. This, along with the support and encouragement of international students, community hosts, and board members, provides a solid foundation for the future.`
 					},
 					{
 						title: "International Friends Board",

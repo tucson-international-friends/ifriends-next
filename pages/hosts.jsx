@@ -102,13 +102,6 @@ Information about group activities and other items of interest are communicated 
 `
 				},
 				{
-					question: "What is required of a community host?",
-					answer: `
-* Contact student(s) within one week of assignment. Students are most eager to meet hosts and get acquainted!
-* Continue monthly contact the first year the student is here. Plan to have a meal together, participate in community events, go sightseeing, attend International Friends activities, or just share coffee and conversation!
-* Participate as often as possible in International Friends group activities.`
-				},
-				{
 					question: "WHAT IS REQUIRED OF An international friends HOST?",
 					answer: `
 * Complete application and be approved as a host

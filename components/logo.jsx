@@ -9,7 +9,7 @@ export default ({ size, className }) => {
 	return (
 		<span className={className}>
 			<img
-				src="/static/logo_revised 2.jpg"
+				src="/static/logo.png"
 				alt="logo"
 				style={{ height: logoSize }}
 			/>
