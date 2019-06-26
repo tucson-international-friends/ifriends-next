@@ -45,7 +45,7 @@ The all-volunteer board is composed of past and present hosts, international stu
 							{
 								type: ACTIONS.READMORE,
 								href: "/letter",
-								label: "Chairperson Letter"
+								label: "Letter from Co-Chairs"
 							}
 						]
 					}
