@@ -30,6 +30,7 @@ export const renderAction = (actionParam, key, defaultValue) => {
 				<Button
 					variant="outline-light"
 					key={key}
+					disabled
 					label={action.label || "Log in"}
 					onClick={() => {
 						const auth = new Auth();
