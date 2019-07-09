@@ -6,5 +6,5 @@
 			"use": "@now/next"
 		}
 	],
-	"alias": ["ifriendstucson.com", "ifriendstucson.org"]
+	"alias": ["ifriendstucson.org"]
 }
