@@ -14,6 +14,7 @@ import "../styles/global/main.scss";
 const MainLayout = ({ children }) => (
 	<React.Fragment>
 		<Meta />
+		<title>Tucson International Friends</title>
 		<Navbar
 			navItems={navItems.map(value => getPageByName(value))}
 			navActions={[
