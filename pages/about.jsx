@@ -142,12 +142,14 @@ The all-volunteer board is composed of past and present hosts, international stu
 				{
 					firstName: "Patricia",
 					lastName: "Gilman",
-					title: "Co-Chair"
+					title: "Co-Chair",
+					profileImg: "/static/images/profiles/patricia_gilman.jpg"
 				},
 				{
 					firstName: "Randy",
 					lastName: "Spalding",
-					title: "Co-Chair"
+					title: "Co-Chair",
+					profileImg: "/static/images/profiles/randy_spalding.jpeg"
 				},
 				{
 					firstName: "Pam",
@@ -157,7 +159,8 @@ The all-volunteer board is composed of past and present hosts, international stu
 				{
 					firstName: "Robert",
 					lastName: "Woerner",
-					title: "Treasurer"
+					title: "Treasurer",
+					profileImg: "/static/images/profiles/robert_woerner.jpeg"
 				},
 				{
 					firstName: "Jody",
@@ -170,9 +173,15 @@ The all-volunteer board is composed of past and present hosts, international stu
 					title: "Community Member"
 				},
 				{
+					firstName: "Rachel",
+					lastName: "Ivanyi",
+					title: "Comunity Member"
+				},
+				{
 					firstName: "LuAnn",
 					lastName: "Haley",
-					title: "Community Member"
+					title: "Community Member",
+					profileImg: "/static/images/profiles/luann_haley.jpg"
 				},
 				{
 					firstName: "Michelle",
