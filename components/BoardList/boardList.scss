@@ -18,13 +18,8 @@
 }
 
 .profilePicture {
-  height: auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
   margin-bottom: 0.5em;
-  width: 100%;
-  @include media-breakpoint-up(sm) {
-    width: 50%;
-  }
-  @include media-breakpoint-up(md) {
-    width: 90%;
-  }
 }
