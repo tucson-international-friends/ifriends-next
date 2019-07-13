@@ -75,7 +75,8 @@ $lgHeight: 600px;
 
 .textCol {
   height: $smHeight;
-  overflow: scroll;
+  box-sizing: content-box;
+  overflow-y: auto;
   @include media-breakpoint-up(md) {
     height: $lgHeight;
   }
@@ -95,7 +96,7 @@ $lgHeight: 600px;
 }
 
 .textContainer {
-  overflow: scroll;
+  overflow: hidden;
   padding-bottom: 1em;
   padding-top: 1em;
 }
