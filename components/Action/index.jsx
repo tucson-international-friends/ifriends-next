@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Button, { Signup } from "../Button";
 import Login from "./login";
+import Profile from "./profile";
 
 export const ACTIONS = {
 	SIGNUP: "signup",
 	READMORE: "readmore",
-	LOGIN: "login"
+	LOGIN: "login",
+	PROFILE: "profile"
 };
 
 export const renderAction = (actionParam, key, defaultValue) => {
@@ -26,6 +28,8 @@ export const renderAction = (actionParam, key, defaultValue) => {
 			);
 		case ACTIONS.LOGIN:
 			return <Login key={key} label={label} />;
+		case ACTIONS.PROFILE:
+			return <Profile key={key} />;
 		default:
 			return (
 				<Link href={href} key={key}>

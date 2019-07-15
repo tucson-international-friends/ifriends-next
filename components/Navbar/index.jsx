@@ -18,8 +18,7 @@ const MainNavbar = ({ router, navItems }) => {
 		{ type: ACTIONS.LOGIN },
 		{ type: ACTIONS.SIGNUP }
 	] : [
-		{ type: ACTIONS.DASHBOARD },
-		{ type: ACTIONS.LOGOUT }
+		{ type: ACTIONS.PROFILE }
 	]), [user]);
 	useEffect(() => {
 		firebase.auth().onAuthStateChanged((u) => {

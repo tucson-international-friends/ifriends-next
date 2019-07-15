@@ -1,16 +1,17 @@
-import { Modal, Form } from "react-bootstrap";
+import { Modal, Form, Alert } from "react-bootstrap";
 import { useCallback, useState } from "react";
 import Button from "../Button";
 import firebase from "../../lib/firebase";
 
 const Login = ({ label = "Log In" }) => {
 	const [showModal, setShowModal] = useState(false);
+	const [error, setError] = useState(null);
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const handleLogin = useCallback(
 		() => {
 			firebase.auth().signInWithEmailAndPassword(email, password).catch((err) => {
-				console.error(err);
+				setError(err.message);
 			});
 		},
 		[email, password],
@@ -22,6 +23,15 @@ const Login = ({ label = "Log In" }) => {
 					<Modal.Title>{label}</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
+					<Alert
+						variant="danger"
+						show={!!error}
+						dismissible
+						onClose={() => {
+							setError(null);
+						}}>
+						{error}
+					</Alert>
 					<Form>
 						<Form.Group controlId="email">
 							<Form.Label>Email</Form.Label>
