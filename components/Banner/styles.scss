@@ -1,4 +1,4 @@
-@import "../../styles/global";
+@import "../../styles/mixins";
 
 .banner {
   text-align: center;
@@ -17,7 +17,6 @@
   @include media-breakpoint-up(xl) {
     height: 600px;
   }
-  @include box-shadow(inset elavation(-1));
 }
 
 .banner:before {

@@ -5,11 +5,31 @@ import { FaBars } from "react-icons/fa";
 import classNames from "classnames";
 import { withRouter } from "next/router";
 import Link from "next/link";
+import React, { useMemo, useEffect } from "react";
+import { useGlobal } from "reactn";
 import Logo from "../logo";
-import { renderActions } from "../Action";
+import { renderActions, ACTIONS } from "../Action";
 import styles from "./navbar.scss";
+import firebase from "../../lib/firebase";
 
-const MainNavbar = ({ router, navItems, navActions }) => {
+const MainNavbar = ({ router, navItems }) => {
+	const [user, setUser] = useGlobal("user");
+	const navActions = useMemo(() => (!user ? [
+		{ type: ACTIONS.LOGIN },
+		{ type: ACTIONS.SIGNUP }
+	] : [
+		{ type: ACTIONS.DASHBOARD },
+		{ type: ACTIONS.LOGOUT }
+	]), [user]);
+	useEffect(() => {
+		firebase.auth().onAuthStateChanged((u) => {
+			if (u) {
+				setUser(u);
+			} else {
+				setUser(undefined);
+			}
+		});
+	}, []);
 	const navbar = (
 		<>
 			<Navbar.Brand className={styles.brand}>
