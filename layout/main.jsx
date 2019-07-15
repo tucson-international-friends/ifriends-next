@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 import navItems from "./navbarItems.json";
 import footerNavItems from "./footerMenuItems.json";
 import { getPageByName } from "../lib/page";
-import { ACTIONS } from "../components/Action";
 
 import "../styles/global/main.scss";
 
@@ -15,11 +14,7 @@ const MainLayout = ({ children }) => (
 	<React.Fragment>
 		<Meta />
 		<Navbar
-			navItems={navItems.map(value => getPageByName(value))}
-			navActions={[
-				{ type: ACTIONS.LOGIN },
-				{ type: ACTIONS.SIGNUP }
-			]} />
+			navItems={navItems.map(value => getPageByName(value))} />
 		<div
 			className="page"
 		>{children}

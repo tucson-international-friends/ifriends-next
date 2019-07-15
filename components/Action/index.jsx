@@ -8,7 +8,6 @@ export const ACTIONS = {
 	LOGIN: "login"
 };
 
-
 export const renderAction = (actionParam, key, defaultValue) => {
 	const action = {
 		variant: "primary",
@@ -26,7 +25,7 @@ export const renderAction = (actionParam, key, defaultValue) => {
 				</Link>
 			);
 		case ACTIONS.LOGIN:
-			return <Login key={key} label={action.label} />;
+			return <Login key={key} label={label} />;
 		default:
 			return (
 				<Link href={href} key={key}>
@@ -36,5 +35,4 @@ export const renderAction = (actionParam, key, defaultValue) => {
 	}
 };
 
-export const renderActions = (actions, defaultValue) =>
-	actions.map((action, i) => renderAction(action, i, defaultValue));
+export const renderActions = (actions, defaultValue) => actions.map((action, i) => renderAction(action, i, defaultValue));

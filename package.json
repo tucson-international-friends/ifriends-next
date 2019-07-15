@@ -13,6 +13,7 @@
 		"body-parser": "^1.19.0",
 		"bootstrap": "^4.3.1",
 		"classnames": "^2.2.6",
+		"dotenv": "^8.0.0",
 		"express": "^4.16.4",
 		"file-loader": "^3.0.1",
 		"firebase": "^6.3.0",
@@ -22,14 +23,13 @@
 		"next": "^8.0.4",
 		"node-sass": "^4.12.0",
 		"react": "^16.8.6",
-		"react-bootstrap": "^1.0.0-beta.5",
+		"react-bootstrap": "^1.0.0-beta.10",
 		"react-dom": "^16.8.6",
 		"react-icons": "^3.5.0",
 		"react-markdown": "^4.0.6",
 		"reactn": "^2.1.4",
 		"url-loader": "^1.1.2",
-		"webpack-filter-warnings-plugin": "^1.2.1",
-		"dotenv": "^8.0.0"
+		"webpack-filter-warnings-plugin": "^1.2.1"
 	},
 	"devDependencies": {
 		"babel-eslint": "^10.0.1",
