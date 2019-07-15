@@ -1,4 +1,5 @@
 require("dotenv").config();
+const DotEnv = require("dotenv-webpack");
 const withSass = require("@zeit/next-sass");
 
 const path = require("path");
@@ -37,6 +38,18 @@ module.exports = withSass({
 				}
 			}
 		});
+
+		config.plugins = config.plugins || [];
+
+		config.plugins = [
+			...config.plugins,
+
+			// Read the .env file
+			new DotEnv({
+				path: path.join(__dirname, ".env"),
+				systemvars: true
+			})
+		];
 		return config;
 	}
 });
