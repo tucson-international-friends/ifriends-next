@@ -175,7 +175,7 @@ The all-volunteer board is composed of past and present hosts, international stu
 				{
 					firstName: "Rachel",
 					lastName: "Ivanyi",
-					title: "Comunity Member"
+					title: "Community Member"
 				},
 				{
 					firstName: "LuAnn",
@@ -191,7 +191,8 @@ The all-volunteer board is composed of past and present hosts, international stu
 				{
 					firstName: "Momoka",
 					lastName: "Sugimura",
-					title: "Student Representative"
+					title: "Student Representative",
+					profileImg: "/static/images/profiles/momoka_sugimura.jpg"
 				},
 				{
 					firstName: "Francisco",

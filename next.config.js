@@ -1,4 +1,6 @@
+require("dotenv").config();
 const withSass = require("@zeit/next-sass");
+
 const path = require("path");
 // eslint-disable-next-line import/no-extraneous-dependencies
 const defaultGetLocalIdent = require("css-loader/lib/getLocalIdent");
