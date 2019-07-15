@@ -35,5 +35,6 @@ export const renderAction = (actionParam, key, defaultValue) => {
 			);
 	}
 };
-// eslint-disable-next-line max-len
-export const renderActions = (actions, defaultValue) => actions.map((action, i) => renderAction(action, i, defaultValue));
+
+export const renderActions = (actions, defaultValue) =>
+	actions.map((action, i) => renderAction(action, i, defaultValue));
