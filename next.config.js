@@ -40,16 +40,21 @@ module.exports = withSass({
 		});
 
 		config.plugins = config.plugins || [];
-
 		config.plugins = [
 			...config.plugins,
-
 			// Read the .env file
 			new DotEnv({
 				path: path.join(__dirname, ".env"),
 				systemvars: true
 			})
 		];
+
+		config.resolve.alias = {
+			...config.resolve.alias,
+			Libs: path.join(__dirname, "lib/"),
+			Components: path.join(__dirname, "components/"),
+			Layouts: path.join(__dirname, "layout/")
+		};
 		return config;
 	}
 });

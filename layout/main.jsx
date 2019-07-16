@@ -8,20 +8,37 @@ import navItems from "./navbarItems.json";
 import footerNavItems from "./footerMenuItems.json";
 import { getPageByName } from "../lib/page";
 import "../styles/global/main.scss";
+import { useEffect } from "react";
+import { useGlobal } from "reactn";
+import firebase from "../lib/firebase";
 
 addReactNDevTools();
 
 
-const MainLayout = ({ children }) => (
-	<React.Fragment>
-		<Meta />
-		<Navbar
-			navItems={navItems.map(value => getPageByName(value))} />
-		<div
-			className="page"
-		>{children}
-		</div>
-		<Footer menuItems={footerNavItems.map(value => getPageByName(value))} />
-	</React.Fragment>
-);
+const MainLayout = ({ children, dashboardView }) => {
+	const [user, setUser] = useGlobal("user");
+	useEffect(() => {
+		firebase.auth().onAuthStateChanged((u) => {
+			if (u) {
+				setUser(firebase.auth().currentUser);
+			} else {
+				setUser(undefined);
+			}
+		});
+	}, []);
+	return (
+		<React.Fragment>
+			<Meta />
+			<Navbar
+				dashboardView={dashboardView}
+				navItems={navItems.map(value => getPageByName(value))}
+				user={user} />
+			<div
+				className="page"
+			>{children}
+			</div>
+			<Footer menuItems={footerNavItems.map(value => getPageByName(value))} />
+		</React.Fragment>
+	);
+};
 export default MainLayout;

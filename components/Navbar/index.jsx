@@ -6,14 +6,11 @@ import classNames from "classnames";
 import { withRouter } from "next/router";
 import Link from "next/link";
 import React, { useMemo, useEffect } from "react";
-import { useGlobal } from "reactn";
 import Logo from "../logo";
 import { renderActions, ACTIONS } from "../Action";
 import styles from "./navbar.scss";
-import firebase from "../../lib/firebase";
 
-const MainNavbar = ({ router, navItems }) => {
-	const [user, setUser] = useGlobal("user");
+const MainNavbar = ({ router, navItems, user }) => {
 	const navActions = useMemo(() => (!user ? [
 		{ type: ACTIONS.LOGIN },
 		{ type: ACTIONS.SIGNUP }
@@ -21,13 +18,7 @@ const MainNavbar = ({ router, navItems }) => {
 		{ type: ACTIONS.PROFILE }
 	]), [user]);
 	useEffect(() => {
-		firebase.auth().onAuthStateChanged((u) => {
-			if (u) {
-				setUser(u);
-			} else {
-				setUser(undefined);
-			}
-		});
+
 	}, []);
 	const navbar = (
 		<>

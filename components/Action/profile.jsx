@@ -1,33 +1,42 @@
 import { NavDropdown, Image } from "react-bootstrap";
 import { useGlobal } from "reactn";
 import { useEffect, useCallback } from "react";
+import { FaSignOutAlt, FaUserCircle } from "react-icons/fa";
 import firebase from "../../lib/firebase";
 
 const Profile = () => {
-	const [profile, setProfile] = useGlobal("profile");
-	useEffect(() => {
-		setProfile(firebase.auth().currentUser);
-	}, [firebase.auth().currentUser]);
+	const [user] = useGlobal("user");
 	const handleLogout = useCallback(
 		() => {
 			firebase.auth().signOut();
 		},
 		[],
 	);
-	if (profile) {
+	if (user) {
+		const { displayName = "Manage", photoURL } = user;
+		const profileStyle = {
+			height: 36,
+			width: 36
+		};
 		return (
 			<div style={{ display: "flex", flexDirection: "row" }}>
-				<Image
-					fluid
-					style={{
-						height: 36,
-						width: 36
-					}}
-					roundedCircle
-					src="http://res.cloudinary.com/simpleview/image/upload/v1553790432/clients/simpleview/Youhao_Wei_81557218-47dc-4ae1-a41e-b10b70880b8e.jpg" />
-				<NavDropdown title={profile.displayName || "Profile"} id="basic-nav-dropdown">
-					<NavDropdown.Item onClick={handleLogout}>
-			Logout
+				{ photoURL
+					? (
+						<Image
+							fluid
+							style={profileStyle}
+							roundedCircle
+							src={photoURL} />
+					) : (
+						<FaUserCircle
+							style={profileStyle}
+							color="#90afc1" />
+					)
+				}
+				<NavDropdown title={displayName || "Manage"} id="basic-nav-dropdown">
+					<NavDropdown.Divider />
+					<NavDropdown.Item
+						onClick={handleLogout}><FaSignOutAlt /><b>SIGN OUT</b>
 					</NavDropdown.Item>
 				</NavDropdown>
 			</div>

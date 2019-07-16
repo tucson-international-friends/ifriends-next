@@ -1,7 +1,8 @@
 import Link from "next/link";
-import Button, { Signup } from "../Button";
+import Button from "../Button";
 import Login from "./login";
 import Profile from "./profile";
+import Signup from "./signup";
 
 export const ACTIONS = {
 	SIGNUP: "signup",
