@@ -1,6 +1,8 @@
 import Button from "react-bootstrap/Button";
-import Signup from "./signup";
 import TextButton from "./textButton";
+import GoogleLogin from "./Login/google";
+import FacebookLogin from "./Login/facebook";
+import LoginButton from "./Login";
 
 const ButtonWrapper = (props) => {
 	const { variant = "secondary", icon, label, children, onClick } = props;
@@ -15,4 +17,4 @@ const ButtonWrapper = (props) => {
 
 export default ButtonWrapper;
 
-export { TextButton, Signup };
+export { TextButton, GoogleLogin, FacebookLogin, LoginButton };

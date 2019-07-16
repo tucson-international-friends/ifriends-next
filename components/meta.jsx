@@ -5,7 +5,7 @@ const Meta = () => (
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta charSet="utf-8" />
 		<title>Tucson International Friends</title>
-		<link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+		<link rel="shortcut icon" type="image/x-icon" href="/static/icons/favicon.ico" />
 	</Head>
 );
 
