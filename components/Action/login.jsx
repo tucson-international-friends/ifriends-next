@@ -62,7 +62,7 @@ const Login = ({ label = "Log In" }) => {
 						<Button variant="important" label="Log In" onClick={handleLogin} />
 					</Form>
 					<div style={{
-						borderBottom: "1px solid rgba(0,0,0,0.2)",
+						borderBottom: "2px rgba(0,0,0,0.1) dashed",
 						height: "1rem",
 						marginBottom: "1rem"
 					}}></div>
