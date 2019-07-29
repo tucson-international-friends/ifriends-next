@@ -17,7 +17,7 @@ const MainLayout = ({ children }) => (
 		<Navbar
 			navItems={navItems.map(value => getPageByName(value))}
 			navActions={[
-				{ type: ACTIONS.LOGIN },
+				// { type: ACTIONS.LOGIN },
 				{ type: ACTIONS.SIGNUP }
 			]} />
 		<div
