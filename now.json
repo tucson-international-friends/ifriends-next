@@ -6,5 +6,27 @@
 			"use": "@now/next"
 		}
 	],
-	"alias": ["ifriendstucson.org"]
+	"routes": [
+		{
+			"src": "studentapp.html",
+			"dest": "https://forms.gle/GX3DK4Dg3zFaCxVo9" // new google form
+		},
+		{
+			"src": "about-us.html",
+			"dest": "/about"
+		},
+		{
+			"src": "hostapp.html",
+			"dest": "https://forms.gle/KMv9PU3kBdbazfFX9" // new google form
+		},
+		{
+			"src": "host-a-student.html",
+			"dest": "/hosts"
+		},
+		{
+			"src": "chairperson-letter.html",
+			"dest": "/letter"
+		}
+	],
+	"alias": ["ifriendstucson.org", "www.ifriendstucson.org"]
 }
