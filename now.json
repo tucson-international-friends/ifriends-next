@@ -12,19 +12,19 @@
 			"dest": "https://forms.gle/GX3DK4Dg3zFaCxVo9" // new google form
 		},
 		{
-			"src": "about-us.html",
+			"src": "/about-us.html",
 			"dest": "/about"
 		},
 		{
-			"src": "hostapp.html",
+			"src": "/hostapp.html",
 			"dest": "https://forms.gle/KMv9PU3kBdbazfFX9" // new google form
 		},
 		{
-			"src": "host-a-student.html",
+			"src": "/host-a-student.html",
 			"dest": "/hosts"
 		},
 		{
-			"src": "chairperson-letter.html",
+			"src": "/chairperson-letter.html",
 			"dest": "/letter"
 		}
 	],
