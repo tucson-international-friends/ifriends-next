@@ -9,7 +9,7 @@
 	"routes": [
 		{
 			"src": "studentapp.html",
-			"dest": "https://forms.gle/GX3DK4Dg3zFaCxVo9" // new google form
+			"dest": "https://forms.gle/GX3DK4Dg3zFaCxVo9"
 		},
 		{
 			"src": "/about-us.html",
@@ -17,7 +17,7 @@
 		},
 		{
 			"src": "/hostapp.html",
-			"dest": "https://forms.gle/KMv9PU3kBdbazfFX9" // new google form
+			"dest": "https://forms.gle/KMv9PU3kBdbazfFX9"
 		},
 		{
 			"src": "/host-a-student.html",
