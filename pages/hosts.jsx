@@ -11,7 +11,7 @@ import TextBlock from "../components/TextBlock";
 import Header from "../components/Header";
 import { FAQList } from "../components/FAQ";
 import Testimonial from "../components/Testimonial";
-import { Signup } from "../components/Button";
+import Signup from "../components/Action/signup";
 
 export default class HostPage extends React.Component {
 	static async getInitialProps() {

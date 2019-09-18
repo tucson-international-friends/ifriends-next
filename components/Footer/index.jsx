@@ -54,7 +54,7 @@ const Email = () => (
 );
 
 const Footer = ({ menuItems }) => (
-	<div className={styles.footer}>
+	<footer className={styles.footer}>
 		<Container>
 			<Row>
 				<Col md={8}>
@@ -104,7 +104,7 @@ const Footer = ({ menuItems }) => (
 				</Col>
 			</Row>
 		</Container>
-	</div>
+	</footer>
 );
 
 export default Footer;

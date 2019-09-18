@@ -1,7 +1,7 @@
 @import "../../styles/mixins";
 
 nav {
-  @include box-shadow(elavation(1));
+  box-shadow: elavation(2);
   z-index: 1;
   a {
     font-family: $action-font;

@@ -165,17 +165,19 @@ The all-volunteer board is composed of past and present hosts, international stu
 				{
 					firstName: "Jody",
 					lastName: "Friend",
-					title: "Community Member"
+					title: "Community Member",
+					profileImg: "/static/images/profiles/jody_friend.jpg"
 				},
 				{
-					firstName: "Doug",
-					lastName: "Cline",
-					title: "Community Member"
+					firstName: "Pamela",
+					lastName: "Harlan",
+					title: "Community Member",
+					profileImg: "/static/images/profiles/pamela_harlan.jpg"
 				},
 				{
 					firstName: "Rachel",
 					lastName: "Ivanyi",
-					title: "Comunity Member"
+					title: "Community Member"
 				},
 				{
 					firstName: "LuAnn",
@@ -186,12 +188,19 @@ The all-volunteer board is composed of past and present hosts, international stu
 				{
 					firstName: "Michelle",
 					lastName: "Morden",
+					title: "Community Member",
+					profileImg: "/static/images/profiles/michelle_morden.jpeg"
+				},
+				{
+					firstName: "Gaurav",
+					lastName: "Deshpande",
 					title: "Community Member"
 				},
 				{
 					firstName: "Momoka",
 					lastName: "Sugimura",
-					title: "Student Representative"
+					title: "Student Representative",
+					profileImg: "/static/images/profiles/momoka_sugimura.jpg"
 				},
 				{
 					firstName: "Francisco",
@@ -208,7 +217,8 @@ The all-volunteer board is composed of past and present hosts, international stu
 					lastName: "Wei",
 					title: "Technical Advisor",
 					email: "youhaowei@ifriends.org",
-					profileImg: "http://res.cloudinary.com/simpleview/image/upload/v1553790432/clients/simpleview/Youhao_Wei_81557218-47dc-4ae1-a41e-b10b70880b8e.jpg"
+					profileImg:
+						"http://res.cloudinary.com/simpleview/image/upload/v1553790432/clients/simpleview/Youhao_Wei_81557218-47dc-4ae1-a41e-b10b70880b8e.jpg"
 				},
 				{
 					firstName: "Sylvia",
