@@ -24,6 +24,27 @@ body {
   flex: 1 0 auto;
 }
 
+.dropdown-menu {
+  border: 0;
+  box-shadow: elavation(2);
+}
+
+.dropdown-item {
+  display: flex;
+  flex-direction: row;
+  svg {
+    margin: auto 0.5rem;
+    flex-grow: 0;
+    height: 100%;
+  }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
 h1,
 h2,
 h3,
@@ -40,6 +61,21 @@ h6 {
   font-weight: bold;
   text-transform: uppercase;
   border-width: 2px;
+  box-shadow: elavation(1);
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  background-color: transparent;
+  border-radius: 0;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.form-label {
+  font-family: $action-font;
 }
 
 a {

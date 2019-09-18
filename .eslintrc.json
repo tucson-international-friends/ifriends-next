@@ -1,4 +1,13 @@
 {
+	"settings": {
+		"import/resolver": {
+			"alias": {
+				"map": [
+					["Libs", "./lib"],
+				]
+			}
+		}
+	},
 	"env": {
 		"browser": true,
 		"es6": true,

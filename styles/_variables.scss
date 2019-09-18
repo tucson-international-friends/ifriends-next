@@ -45,8 +45,6 @@ $container-max-widths: (
   xl: 1400px
 );
 
-$enable-shadows: true;
-$enable-gradients: true;
 $enable-responsive-font-sizes: true;
 
 @import "../node_modules/bootstrap/scss/functions";
