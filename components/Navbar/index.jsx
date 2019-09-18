@@ -11,15 +11,11 @@ import { renderActions, ACTIONS } from "../Action";
 import styles from "./navbar.scss";
 
 const MainNavbar = ({ router, navItems, user }) => {
-	const navActions = useMemo(() => (!user ? [
-		{ type: ACTIONS.LOGIN },
-		{ type: ACTIONS.SIGNUP }
-	] : [
-		{ type: ACTIONS.PROFILE }
-	]), [user]);
-	useEffect(() => {
-
-	}, []);
+	const navActions = useMemo(
+		() => (!user ? [{ type: ACTIONS.SIGNUP }] : [{ type: ACTIONS.PROFILE }]),
+		[user]
+	);
+	useEffect(() => {}, []);
 	const navbar = (
 		<>
 			<Navbar.Brand className={styles.brand}>
@@ -46,11 +42,14 @@ const MainNavbar = ({ router, navItems, user }) => {
 				id="main-navbar-nav"
 				className="flex-md-column flex-lg-row">
 				<Nav className="ml-md-auto ml-lg-0 mr-lg-auto order-md-1 order-lg-0">
-					{navItems
-						&& navItems.map((navItem, i) => (
-							<Link passHref href={navItem.route} key={navItem.name || navItem.route || i}>
-								<Nav.Link
-									active={navItem.route === router.route}>{navItem.label}
+					{navItems &&
+						navItems.map((navItem, i) => (
+							<Link
+								passHref
+								href={navItem.route}
+								key={navItem.name || navItem.route || i}>
+								<Nav.Link active={navItem.route === router.route}>
+									{navItem.label}
 								</Nav.Link>
 							</Link>
 						))}
@@ -67,9 +66,7 @@ const MainNavbar = ({ router, navItems, user }) => {
 			<Container fluid className={classNames("d-lg-none")}>
 				{navbar}
 			</Container>
-			<Container className={classNames("d-none d-lg-flex")}>
-				{navbar}
-			</Container>
+			<Container className={classNames("d-none d-lg-flex")}>{navbar}</Container>
 		</Navbar>
 	);
 };
