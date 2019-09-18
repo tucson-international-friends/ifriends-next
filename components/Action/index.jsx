@@ -3,6 +3,8 @@ import Button from "../Button";
 import Login from "./login";
 import Profile from "./profile";
 import Signup from "./signup";
+import { useRouter } from "next/router";
+import { useMemo, useCallback } from "react";
 
 export const ACTIONS = {
 	SIGNUP: "signup",
@@ -12,32 +14,32 @@ export const ACTIONS = {
 };
 
 export const renderAction = (actionParam, key, defaultValue) => {
-	const action = {
-		variant: "primary",
-		...defaultValue,
-		...actionParam
-	};
+	const router = useRouter();
+	const action = useMemo(
+		() => ({
+			variant: "primary",
+			...defaultValue,
+			...actionParam
+		}),
+		[actionParam, defaultValue]
+	);
+
 	const { type, label, href } = action;
+	const gotoHref = useCallback(() => {
+		router.push(href);
+	}, [href]);
 	switch (type) {
 		case ACTIONS.SIGNUP:
 			return <Signup {...action} key={key} />;
-		case ACTIONS.READMORE:
-			return (
-				<Link href={href} key={key}>
-					<Button {...action} />
-				</Link>
-			);
 		case ACTIONS.LOGIN:
 			return <Login key={key} label={label} />;
 		case ACTIONS.PROFILE:
 			return <Profile key={key} />;
+		case ACTIONS.READMORE:
 		default:
-			return (
-				<Link href={href} key={key}>
-					<Button {...action} />
-				</Link>
-			);
+			return <Button key={key} {...action} onClick={gotoHref} />;
 	}
 };
 
-export const renderActions = (actions, defaultValue) => actions.map((action, i) => renderAction(action, i, defaultValue));
+export const renderActions = (actions, defaultValue) =>
+	actions.map((action, i) => renderAction(action, i, defaultValue));
