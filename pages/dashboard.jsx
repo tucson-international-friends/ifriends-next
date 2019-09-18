@@ -1,1 +1,0 @@
-import MainLayout from "../layout/main";
