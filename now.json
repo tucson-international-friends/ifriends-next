@@ -28,5 +28,8 @@
 			"dest": "/letter"
 		}
 	],
-	"alias": ["ifriendstucson.org", "www.ifriendstucson.org"]
+	"alias": [
+		"ifriendstucson.org",
+		"www.ifriendstucson.org"
+	]
 }
