@@ -111,13 +111,16 @@ The all-volunteer board is composed of past and present hosts, international stu
 					location: "Reid Park"
 				},
 				{
-					name: "Amerind Fall Festival",
-					date: "2019-10-19"
+					name: "Biosphere Tour",
+					date: "2019-10-20",
+					startDatetime: "2019-10-20 13:45",
+					location: "Biosphere 2"
 				},
 				{
-					name: "Biosphere Trip",
-					date: "2019-10-20",
-					location: "Biosphere 2"
+					name: "Amerind Fall Festival",
+					date: "2019-10-26",
+					startDatetime: "2019-10-26 10:00",
+					endDatetime: "2019-10-26 04:00"
 				},
 				{
 					name: "International Students Talent Show",
@@ -141,7 +144,9 @@ The all-volunteer board is composed of past and present hosts, international stu
 				},
 				{
 					name: "Rodeo Picnic",
-					date: "2020-02-23"
+					date: "2020-02-23",
+					startDatetime: "2020-02-23 12:00",
+					endDatetime: "2020-02-23 14:00",
 				},
 				{
 					name: "Annual Board Meeting",
