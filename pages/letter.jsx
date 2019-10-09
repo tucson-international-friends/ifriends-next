@@ -8,7 +8,7 @@ export default class ByLaws extends Component {
 		return {
 			letter: {
 				header: `
-## Letter from the chair
+## Letter from the Co-Chair
 `,
 				content: `Thank you for your interest in International Friends! 
 
@@ -29,7 +29,7 @@ Randy Spalding and Pat Gilman, Co-chairs, International Friends, Inc.
 	}
 
 	render() {
-		const {letter: { header, content }} = this.props;
+		const { letter: { header, content } } = this.props;
 		return (
 			<MainLayout>
 				<Container

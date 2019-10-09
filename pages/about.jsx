@@ -104,12 +104,31 @@ The all-volunteer board is composed of past and present hosts, international stu
 					location: "ISS Office"
 				},
 				{
-					name: "Turquoise Trail",
-					placeholder: "Nov TBA"
+					key: "fall-picnic",
+					name: "Fall Picnic",
+					startDatetime: "2019-09-29 12:00",
+					date: "2019-09-29",
+					location: "Reid Park"
+				},
+				{
+					name: "Biosphere Tour",
+					date: "2019-10-20",
+					startDatetime: "2019-10-20 13:45",
+					location: "Biosphere 2"
+				},
+				{
+					name: "Amerind Fall Festival",
+					date: "2019-10-26",
+					startDatetime: "2019-10-26 10:00",
+					endDatetime: "2019-10-26 04:00"
 				},
 				{
 					name: "International Students Talent Show",
 					placeholder: "Nov TBA"
+				},
+				{
+					name: "Presidio Living History Day",
+					date: "2019-11-19"
 				},
 				{
 					key: "board-meeting-dec",
@@ -125,13 +144,20 @@ The all-volunteer board is composed of past and present hosts, international stu
 				},
 				{
 					name: "Rodeo Picnic",
-					date: "2020-02-23"
+					date: "2020-02-23",
+					startDatetime: "2020-02-23 12:00",
+					endDatetime: "2020-02-23 14:00",
 				},
 				{
 					name: "Annual Board Meeting",
 					date: "2020-03-02",
 					startDatetime: "2020-03-02 17:30",
 					location: "ISS Office"
+				},
+				{
+					name: "Desert Museum Tour",
+					date: "2020-04-11",
+					location: "Desert Museum"
 				},
 				{
 					name: "Planning Meeting",
@@ -154,7 +180,8 @@ The all-volunteer board is composed of past and present hosts, international stu
 				{
 					firstName: "Pam",
 					lastName: "Obando",
-					title: "Secretary"
+					title: "Secretary",
+					profileImg: "/static/images/profiles/pam_obando.jpg"
 				},
 				{
 					firstName: "Robert",
@@ -177,7 +204,8 @@ The all-volunteer board is composed of past and present hosts, international stu
 				{
 					firstName: "Rachel",
 					lastName: "Ivanyi",
-					title: "Community Member"
+					title: "Community Member",
+					profileImg: "/static/images/profiles/rachel_Ivanyi.jpg"
 				},
 				{
 					firstName: "LuAnn",
@@ -194,7 +222,8 @@ The all-volunteer board is composed of past and present hosts, international stu
 				{
 					firstName: "Gaurav",
 					lastName: "Deshpande",
-					title: "Community Member"
+					title: "Community Member",
+					profileImg: "/static/images/profiles/gaurav_deshpande.jpg"
 				},
 				{
 					firstName: "Momoka",
@@ -203,14 +232,10 @@ The all-volunteer board is composed of past and present hosts, international stu
 					profileImg: "/static/images/profiles/momoka_sugimura.jpg"
 				},
 				{
-					firstName: "Francisco",
-					lastName: "Villegas",
-					title: "Student Representative"
-				},
-				{
 					firstName: "Siyu",
 					lastName: "Wang",
-					title: "Student Representative"
+					title: "Student Representative",
+					profileImg: "/static/images/profiles/siyu_wang.jpg"
 				},
 				{
 					firstName: "Youhao",
@@ -223,7 +248,8 @@ The all-volunteer board is composed of past and present hosts, international stu
 				{
 					firstName: "Sylvia",
 					lastName: "Ahanonu",
-					title: "ISS Liason"
+					title: "ISS Liason",
+					profileImg: "/static/images/profiles/sylvia_ahanonu.jpg"
 				}
 			]
 		};
