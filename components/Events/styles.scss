@@ -1,0 +1,10 @@
+@import "../../styles/global";
+
+.table {
+  border: none;
+  box-shadow: elavation(1);
+  th {
+    font-weight: bold;
+    font-family: $action-font;
+  }
+}

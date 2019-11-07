@@ -1,8 +1,11 @@
-import { Row, Col, Image } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
 import classNames from "classnames/bind";
-import styles from "./styles.scss";
 import { renderActions } from "../Action";
+
+import styles from "./styles.scss";
 
 const cx = classNames.bind(styles);
 
@@ -17,18 +20,18 @@ const ImageTextBlock = ({
 	image,
 	invert,
 	color = COLORS.DARK,
-	actions
+	actions,
+	extraHeight
 }) => (
 	<Row className="container">
-		<Col
-			md={{ span: 6, offset: invert ? 6 : 0 }}
-			className={cx("imageCol", color)}>
-			<Image src={image} />
-		</Col>
-		<div className={cx("backdrop", color, { invert })} />
+		<div
+			className={cx("imageCol", color, { not_invert: !invert }, { invert }, { xh: extraHeight })}>
+			<Image fluid src={image} />
+		</div>
+		<div className={cx("backdrop", color, { invert }, { xh: extraHeight })} />
 		<Col
 			md={{ span: 6, offset: invert ? 0 : 6 }}
-			className={cx("textCol", styles[color])}>
+			className={cx("textCol", styles[color], { xh: extraHeight })}>
 			<div className={cx("textContainer")}>
 				<h2>{title}</h2>
 				<ReactMarkdown source={content} />

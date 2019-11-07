@@ -1,17 +1,20 @@
 import Button from "react-bootstrap/Button";
 import TextButton from "./textButton";
-import Signup from "./signup";
+import GoogleLogin from "./Login/google";
+import FacebookLogin from "./Login/facebook";
+import LoginButton from "./Login";
 
-export default (props) => {
-	const { variant, icon, label, children } = props;
-	console.log(icon);
+const ButtonWrapper = (props) => {
+	const { variant = "secondary", icon, label, children, onClick } = props;
 	if (variant.startsWith("text-")) {
 		const type = variant.split("-")[1];
-		return <TextButton type={type} icon={icon}>{children || label}</TextButton>;
+		return <TextButton onClick={onClick} type={type} icon={icon}>{children || label}</TextButton>;
 	}
 	const buttonProps = { ...props };
 	delete buttonProps.icon;
 	return <Button {...buttonProps}>{label}{icon}</Button>;
 };
 
-export { TextButton, Signup };
+export default ButtonWrapper;
+
+export { TextButton, GoogleLogin, FacebookLogin, LoginButton };

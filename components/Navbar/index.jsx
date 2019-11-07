@@ -3,11 +3,19 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { FaBars } from "react-icons/fa";
 import classNames from "classnames";
+import { withRouter } from "next/router";
+import Link from "next/link";
+import React, { useMemo, useEffect } from "react";
 import Logo from "../logo";
-import styles from "./styles.scss";
-import { Signup } from "../Button";
+import { renderActions, ACTIONS } from "../Action";
+import styles from "./navbar.scss";
 
-export default () => {
+const MainNavbar = ({ router, navItems, user }) => {
+	const navActions = useMemo(
+		() => (!user ? [{ type: ACTIONS.SIGNUP }] : [{ type: ACTIONS.PROFILE }]),
+		[user]
+	);
+	useEffect(() => {}, []);
 	const navbar = (
 		<>
 			<Navbar.Brand className={styles.brand}>
@@ -34,14 +42,20 @@ export default () => {
 				id="main-navbar-nav"
 				className="flex-md-column flex-lg-row">
 				<Nav className="ml-md-auto ml-lg-0 mr-lg-auto order-md-1 order-lg-0">
-					<Nav.Link active>Home</Nav.Link>
-					<Nav.Link>About Us</Nav.Link>
-					<Nav.Link>Host a Student</Nav.Link>
-					<Nav.Link>Meet Our Students</Nav.Link>
-					<Nav.Link>News</Nav.Link>
+					{navItems &&
+						navItems.map((navItem, i) => (
+							<Link
+								passHref
+								href={navItem.route}
+								key={navItem.name || navItem.route || i}>
+								<Nav.Link active={navItem.route === router.route}>
+									{navItem.label}
+								</Nav.Link>
+							</Link>
+						))}
 				</Nav>
 				<Nav className="ml-auto order-md-0 order-lg-1">
-					<Signup />
+					{navActions && renderActions(navActions)}
 				</Nav>
 			</Navbar.Collapse>
 		</>
@@ -52,9 +66,9 @@ export default () => {
 			<Container fluid className={classNames("d-lg-none")}>
 				{navbar}
 			</Container>
-			<Container className={classNames("d-none d-lg-flex")}>
-				{navbar}
-			</Container>
+			<Container className={classNames("d-none d-lg-flex")}>{navbar}</Container>
 		</Navbar>
 	);
 };
+
+export default withRouter(MainNavbar);

@@ -1,0 +1,32 @@
+[
+	{
+		"label": "Home",
+		"name": "index",
+		"sub": [
+			{
+				"label": "About Us",
+				"name": "about"
+			},
+			{
+				"label": "Host A Student",
+				"name": "hosts"
+			},
+			{
+				"label": "Meet Our Students",
+				"name": "students"
+			},
+			{
+				"label": "By Laws",
+				"name": "by-laws"
+			},
+			{
+				"label": "Letter from Co-Chairs",
+				"name": "letter"
+			},
+			{
+				"label": "Guiding Principles",
+				"name": "guidelines"
+			}
+		]
+	}
+]
