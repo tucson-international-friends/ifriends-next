@@ -12,10 +12,16 @@ import styles from "./navbar.scss";
 
 const MainNavbar = ({ router, navItems, user }) => {
 	const navActions = useMemo(
-		() => (!user ? [{ type: ACTIONS.SIGNUP }] : [{ type: ACTIONS.PROFILE }]),
+		() => {
+			const result = [
+				{ type: ACTIONS.DONATE }
+			];
+			result.push(!user ? { type: ACTIONS.SIGNUP } : { type: ACTIONS.PROFILE });
+			return result;
+		},
 		[user]
 	);
-	useEffect(() => {}, []);
+	useEffect(() => { }, []);
 	const navbar = (
 		<>
 			<Navbar.Brand className={styles.brand}>
@@ -42,8 +48,8 @@ const MainNavbar = ({ router, navItems, user }) => {
 				id="main-navbar-nav"
 				className="flex-md-column flex-lg-row">
 				<Nav className="ml-md-auto ml-lg-0 mr-lg-auto order-md-1 order-lg-0">
-					{navItems &&
-						navItems.map((navItem, i) => (
+					{navItems
+						&& navItems.map((navItem, i) => (
 							<Link
 								passHref
 								href={navItem.route}
