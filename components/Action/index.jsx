@@ -5,12 +5,14 @@ import Profile from "./profile";
 import Signup from "./signup";
 import { useRouter } from "next/router";
 import { useMemo, useCallback } from "react";
+import Donate from "./donate";
 
 export const ACTIONS = {
 	SIGNUP: "signup",
 	READMORE: "readmore",
 	LOGIN: "login",
-	PROFILE: "profile"
+	PROFILE: "profile",
+	DONATE: "donate"
 };
 
 export const renderAction = (actionParam, key, defaultValue) => {
@@ -35,6 +37,8 @@ export const renderAction = (actionParam, key, defaultValue) => {
 			return <Login key={key} label={label} />;
 		case ACTIONS.PROFILE:
 			return <Profile key={key} />;
+		case ACTIONS.DONATE:
+			return <Donate />
 		case ACTIONS.READMORE:
 		default:
 			return <Button key={key} {...action} onClick={gotoHref} />;
