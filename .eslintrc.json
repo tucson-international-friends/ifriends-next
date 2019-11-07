@@ -3,7 +3,10 @@
 		"import/resolver": {
 			"alias": {
 				"map": [
-					["Libs", "./lib"],
+					[
+						"Libs",
+						"./lib"
+					]
 				]
 			}
 		}
