@@ -1,9 +1,13 @@
+require("dotenv").config();
+const DotEnv = require("dotenv-webpack");
 const withSass = require("@zeit/next-sass");
+
 const path = require("path");
 // eslint-disable-next-line import/no-extraneous-dependencies
 const defaultGetLocalIdent = require("css-loader/lib/getLocalIdent");
 
 module.exports = withSass({
+	target: "serverless",
 	cssModules: true,
 	cssLoaderOptions: {
 		getLocalIdent: (loaderContext, localIdentName, localName, options) => {
@@ -34,6 +38,23 @@ module.exports = withSass({
 				}
 			}
 		});
+
+		config.plugins = config.plugins || [];
+		config.plugins = [
+			...config.plugins,
+			// Read the .env file
+			new DotEnv({
+				path: path.join(__dirname, ".env"),
+				systemvars: true
+			})
+		];
+
+		config.resolve.alias = {
+			...config.resolve.alias,
+			Libs: path.join(__dirname, "lib/"),
+			Components: path.join(__dirname, "components/"),
+			Layouts: path.join(__dirname, "layout/")
+		};
 		return config;
 	}
 });

@@ -2,8 +2,9 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 import classNames from "classnames";
 import Image from "react-bootstrap/Image";
-import styles from "./styles.scss";
 import { renderActions } from "../Action";
+
+import styles from "./styles.scss";
 
 const Banner = ({ message = "Banner Message", actions, image }) => (
 	<Jumbotron fluid className={classNames(styles.banner)}>

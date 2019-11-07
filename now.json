@@ -1,0 +1,35 @@
+{
+	"version": 2,
+	"builds": [
+		{
+			"src": "package.json",
+			"use": "@now/next"
+		}
+	],
+	"routes": [
+		{
+			"src": "studentapp.html",
+			"dest": "https://forms.gle/GX3DK4Dg3zFaCxVo9"
+		},
+		{
+			"src": "/about-us.html",
+			"dest": "/about"
+		},
+		{
+			"src": "/hostapp.html",
+			"dest": "https://forms.gle/KMv9PU3kBdbazfFX9"
+		},
+		{
+			"src": "/host-a-student.html",
+			"dest": "/hosts"
+		},
+		{
+			"src": "/chairperson-letter.html",
+			"dest": "/letter"
+		}
+	],
+	"alias": [
+		"ifriendstucson.org",
+		"www.ifriendstucson.org"
+	]
+}

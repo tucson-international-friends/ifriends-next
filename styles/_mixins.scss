@@ -1,6 +1,8 @@
+@import "../node_modules/bootstrap/scss/mixins";
 @import "variables";
 @import "functions";
-@import "../node_modules/bootstrap/scss/mixins";
+
+
 @mixin linear-grandient($direction, $color-stops...) {
 	@if is-direction($direction) == false {
 		$color-stops: $direction, $color-stops;
