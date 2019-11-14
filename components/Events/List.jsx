@@ -1,14 +1,25 @@
 import Table from "react-bootstrap/Table";
+import { FaLink } from "react-icons/fa";
 import { wrapFormatValue } from "../../lib/common/format";
 import styles from "./styles.scss";
 
 const EventListItem = ({ event, columns }) => {
-	const row = columns.map(column => <td key={`${event.key || event.name}-${column.name}`}>{wrapFormatValue(event[column.name], column.format)}</td>);
+	const row = columns.map((column) => {
+		const formatted = wrapFormatValue(event[column.name], column.format);
+		return (
+			<td key={`${event.key || event.name}-${column.name}`}>
+				{event.url && column.name === "name" ? <a href={event.url}>{formatted}<FaLink className="mx-1" /></a> : formatted}
+			</td>
+		);
+	});
 	if (!event.startDatetime) {
 		row.splice(1, 1, <td key={`${event.name}-start`}>TBA</td>);
 	}
 	if (event.placeholder) {
 		row.splice(0, 3, <td colSpan={3} key={`${event.name}-placeholder`}>{event.placeholder}</td>);
+	}
+	if (event.url) {
+
 	}
 	return (
 		<tr key={`row-${event.key || event.name}`}>
