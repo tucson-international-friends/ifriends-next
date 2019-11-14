@@ -8,7 +8,7 @@ export default function Donate({ size }) {
 			<Head>
 				<script type="text/javascript" defer src="https://donorbox.org/install-popup-button.js" />
 			</Head>
-			<Button href="https://donorbox.org/test-769" className="dbox-donation-button" size={size} label="Donate" />
+			<Button href="https://donorbox.org/test-769" className="dbox-donation-button" size={size} label="Support" />
 		</>
 	);
 }
