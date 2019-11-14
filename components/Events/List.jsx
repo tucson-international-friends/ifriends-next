@@ -18,9 +18,6 @@ const EventListItem = ({ event, columns }) => {
 	if (event.placeholder) {
 		row.splice(0, 3, <td colSpan={3} key={`${event.name}-placeholder`}>{event.placeholder}</td>);
 	}
-	if (event.url) {
-
-	}
 	return (
 		<tr key={`row-${event.key || event.name}`}>
 			{row}
