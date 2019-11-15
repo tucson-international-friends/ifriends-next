@@ -17,7 +17,7 @@ const Address = () => (
 			<a href="https://www.google.com/maps/place/International+Student+Services/@32.2334375,-110.9583125,17z/data=!4m13!1m7!3m6!1s0x0:0x0!2s62MR%2B9M!3b1!8m2!3d32.2334375!4d-110.9583125!3m4!1s0x86d67105b52de59b:0xf1c74b22f507a397!8m2!3d32.233389!4d-110.958302">
 				{"International Student Services (ISS)"}
 				<br />
-				915 N Tyndall Ave, Tucson, AZ 85719
+				615 N Park Avenue, AZ 85719
 			</a>
 		</p>
 	</>
