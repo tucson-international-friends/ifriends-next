@@ -124,7 +124,11 @@ The all-volunteer board is composed of past and present hosts, international stu
 				},
 				{
 					name: "International Students Talent Show",
-					placeholder: "Nov TBA"
+					date: "2019-11-12",
+					startDatetime: "2019-11-12 19:00",
+					endDatetime: "2019-11-12 21:00",
+					location: "Stevie Eller Dance Theater",
+					url: "https://global.arizona.edu/events/global-wildcats-got-talent-8"
 				},
 				{
 					name: "Presidio Living History Day",
@@ -236,6 +240,12 @@ The all-volunteer board is composed of past and present hosts, international stu
 					lastName: "Wang",
 					title: "Student Representative",
 					profileImg: "/static/images/profiles/siyu_wang.jpg"
+				},
+				{
+					firstName: "Francisco",
+					lastName: " Villegas",
+					title: "Student Representative",
+					profileImg: "/static/images/profiles/francisco_villegas.png"
 				},
 				{
 					firstName: "Youhao",
