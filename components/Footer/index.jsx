@@ -5,17 +5,16 @@ import moment from "moment";
 import { FaMapMarked, FaPhone, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import FacebookButton from "../Button/facebook";
-import styles from "./footer.scss";
 
 const Address = () => (
 	<>
 		<h6>
-			<FaMapMarked size={24} className={styles.headerIcon} />
+			<FaMapMarked size={24} className="headerIcon" />
 			<span>Address</span>
 		</h6>
 		<p>
 			<a href="https://goo.gl/maps/3PF4UE3ZkaModhdi8">
-				{"International Student Services (ISS)"}
+				International Student Services (ISS)
 				<br />
 				615 N Park Avenue, AZ 85719
 			</a>
@@ -28,7 +27,7 @@ const Phone = () => (
 		<h6>
 			<FaPhone
 				style={{ transform: "rotateY(180deg)" }}
-				className={styles.headerIcon}
+				className="headerIcon"
 			/>
 			<span>Phone Number</span>
 		</h6>
@@ -43,7 +42,7 @@ const Email = () => (
 		<h6>
 			<FaEnvelope
 				style={{ transform: "rotateY(180deg)" }}
-				className={styles.headerIcon}
+				className="headerIcon"
 			/>
 			<span>Email Address</span>
 		</h6>
@@ -54,13 +53,13 @@ const Email = () => (
 );
 
 const Footer = ({ menuItems }) => (
-	<footer className={styles.footer}>
+	<footer className="footer">
 		<Container>
 			<Row>
 				<Col md={8}>
 					<h1>International Friends, Inc.</h1>
 					<p>
-						{"International Friends is an all-volunteer organization that brings together international students attending the University of Arizona and Southern Arizona residents."}
+						International Friends is an all-volunteer organization that brings together international students attending the University of Arizona and Southern Arizona residents.
 					</p>
 					<Row className="mt-4 mb-2">
 						<Col sm={5}>
@@ -79,7 +78,7 @@ const Footer = ({ menuItems }) => (
 				</Col>
 				<Col md={4} className="pl-5">
 					<h2>Menu</h2>
-					<ul className={styles.menu}>
+					<ul className="menu">
 						{menuItems.map(menuItem => (
 							<li key={menuItem.name}>
 								<Link href={menuItem.route}>

@@ -8,7 +8,6 @@ import Link from "next/link";
 import React, { useMemo, useEffect } from "react";
 import Logo from "../logo";
 import { renderActions, ACTIONS } from "../Action";
-import styles from "./navbar.scss";
 
 const MainNavbar = ({ router, navItems, user }) => {
 	const navActions = useMemo(
@@ -24,7 +23,7 @@ const MainNavbar = ({ router, navItems, user }) => {
 	useEffect(() => { }, []);
 	const navbar = (
 		<>
-			<Navbar.Brand className={styles.brand}>
+			<Navbar.Brand className={"brand"}>
 				<Logo className="d-none d-sm-block" />
 				<Logo className="d-block d-sm-none" size="sm" />
 			</Navbar.Brand>

@@ -3,13 +3,8 @@ import classNames from "classnames/bind";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
 import { GoArrowRight } from "react-icons/go";
 import { renderActions } from "../Action";
-
-import styles from "./styles.scss";
-
-const cx = classNames.bind(styles);
 
 export const VARIANTS = { CALLOUT: "callout" };
 
@@ -17,8 +12,8 @@ export const VARIANTS = { CALLOUT: "callout" };
 const TextBlock = ({ title, content, actions, variant, headerAlign, textAlign = "left" }) => {
 	const isCallout = variant === VARIANTS.CALLOUT;
 	const component = (
-		<div className={`${cx("textBlock", { callout: isCallout })} text-${textAlign}`}>
-			<h2 className={`${styles.title} text-${headerAlign || textAlign}`}>{title}</h2>
+		<div className={ classNames("textBlock", { callout: isCallout }, `text-${textAlign}`)}>
+			<h2 className={`title text-${headerAlign || textAlign}`}>{title}</h2>
 			{Array.isArray(content)
 				? (
 					<Row>
@@ -40,7 +35,7 @@ const TextBlock = ({ title, content, actions, variant, headerAlign, textAlign = 
 		</div>
 	);
 	return isCallout ? (
-		<Jumbotron className={styles.callout}>{component}</Jumbotron>
+		<Jumbotron className={"callout"}>{component}</Jumbotron>
 	) : (
 		component
 	);

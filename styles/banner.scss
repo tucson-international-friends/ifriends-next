@@ -1,4 +1,4 @@
-@import "../../styles/mixins";
+@import "./mixins";
 
 .banner {
   text-align: center;
@@ -17,6 +17,29 @@
   @include media-breakpoint-up(xl) {
     height: 600px;
   }
+
+  .container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: bottom;
+    @include media-breakpoint-up(md) {
+      padding-bottom: 1em;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 3em;
+    }
+    text-align: center;
+  }
+  .background {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+    filter: blur(1px);
+  }
 }
 
 .banner:before {
@@ -29,26 +52,6 @@
   background: linear-gradient(to bottom left, $light-to-accent);
 }
 
-.background {
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  opacity: 0.25;
-  filter: blur(1px);
-}
 
-.container {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%);
-  vertical-align: bottom;
-  @include media-breakpoint-up(md) {
-    padding-bottom: 1em;
-  }
-  @include media-breakpoint-up(lg) {
-    padding-bottom: 3em;
-  }
-  text-align: center;
-}
+
+

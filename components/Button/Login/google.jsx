@@ -21,7 +21,7 @@ const GoogleLoginButton = ({ handleLogin }) => {
 					width: 36,
 					height: 36
 				}}
-				src="static/icons/btn_google_light_normal_ios.svg"
+				src="icons/btn_google_light_normal_ios.svg"
 				alt="google-logo"
 			/>
 			<span style={{ flexGrow: 1 }}>Sign in with Google</span>
