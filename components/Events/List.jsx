@@ -1,7 +1,6 @@
 import Table from "react-bootstrap/Table";
 import { FaLink } from "react-icons/fa";
 import { wrapFormatValue } from "../../lib/common/format";
-import styles from "./styles.scss";
 
 const EventListItem = ({ event, columns }) => {
 	const row = columns.map((column) => {
@@ -26,7 +25,7 @@ const EventListItem = ({ event, columns }) => {
 };
 
 const EventList = ({ events, columns }) => (
-	<Table striped className={styles.table}>
+	<Table striped className="table">
 		<thead>
 			<tr>
 				{columns.map(column => <th key={`head-${column.name}`}>{column.label}</th>)}

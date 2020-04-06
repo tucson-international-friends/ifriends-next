@@ -1,10 +1,10 @@
-@import "../../styles/global";
+@import "./global";
 
 $smHeight: 400px;
 $smHeightDouble: $smHeight + $smHeight;
 $lgHeight: 600px;
 
-.container {
+.imageTextBox {
   height: $smHeightDouble;
   @include media-breakpoint-up(md) {
     height: $lgHeight;
