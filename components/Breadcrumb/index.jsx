@@ -1,7 +1,6 @@
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import { withRouter } from "next/router";
 import { getPageByRoute, getPageByName } from "../../lib/page";
-import styles from "./breadcrumb.scss";
 
 const BreadcrumWrapper = ({ router }) => {
 	const activeRoute = getPageByRoute(router.route);
@@ -12,7 +11,7 @@ const BreadcrumWrapper = ({ router }) => {
 		curRoute = curRoute.parent && getPageByName(curRoute.parent.name);
 	}
 	return (
-		<Breadcrumb className={styles.breadcrumb}>
+		<Breadcrumb className="breadcrumb">
 			{routes.map((route) => {
 				const active = route === activeRoute;
 				const href = route.route;
