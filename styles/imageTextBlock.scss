@@ -1,0 +1,102 @@
+@import "./global";
+
+$smHeight: 400px;
+$smHeightDouble: $smHeight + $smHeight;
+$lgHeight: 600px;
+
+.imageTextBox {
+  height: $smHeightDouble;
+  @include media-breakpoint-up(md) {
+    height: $lgHeight;
+  }
+}
+
+.backdrop {
+  height: $smHeightDouble;
+
+  @include media-breakpoint-up(md) {
+    height: $lgHeight;
+  }
+
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  &.light {
+    @include linear-grandient(to top, $primary-to-light-transparent);
+
+    @include media-breakpoint-up(md) {
+      @include linear-grandient(to left, $primary-to-light-transparent);
+
+      &.invert {
+        @include linear-grandient(to right, $primary-to-light-transparent);
+      }
+    }
+  }
+
+  &.dark {
+    @include linear-grandient(to top, $dark-to-accent-transparent);
+
+    @include media-breakpoint-up(md) {
+      @include linear-grandient(to left, $dark-to-accent-transparent);
+
+      &.invert {
+        @include linear-grandient(to right, $dark-to-accent-transparent);
+      }
+    }
+  }
+}
+
+.imageCol {
+  height: $smHeight;
+  width: 100vw;
+  @include media-breakpoint-up(md) {
+    height: $lgHeight;
+    width: 50vw;
+  }
+
+  overflow: hidden;
+  position: absolute;
+  &.not_invert {
+    left: 0;
+  }
+  &.invert {
+    right: 0;
+  }
+
+  padding: 0;
+
+  img {
+    min-width: 100%;
+    min-height: 101%;
+    object-fit: cover;
+  }
+}
+
+.textCol {
+  height: $smHeight;
+  box-sizing: content-box;
+  overflow-y: auto;
+  @include media-breakpoint-up(md) {
+    height: $lgHeight;
+  }
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-top: $smHeight;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 0;
+  }
+
+  color: $off-white;
+}
+
+.textContainer {
+  overflow: hidden;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}

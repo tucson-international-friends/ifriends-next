@@ -1,0 +1,17 @@
+@import "./variables";
+
+.textBlock {
+  padding: 2em 0;
+}
+
+.callout {
+  background: transparent;
+  font-size: 1.25em;
+  p {
+    color: $main-brand;
+  }
+}
+
+.title {
+  margin-bottom: 1em;
+}

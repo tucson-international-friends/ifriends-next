@@ -26,6 +26,10 @@
 			{
 				"label": "Guiding Principles",
 				"name": "guidelines"
+			},
+			{
+				"label": "Newsletters",
+				"name": "newsletters"
 			}
 		]
 	}

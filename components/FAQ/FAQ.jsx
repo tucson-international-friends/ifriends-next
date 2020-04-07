@@ -4,8 +4,6 @@ import classNames from "classnames";
 import Collapse from "react-bootstrap/Collapse";
 import { FaCaretRight } from "react-icons/fa";
 
-import styles from "./faq.scss";
-
 const FAQ = ({ data }) => {
 	const [expanded, setExpanded] = useState(false);
 	const handleClickHeader = () => {
@@ -20,9 +18,9 @@ const FAQ = ({ data }) => {
 					e.preventDefault();
 				}}>
 				<h5
-					className={classNames(styles.question)}>
+					className={classNames("question")}>
 					<FaCaretRight className={
-						classNames(styles.caret, { [styles.expanded]: expanded })} />{data.question}
+						classNames("caret", { expanded })} />{data.question}
 				</h5>
 			</a>
 			<Collapse in={expanded}>

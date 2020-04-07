@@ -1,0 +1,22 @@
+@import "./mixins";
+
+nav {
+  box-shadow: elavation(2);
+  z-index: 1;
+  a {
+    font-family: $action-font;
+    &.active {
+      font-weight: bold;
+    }
+  }
+  button {
+    margin-left: 1em;
+  }
+
+  .brand {
+    margin-right: 0;
+    font-size: 1rem;
+  }
+}
+
+

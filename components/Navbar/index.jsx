@@ -8,7 +8,6 @@ import Link from "next/link";
 import React, { useMemo, useEffect } from "react";
 import Logo from "../logo";
 import { renderActions, ACTIONS } from "../Action";
-import styles from "./navbar.scss";
 
 const MainNavbar = ({ router, navItems, user }) => {
 	const navActions = useMemo(
@@ -24,7 +23,7 @@ const MainNavbar = ({ router, navItems, user }) => {
 	useEffect(() => { }, []);
 	const navbar = (
 		<>
-			<Navbar.Brand className={styles.brand}>
+			<Navbar.Brand className={"brand"}>
 				<Logo className="d-none d-sm-block" />
 				<Logo className="d-block d-sm-none" size="sm" />
 			</Navbar.Brand>
@@ -46,8 +45,8 @@ const MainNavbar = ({ router, navItems, user }) => {
 			</Navbar.Toggle>
 			<Navbar.Collapse
 				id="main-navbar-nav"
-				className="flex-md-column flex-lg-row">
-				<Nav className="ml-md-auto ml-lg-0 mr-lg-auto order-md-1 order-lg-0">
+				className="flex-md-column flex-xl-row">
+				<Nav className="ml-md-auto ml-xl-0 mr-xl-auto order-md-1 order-md-0">
 					{navItems
 						&& navItems.map((navItem, i) => (
 							<Link
@@ -60,7 +59,7 @@ const MainNavbar = ({ router, navItems, user }) => {
 							</Link>
 						))}
 				</Nav>
-				<Nav className="ml-auto order-md-0 order-lg-1">
+				<Nav className="ml-auto order-lg-0 order-xl-1">
 					{navActions && renderActions(navActions)}
 				</Nav>
 			</Navbar.Collapse>

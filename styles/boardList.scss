@@ -1,0 +1,25 @@
+@import "./global";
+
+.contact {
+  transition: 1s;
+  text-align: center;
+  padding: 1em;
+  cursor: pointer;
+  border-radius: 10px;
+  &:hover {
+    background-color: lighten($light-accent, 30%)
+  }
+}
+
+.profilePictureWrapper {
+  width: auto;
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+.profilePicture {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 0.5em;
+}

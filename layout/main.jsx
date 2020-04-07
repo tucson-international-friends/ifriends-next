@@ -7,9 +7,7 @@ import Footer from "../components/Footer";
 import navItems from "./navbarItems.json";
 import footerNavItems from "./footerMenuItems.json";
 import { getPageByName } from "../lib/page";
-import "../styles/global/main.scss";
 import { useEffect } from "react";
-import { useGlobal } from "reactn";
 import firebase from "../lib/firebase";
 import { ACTIONS } from "../components/Action";
 

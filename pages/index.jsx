@@ -13,7 +13,7 @@ export default class Index extends Component {
 		return {
 			banner: {
 				message: "EVERY STUDENT NEEDS A SENSE OF HOME, WHEREVER THEY ARE FROM.",
-				image: "/static/images/home-banner.jpg",
+				image: "/images/home-banner.jpg",
 				actions: [
 					{
 						type: "signup",
@@ -59,7 +59,7 @@ export default class Index extends Component {
 * Participate in activities with interesting and eager students
 * Help international students adjust to American culture
 * Have fun!`,
-						image: "/static/images/zipline.jpg",
+						image: "/images/zipline.jpg",
 						actions: [
 							{
 								type: ACTIONS.READMORE,
@@ -69,7 +69,7 @@ export default class Index extends Component {
 					},
 					{
 						title: "What is Expected?",
-						image: "/static/images/host.jpg",
+						image: "/images/host.jpg",
 						content: `
 * Commit to participate for one academic year
 * Hosts and students contact each other within one week of being matched
