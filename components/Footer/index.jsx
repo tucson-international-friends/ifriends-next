@@ -5,6 +5,7 @@ import moment from "moment";
 import { FaMapMarked, FaPhone, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import FacebookButton from "../Button/facebook";
+import GithubButton from "../Button/github";
 
 const Address = () => (
 	<>
@@ -74,6 +75,8 @@ const Footer = ({ menuItems }) => (
 					</Row>
 					<div className="pt-1">
 						<FacebookButton link="https://www.facebook.com/groups/298210727017/" />
+						<span className="px-4" />
+						<GithubButton link="https://github.com/tucson-international-friends/ifriends-next" />
 					</div>
 				</Col>
 				<Col md={4} className="pl-5">
