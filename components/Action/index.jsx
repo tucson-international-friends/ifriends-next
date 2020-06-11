@@ -38,7 +38,7 @@ export const renderAction = (actionParam, key, defaultValue) => {
 		case ACTIONS.PROFILE:
 			return <Profile key={key} />;
 		case ACTIONS.DONATE:
-			return <Donate />
+			return <Donate key={key} />
 		case ACTIONS.READMORE:
 		default:
 			return <Button key={key} {...action} onClick={gotoHref} />;
