@@ -7,6 +7,7 @@ import Banner from "../components/Banner";
 import TextBlock, { VARIANTS } from "../components/TextBlock";
 import ImageTextBlock, { COLORS } from "../components/ImageTextBlock";
 import { ACTIONS } from "../components/Action";
+import ReactPlayer from "react-player";
 
 export default class Index extends Component {
 	static async getInitialProps() {
@@ -103,7 +104,7 @@ Make a “world of difference” in the lives of international students and loca
 	}
 
 	render() {
-		const { sections, banner } = this.props;
+		const { sections, banner, intro } = this.props;
 		return (
 			<MainLayout>
 				<Banner {...banner} />
@@ -111,10 +112,14 @@ Make a “world of difference” in the lives of international students and loca
 					<Row>
 						<Col md={6}>
 							<TextBlock {...sections[0][0]} />
-						</Col>
-						<Col md={6}>
 							<TextBlock {...sections[0][1]} />
 						</Col>
+						<Col md={6}>
+							<iframe className="embed-video" allow="autoplay" allowfullscreen="" src="https://arizona.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=06dd0cd1-402e-4042-bd61-abf8013f6212&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=false&amp;start=0&amp;interactivity=all" style={{
+								width: "100%"
+							}}/>
+						</Col>
+						
 					</Row>
 					<ImageTextBlock {...sections[1][0]} extraHeight invert />
 					<ImageTextBlock
