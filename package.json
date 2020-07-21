@@ -10,7 +10,7 @@
 	"dependencies": {
 		"bootstrap": "^4.5.0",
 		"classnames": "^2.2.6",
-		"firebase": "^7.16.0",
+		"firebase": "^7.16.1",
 		"lodash": "^4.17.19",
 		"moment": "^2.27.0",
 		"next": "^9.4.4",
@@ -22,7 +22,7 @@
 		"react-markdown": "^4.3.1",
 		"react-pdf": "^4.1.0",
 		"react-player": "^2.5.0",
-		"react-svg": "^11.0.29",
+		"react-svg": "^11.0.31",
 		"react-window-size": "^1.2.2",
 		"reactn": "^2.2.7",
 		"reactn-devtools": "^1.1.0"
