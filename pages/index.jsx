@@ -115,11 +115,16 @@ Make a “world of difference” in the lives of international students and loca
 							<TextBlock {...sections[0][1]} />
 						</Col>
 						<Col md={6}>
-							<iframe className="embed-video" allow="autoplay" allowfullscreen="" src="https://arizona.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=06dd0cd1-402e-4042-bd61-abf8013f6212&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=false&amp;start=0&amp;interactivity=all" style={{
-								width: "100%"
-							}}/>
+							<div style={{
+								padding: "calc(2rem * 1.2 + 1rem + 0.83rem + 34px) 0"
+							}}>
+								<p>Watch a video to learn more.</p>
+								<iframe className="embed-video" allow="autoplay" allowfullscreen="" src="https://arizona.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=06dd0cd1-402e-4042-bd61-abf8013f6212&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=false&amp;start=0&amp;interactivity=all" style={{
+									width: "100%"
+								}} />
+							</div>
 						</Col>
-						
+
 					</Row>
 					<ImageTextBlock {...sections[1][0]} extraHeight invert />
 					<ImageTextBlock
