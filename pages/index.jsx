@@ -108,8 +108,8 @@ Make a “world of difference” in the lives of international students and loca
 		const { sections, banner, intro } = this.props;
 		return (
 			<MainLayout>
-				<Alert id="covid-alert" variant="primary">
-					<i>Please note that all new matches made by International Friends will initially be virtual, and all participants must follow University and CDC COVID-19 guidelines.</i>
+				<Alert id="covid-alert" variant="warning">
+					Please note that all new matches made by International Friends will initially be virtual, and all participants must follow University and CDC COVID-19 guidelines.
 				</Alert>
 				<Banner {...banner} />
 				<Container>
