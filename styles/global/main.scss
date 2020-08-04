@@ -40,6 +40,25 @@ body {
   }
 }
 
+#covid-alert {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: absolute;
+  top: 3rem;
+  font-size: larger;
+  font-style: italic;
+
+  z-index: 2;
+
+  @include media-breakpoint-up(md) {
+    top: 6rem
+  }
+  @include media-breakpoint-up(xl) {
+    top: 3rem;
+  }
+}
+
 .h1,
 .h2,
 .h3,

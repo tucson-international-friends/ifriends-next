@@ -8,6 +8,7 @@ import TextBlock, { VARIANTS } from "../components/TextBlock";
 import ImageTextBlock, { COLORS } from "../components/ImageTextBlock";
 import { ACTIONS } from "../components/Action";
 import ReactPlayer from "react-player";
+import { Alert } from "react-bootstrap";
 
 export default class Index extends Component {
 	static async getInitialProps() {
@@ -107,6 +108,9 @@ Make a “world of difference” in the lives of international students and loca
 		const { sections, banner, intro } = this.props;
 		return (
 			<MainLayout>
+				<Alert id="covid-alert" variant="warning">
+					Please note that all new matches made by International Friends will initially be virtual, and all participants must follow University and CDC COVID-19 guidelines.
+				</Alert>
 				<Banner {...banner} />
 				<Container>
 					<Row>
