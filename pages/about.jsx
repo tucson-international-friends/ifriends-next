@@ -253,7 +253,7 @@ The all-volunteer board is composed of past and present hosts, international stu
 					title: "Technical Advisor",
 					email: "youhaowei@ifriends.org",
 					profileImg:
-						"http://res.cloudinary.com/simpleview/image/upload/v1553790432/clients/simpleview/Youhao_Wei_81557218-47dc-4ae1-a41e-b10b70880b8e.jpg"
+						"https://res.cloudinary.com/simpleview/image/upload/v1553790432/clients/simpleview/Youhao_Wei_81557218-47dc-4ae1-a41e-b10b70880b8e.jpg"
 				},
 				{
 					firstName: "Sylvia",
