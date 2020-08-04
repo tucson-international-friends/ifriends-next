@@ -8,16 +8,8 @@
 	],
 	"routes": [
 		{
-			"src": "studentapp.html",
-			"dest": "https://forms.gle/GX3DK4Dg3zFaCxVo9"
-		},
-		{
 			"src": "/about-us.html",
 			"dest": "/about"
-		},
-		{
-			"src": "/hostapp.html",
-			"dest": "https://forms.gle/KMv9PU3kBdbazfFX9"
 		},
 		{
 			"src": "/host-a-student.html",
