@@ -47,7 +47,7 @@ export default class Index extends Component {
 						actions: [
 							{
 								type: ACTIONS.READMORE,
-								href: "/hosts"
+								href: "/about"
 							}
 						]
 					}
