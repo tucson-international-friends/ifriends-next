@@ -14,9 +14,9 @@ import BoardList from "../components/BoardList";
 import Header from "../components/Header";
 import { getStorageMediaUrl } from "../lib/image";
 
-export default class About extends React.Component {
-	static async getInitialProps() {
-		return {
+export const getStaticProps = async () => {
+	return {
+		props: {
 			banner: {
 				message: "LEARN ABOUT EACH OTHER'S CULTURE",
 				image: getStorageMediaUrl('about-banner.jpg')
@@ -237,10 +237,9 @@ The all-volunteer board is composed of past and present hosts, international stu
 					profileImg: "profiles/momoka_sugimura.jpg"
 				},
 				{
-					firstName: "Siyu",
-					lastName: "Wang",
+					firstName: "Ye",
+					lastName: "Zhang",
 					title: "Student Representative",
-					profileImg: "profiles/siyu_wang.jpg"
 				},
 				{
 					firstName: "Francisco",
@@ -262,30 +261,40 @@ The all-volunteer board is composed of past and present hosts, international stu
 					title: "ISS Liason",
 					profileImg: "profiles/sylvia_ahanonu.jpg"
 				}
-			]
-		};
-	}
+			],
+			previousMembers: [{
+				firstName: "Siyu",
+				lastName: "Wang",
+				title: "Student Representative",
+				profileImg: "profiles/siyu_wang.jpg"
+			},]
+		}
+	};
+};
 
-	render() {
-		const { banner, sections, eventColumns, events, boardMembers } = this.props;
-		return (
-			<MainLayout>
-				<Banner {...banner} />
-				<Container>
-					<Row>
-						<Col md={6}>
-							<TextBlock {...sections[0][0]} />
-						</Col>
-						<Col md={6}>
-							<TextBlock {...sections[0][1]} />
-						</Col>
-					</Row>
-					<Header title="Events" />
-					<EventList columns={eventColumns} events={events} />
-					<Header title="Board Members" />
-					<BoardList members={boardMembers} />
-				</Container>
-			</MainLayout>
-		);
-	}
-}
+const AboutPage = ({ banner, sections, eventColumns, events, boardMembers, previousMembers }) => {
+	return (
+		<MainLayout>
+			<Banner {...banner} />
+			<Container>
+				<Row>
+					<Col md={6}>
+						<TextBlock {...sections[0][0]} />
+					</Col>
+					<Col md={6}>
+						<TextBlock {...sections[0][1]} />
+					</Col>
+				</Row>
+				<Header title="Events" />
+				<EventList columns={eventColumns} events={events} />
+				<Header title="Current Board Members" />
+				<BoardList members={boardMembers} />
+
+				<Header title="Previous Members" />
+				<BoardList members={previousMembers} />
+			</Container>
+		</MainLayout>
+	);
+};
+
+export default AboutPage;
