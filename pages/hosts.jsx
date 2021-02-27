@@ -52,7 +52,7 @@ International students describe International Friends as an invaluable asset for
 					},
 					{
 						title: "HOW HOSTING WORKS",
-						image: getStorageMediaUrl("ooking2.jpg"),
+						image: getStorageMediaUrl("cooking2.jpg"),
 						content: `
 Students and hosts are matched for one academic year. Although the relationships may continue well beyond this time period, we hope hosts will make themselves available for matching to other first-year students in upcoming years.
 
