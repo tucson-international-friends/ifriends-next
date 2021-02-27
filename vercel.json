@@ -1,23 +1,17 @@
 {
 	"version": 2,
-	"builds": [
-		{
-			"src": "package.json",
-			"use": "@vercel/next"
-		}
-	],
 	"redirects": [
 		{
-			"src": "/about-us.html",
-			"dest": "/about"
+			"source": "/about-us.html",
+			"destination": "/about"
 		},
 		{
-			"src": "/host-a-student.html",
-			"dest": "/hosts"
+			"source": "/host-a-student.html",
+			"destination": "/hosts"
 		},
 		{
-			"src": "/chairperson-letter.html",
-			"dest": "/letter"
+			"source": "/chairperson-letter.html",
+			"destination": "/letter"
 		}
 	]
 }
