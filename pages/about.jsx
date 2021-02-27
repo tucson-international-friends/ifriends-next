@@ -285,9 +285,10 @@ const AboutPage = ({ banner, sections, eventColumns, events, boardMembers, previ
 						<TextBlock {...sections[0][1]} />
 					</Col>
 				</Row>
-				<Header title="Events" />
+
 				{
 					// caledanr can be added back after planning meeting
+					// <Header title="Events" />
 					//<EventList columns={eventColumns} events={events} />
 				}
 				<Header title="Current Board Members" />
