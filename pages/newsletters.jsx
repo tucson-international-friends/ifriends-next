@@ -71,23 +71,20 @@ const PDF = ({ windowWidth }) => {
 	</>;
 };
 
-class NewsLetters extends Component {
-
-	render() {
-		return <MainLayout>
-			<Container style={{
-				paddingTop: "10em",
-				paddingBottom: "10em"
-			}}>
-				<h1>Newsletters</h1>
-				<div className="py-4">
-					<h2>Spring 2020</h2>
-					<a className="btn btn-primary" target="_blank" href="/newsletters/SP2020.pdf" >View PDF</a>
-				</div>
-				<PDF />
-			</Container>
-		</MainLayout>;
-	}
-}
+const NewsLetters = () => {
+	return <MainLayout>
+		<Container style={{
+			paddingTop: "10em",
+			paddingBottom: "10em"
+		}}>
+			<h1>Newsletters</h1>
+			<div className="py-4">
+				<h2>Spring 2020</h2>
+				<a className="btn btn-primary" target="_blank" href="/newsletters/SP2020.pdf" >View PDF</a>
+			</div>
+			<PDF />
+		</Container>
+	</MainLayout>;
+};
 
 export default NewsLetters;

@@ -1,7 +1,6 @@
 import React from "react";
-import { FaGlobeAmericas } from "react-icons/fa";
 
-export default ({ size, className }) => {
+const Logo = ({ size, className }) => {
 	let logoSize = "2em";
 	if (size === "sm" || size === "small" || size === 1) {
 		logoSize = "1.5em";
@@ -16,3 +15,5 @@ export default ({ size, className }) => {
 		</span>
 	);
 };
+
+export default Logo;

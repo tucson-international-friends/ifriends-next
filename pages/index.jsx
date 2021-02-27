@@ -1,18 +1,16 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Component } from "react";
 import MainLayout from "../layout/main";
 import Banner from "../components/Banner";
 import TextBlock, { VARIANTS } from "../components/TextBlock";
 import ImageTextBlock, { COLORS } from "../components/ImageTextBlock";
 import { ACTIONS } from "../components/Action";
-import ReactPlayer from "react-player";
 import { Alert } from "react-bootstrap";
 
-export default class Index extends Component {
-	static async getInitialProps() {
-		return {
+export const getStaticProps = async () => {
+	return {
+		props: {
 			banner: {
 				message: "EVERY STUDENT NEEDS A SENSE OF HOME, WHEREVER THEY ARE FROM.",
 				image: "/images/home-banner.jpg",
@@ -43,7 +41,7 @@ export default class Index extends Component {
 						title: "What We Do",
 						textAlign: "justify",
 						content:
-							"Our goal is simple but important. We bring people together to share their cultures, interests, and life experiences. International students and local hosts are matched with the intent of them meeting at least once a month during the school year for socializing, activities, and fun. International Friends is not a live-in hosting program, and we have no religious affiliation. Participation is open to international students attending the University of Arizona and to Southern Arizona residents.",
+							"Our goal is simple but important. We bring people together to share their cultures, interests, and life experiences. International students and local hosts are matched with the intent of them meeting at least once a month during the school year for socializing, activities, and fun. International Friends is not a live-in hosting program, and we have no religious affiliation. Participation is open to international students attending the University of Arizona and to Southern Arizona residents who serve as hosts.",
 						actions: [
 							{
 								type: ACTIONS.READMORE,
@@ -57,11 +55,11 @@ export default class Index extends Component {
 					{
 						title: "Why Host?",
 						content: `
-* Learn about other countries and cultures
-* Participate in activities with interesting and eager students
-* Help international students adjust to American culture
-* Have fun!`,
-						image: "/images/zipline.jpg",
+	* Learn about other countries and cultures
+	* Participate in activities with interesting and eager students
+	* Help international students adjust to American culture
+	* Have fun!`,
+						image: "zipline.jpg",
 						actions: [
 							{
 								type: ACTIONS.READMORE,
@@ -73,12 +71,12 @@ export default class Index extends Component {
 						title: "What is Expected?",
 						image: "/images/host.jpg",
 						content: `
-* Commit to participate for one academic year
-* Hosts and students contact each other within one week of being matched
-* Students and hosts get together at least once a month during the school year for activities that both would enjoy
-* Hosts and students share ideas, customs, and cultures
-* Follow the International Friends Guidelines for hosts and students
-`,
+	* Commit to participate for one academic year
+	* Hosts and students contact each other within one week of being matched
+	* Students and hosts get together at least once a month during the school year for activities that both would enjoy
+	* Hosts and students share ideas, customs, and cultures
+	* Follow the International Friends Guidelines for hosts and students
+	`,
 						actions: [
 							{
 								type: ACTIONS.READMORE,
@@ -91,7 +89,7 @@ export default class Index extends Component {
 					title: "Get Involved",
 					textAlign: "center",
 					content: `
-Make a “world of difference” in the lives of international students and local hosts.  It’s fun, it’s easy, and it changes lives.`,
+	Make a “world of difference” in the lives of international students and local hosts.  It’s fun, it’s easy, and it changes lives.`,
 					actions: [
 						{
 							type: ACTIONS.SIGNUP,
@@ -101,44 +99,41 @@ Make a “world of difference” in the lives of international students and loca
 					]
 				}
 			]
-		};
-	}
+		}
+	};
+};
 
-	render() {
-		const { sections, banner, intro } = this.props;
-		return (
-			<MainLayout>
-				<Alert id="covid-alert" variant="warning">
-					Please note that all new matches made by International Friends will initially be virtual, and all participants must follow University and CDC COVID-19 guidelines.
-				</Alert>
-				<Banner {...banner} />
-				<Container>
-					<Row>
-						<Col md={6}>
-							<TextBlock {...sections[0][0]} />
-							<TextBlock {...sections[0][1]} />
-						</Col>
-						<Col md={6}>
-							<div style={{
-								padding: "calc(2rem * 1.2 + 1rem + 0.83rem + 34px) 0"
-							}}>
-								<p>Watch a video to learn more.</p>
-								<iframe className="embed-video" allow="autoplay" allowfullscreen="" src="https://arizona.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=06dd0cd1-402e-4042-bd61-abf8013f6212&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=false&amp;start=0&amp;interactivity=all" style={{
-									width: "100%"
-								}} />
-							</div>
-						</Col>
+const HomePage = ({ sections, banner }) => (<MainLayout>
+	<Alert id="covid-alert" variant="warning">
+		Please note that all new matches made by International Friends will initially be virtual, and all participants must follow University and CDC COVID-19 guidelines.
+	</Alert>
+	<Banner {...banner} />
+	<Container>
+		<Row>
+			<Col md={6}>
+				<TextBlock {...sections[0][0]} />
+				<TextBlock {...sections[0][1]} />
+			</Col>
+			<Col md={6}>
+				<div style={{
+					padding: "calc(2rem * 1.2 + 1rem + 0.83rem + 34px) 0"
+				}}>
+					<p>Watch a video to learn more.</p>
+					<iframe className="embed-video" allow="autoplay" allowfullscreen="" src="https://arizona.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=06dd0cd1-402e-4042-bd61-abf8013f6212&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=false&amp;start=0&amp;interactivity=all" style={{
+						width: "100%"
+					}} />
+				</div>
+			</Col>
 
-					</Row>
-					<ImageTextBlock {...sections[1][0]} extraHeight invert />
-					<ImageTextBlock
-						{...sections[1][1]}
-						extraHeight
-						color={COLORS.LIGHT}
-					/>
-					<TextBlock {...sections[2]} variant={VARIANTS.CALLOUT} />
-				</Container>
-			</MainLayout>
-		);
-	}
-}
+		</Row>
+		<ImageTextBlock {...sections[1][0]} extraHeight invert />
+		<ImageTextBlock
+			{...sections[1][1]}
+			extraHeight
+			color={COLORS.LIGHT}
+		/>
+		<TextBlock {...sections[2]} variant={VARIANTS.CALLOUT} />
+	</Container>
+</MainLayout>);
+
+export default HomePage;
