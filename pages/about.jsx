@@ -12,13 +12,14 @@ import TextBlock from "../components/TextBlock";
 import EventList from "../components/Events/List";
 import BoardList from "../components/BoardList";
 import Header from "../components/Header";
+import { getStorageMediaUrl } from "../lib/image";
 
 export default class About extends React.Component {
 	static async getInitialProps() {
 		return {
 			banner: {
 				message: "LEARN ABOUT EACH OTHER'S CULTURE",
-				image: "/images/about-banner.jpg"
+				image: getStorageMediaUrl('about-banner.jpg')
 			},
 			sections: [
 				[
@@ -173,79 +174,79 @@ The all-volunteer board is composed of past and present hosts, international stu
 					firstName: "Patricia",
 					lastName: "Gilman",
 					title: "Co-Chair",
-					profileImg: "/images/profiles/patricia_gilman.jpg"
+					profileImg: "profiles/patricia_gilman.jpg"
 				},
 				{
 					firstName: "Randy",
 					lastName: "Spalding",
 					title: "Co-Chair",
-					profileImg: "/images/profiles/randy_spalding.jpeg"
+					profileImg: "profiles/randy_spalding.jpeg"
 				},
 				{
 					firstName: "Pam",
 					lastName: "Obando",
 					title: "Secretary",
-					profileImg: "/images/profiles/pam_obando.jpg"
+					profileImg: "profiles/pam_obando.jpg"
 				},
 				{
 					firstName: "Robert",
 					lastName: "Woerner",
 					title: "Treasurer",
-					profileImg: "/images/profiles/robert_woerner.jpeg"
+					profileImg: "profiles/robert_woerner.jpeg"
 				},
 				{
 					firstName: "Jody",
 					lastName: "Friend",
 					title: "Community Member",
-					profileImg: "/images/profiles/jody_friend.jpg"
+					profileImg: "profiles/jody_friend.jpg"
 				},
 				{
 					firstName: "Pamela",
 					lastName: "Harlan",
 					title: "Community Member",
-					profileImg: "/images/profiles/pamela_harlan.jpg"
+					profileImg: "profiles/pamela_harlan.jpg"
 				},
 				{
 					firstName: "Rachel",
 					lastName: "Ivanyi",
 					title: "Community Member",
-					profileImg: "/images/profiles/rachel_Ivanyi.jpg"
+					profileImg: "profiles/rachel_Ivanyi.jpg"
 				},
 				{
 					firstName: "LuAnn",
 					lastName: "Haley",
 					title: "Community Member",
-					profileImg: "/images/profiles/luann_haley.jpg"
+					profileImg: "profiles/luann_haley.jpg"
 				},
 				{
 					firstName: "Michelle",
 					lastName: "Morden",
 					title: "Community Member",
-					profileImg: "/images/profiles/michelle_morden.jpeg"
+					profileImg: "profiles/michelle_morden.jpeg"
 				},
 				{
 					firstName: "Gaurav",
 					lastName: "Deshpande",
 					title: "Community Member",
-					profileImg: "/images/profiles/gaurav_deshpande.jpg"
+					profileImg: "profiles/gaurav_deshpande.jpg"
 				},
 				{
 					firstName: "Momoka",
 					lastName: "Sugimura",
 					title: "Student Representative",
-					profileImg: "/images/profiles/momoka_sugimura.jpg"
+					profileImg: "profiles/momoka_sugimura.jpg"
 				},
 				{
 					firstName: "Siyu",
 					lastName: "Wang",
 					title: "Student Representative",
-					profileImg: "/images/profiles/siyu_wang.jpg"
+					profileImg: "profiles/siyu_wang.jpg"
 				},
 				{
 					firstName: "Francisco",
 					lastName: " Villegas",
 					title: "Student Representative",
-					profileImg: "/images/profiles/francisco_villegas.png"
+					profileImg: "profiles/francisco_villegas.png"
 				},
 				{
 					firstName: "Youhao",
@@ -253,13 +254,13 @@ The all-volunteer board is composed of past and present hosts, international stu
 					title: "Technical Advisor",
 					email: "youhaowei@ifriends.org",
 					profileImg:
-						"https://res.cloudinary.com/simpleview/image/upload/v1553790432/clients/simpleview/Youhao_Wei_81557218-47dc-4ae1-a41e-b10b70880b8e.jpg"
+						"profiles/youhao_wei.jpg"
 				},
 				{
 					firstName: "Sylvia",
 					lastName: "Ahanonu",
 					title: "ISS Liason",
-					profileImg: "/images/profiles/sylvia_ahanonu.jpg"
+					profileImg: "profiles/sylvia_ahanonu.jpg"
 				}
 			]
 		};

@@ -7,13 +7,14 @@ import TextBlock, { VARIANTS } from "../components/TextBlock";
 import ImageTextBlock, { COLORS } from "../components/ImageTextBlock";
 import { ACTIONS } from "../components/Action";
 import { Alert } from "react-bootstrap";
+import { getStorageMediaUrl } from "../lib/image";
 
 export const getStaticProps = async () => {
 	return {
 		props: {
 			banner: {
 				message: "EVERY STUDENT NEEDS A SENSE OF HOME, WHEREVER THEY ARE FROM.",
-				image: "/images/home-banner.jpg",
+				image: getStorageMediaUrl("home-banner.jpg"),
 				actions: [
 					{
 						type: "signup",
@@ -55,11 +56,11 @@ export const getStaticProps = async () => {
 					{
 						title: "Why Host?",
 						content: `
-	* Learn about other countries and cultures
-	* Participate in activities with interesting and eager students
-	* Help international students adjust to American culture
-	* Have fun!`,
-						image: "zipline.jpg",
+* Learn about other countries and cultures
+* Participate in activities with interesting and eager students
+* Help international students adjust to American culture
+* Have fun!`,
+						image: getStorageMediaUrl("zipline.jpg"),
 						actions: [
 							{
 								type: ACTIONS.READMORE,
@@ -69,13 +70,13 @@ export const getStaticProps = async () => {
 					},
 					{
 						title: "What is Expected?",
-						image: "/images/host.jpg",
+						image: getStorageMediaUrl("host.jpg"),
 						content: `
-	* Commit to participate for one academic year
-	* Hosts and students contact each other within one week of being matched
-	* Students and hosts get together at least once a month during the school year for activities that both would enjoy
-	* Hosts and students share ideas, customs, and cultures
-	* Follow the International Friends Guidelines for hosts and students
+* Commit to participate for one academic year
+* Hosts and students contact each other within one week of being matched
+* Students and hosts get together at least once a month during the school year for activities that both would enjoy
+* Hosts and students share ideas, customs, and cultures
+* Follow the International Friends Guidelines for hosts and students
 	`,
 						actions: [
 							{
@@ -89,7 +90,7 @@ export const getStaticProps = async () => {
 					title: "Get Involved",
 					textAlign: "center",
 					content: `
-	Make a “world of difference” in the lives of international students and local hosts.  It’s fun, it’s easy, and it changes lives.`,
+Make a “world of difference” in the lives of international students and local hosts. It’s fun, it’s easy, and it changes lives.`,
 					actions: [
 						{
 							type: ACTIONS.SIGNUP,
@@ -119,7 +120,7 @@ const HomePage = ({ sections, banner }) => (<MainLayout>
 					padding: "calc(2rem * 1.2 + 1rem + 0.83rem + 34px) 0"
 				}}>
 					<p>Watch a video to learn more.</p>
-					<iframe className="embed-video" allow="autoplay" allowfullscreen="" src="https://arizona.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=06dd0cd1-402e-4042-bd61-abf8013f6212&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=false&amp;start=0&amp;interactivity=all" style={{
+					<iframe className="embed-video" allow="autoplay" allowFullScreen="" src="https://arizona.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=06dd0cd1-402e-4042-bd61-abf8013f6212&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=false&amp;start=0&amp;interactivity=all" style={{
 						width: "100%"
 					}} />
 				</div>

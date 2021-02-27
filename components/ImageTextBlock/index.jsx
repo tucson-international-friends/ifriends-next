@@ -30,7 +30,7 @@ const ImageTextBlock = ({
 			className={classNames("textCol", color, { xh: extraHeight })}>
 			<div className={classNames("textContainer")}>
 				<h2>{title}</h2>
-				<ReactMarkdown source={content} />
+				<ReactMarkdown>{content}</ReactMarkdown>
 				{actions && renderActions(actions, { variant: "outline-light", label: "Learn More" })}
 			</div>
 		</Col>

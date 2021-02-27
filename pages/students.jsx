@@ -10,6 +10,7 @@ import Banner from "../components/Banner";
 import TextBlock from "../components/TextBlock";
 import Header from "../components/Header";
 import Testimonial from "../components/Testimonial";
+import { getStorageMediaUrl } from "../lib/image";
 
 export default class StudentsPage extends React.Component {
 	static async getInitialProps() {
@@ -17,7 +18,7 @@ export default class StudentsPage extends React.Component {
 			banner: {
 				message:
 					"BECOME A FRIEND TO AN INTERNATIONAL STUDENT STUDYING IN TUCSON",
-				image: "/images/meet-student-banner.jpg"
+				image: getStorageMediaUrl("meet-student-banner.jpg")
 			},
 			sections: [
 				{
@@ -44,25 +45,25 @@ I will take the liberty to thank all the Board Members and hosts in the name of 
 						title: "FALL WELCOME LUNCHEON",
 						content:
 							"Before the beginning of the fall semester, International Friends hosts a lunch for incoming international students in conjunction with the University‘s orientation program. Attendees also include hosts and representatives from International Student Services, and volunteers bring and help prepare food. This is a great opportunity to meet the new students. While at the lunch, students are encouraged to sign up for an International Friends host.  The matching process begins after the lunch.",
-						image: "/images/welcome-luncheon.jpg"
+						image: getStorageMediaUrl("welcome-luncheon.jpg")
 					},
 					{
 						title: "FALL PICNIC",
 						content:
 							"International Friends sponsors a fall picnic, usually in late September, for students and hosts. Everyone on our email list is invited to come. We always need volunteers to welcome guests, contribute to the lunch buffet, and help with the activities.",
-						image: "/images/fall-fiesta.jpg"
+						image: getStorageMediaUrl("fall-fiesta.jpg")
 					},
 					{
 						title: "SPRING WELCOME Brunch",
 						content:
 							"Before the spring semester begins, International Friends sponsors a brunch for incoming international students and hosts.  This meet-and-greet event is a great opportunity to welcome the new spring semester students.  While at the brunch, students are encouraged to sign up for an International Friends host. The matching process begins after the brunch.",
-						image: "/images/welcome-dinner.jpg"
+						image: getStorageMediaUrl("welcome-dinner.jpg")
 					},
 					{
 						title: "RODEO PICNIC",
 						content:
 							"Each spring, International Friends hosts an annual Rodeo Picnic at about the time of the historic Tucson Rodeo. This event features a picnic for all students who have been involved in our activities during the year, their hosts, and other community friends. Traditionally held at Reid Park, this event features music, dancing, games, and food.",
-						image: "/images/spring-picnic.jpg"
+						image: getStorageMediaUrl("spring-picnic.jpg")
 					}
 				]
 			],
@@ -99,7 +100,7 @@ I will take the liberty to thank all the Board Members and hosts in the name of 
 				<Container>
 					<Row>
 						<Col md={4} xl={3} style={{ marginTop: "2em" }}>
-							<Image style={{}} fluid rounded src="/images/bruna.jpg" />
+							<Image style={{}} fluid rounded src={getStorageMediaUrl('bruna.jpg')} />
 						</Col>
 						<Col xl={9} md={8}>
 							<TextBlock {...sections[0]} />

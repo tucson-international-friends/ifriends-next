@@ -12,13 +12,14 @@ import Header from "../components/Header";
 import { FAQList } from "../components/FAQ";
 import Testimonial from "../components/Testimonial";
 import Signup from "../components/Action/signup";
+import { getStorageMediaUrl } from "../lib/image";
 
 export default class HostPage extends React.Component {
 	static async getInitialProps() {
 		return {
 			banner: {
 				message: "BUILD LASTING FRIENDSHIPS",
-				image: "/images/host-student-banner.jpg"
+				image: getStorageMediaUrl(`host-student-banner.jpg`)
 			},
 			sections: [
 				[
@@ -38,7 +39,7 @@ While the students’ and hosts’ matched relationships officially end after th
 				[
 					{
 						title: "LIFE-LONG FRIENDSHIPS ARE FORMED",
-						image: "./images/halloween.jpg",
+						image: getStorageMediaUrl("halloween.jpg"),
 						content: `
 International students describe International Friends as an invaluable asset for learning about American life outside the academic environment. Southern Arizonans who have hosted students have expressed tremendous gratitude for the pleasure these relationships bring, and the goodwill generated affects both students and hosts for the rest of their lives.
 `,
@@ -51,7 +52,7 @@ International students describe International Friends as an invaluable asset for
 					},
 					{
 						title: "HOW HOSTING WORKS",
-						image: "/images/cooking2.jpg",
+						image: getStorageMediaUrl("ooking2.jpg"),
 						content: `
 Students and hosts are matched for one academic year. Although the relationships may continue well beyond this time period, we hope hosts will make themselves available for matching to other first-year students in upcoming years.
 
