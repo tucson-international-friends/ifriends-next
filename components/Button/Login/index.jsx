@@ -1,7 +1,9 @@
-import firebase, { facebookProvider, googleProvider } from "Libs/firebase";
+import React, { useCallback } from "react";
 import { Button } from "react-bootstrap";
+import Image from "next/image";
 import { FaFacebookF } from "react-icons/fa";
-import { useCallback } from "react";
+
+import firebase, { facebookProvider, googleProvider } from "../../../lib/firebase";
 
 export const PROVIDERS = {
 	GOOGLE: "Google",
@@ -13,7 +15,7 @@ const { GOOGLE, FACEBOOK } = PROVIDERS;
 const props = {
 	[GOOGLE]: {
 		Icon: () => (
-			<img
+			<Image
 				style={{
 					width: 36,
 					height: 36
@@ -42,10 +44,10 @@ const props = {
 };
 
 const LoginButton = ({ variant, handleSuccess, handleError }) => {
-	if (!variant in PROVIDERS) {
+	if (!(variant in PROVIDERS)) {
 		return null;
 	}
-	console.log(variant);
+	// eslint-disable-next-line react/destructuring-assignment
 	const { provider, color, Icon } = props[variant];
 	const handleLogin = useCallback(() => {
 		firebase

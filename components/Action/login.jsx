@@ -1,8 +1,8 @@
 import { Modal, Form, Alert, Row, Col } from "react-bootstrap";
 import { useCallback, useState } from "react";
-import Button, { LoginButton } from "../Button";
-import firebase from "Libs/firebase";
 import { useGlobal } from "reactn";
+import firebase from "../../lib/firebase";
+import Button, { LoginButton } from "../Button";
 
 const Login = ({ label = "Log In" }) => {
 	const [user, setUser] = useGlobal("user");
@@ -18,12 +18,12 @@ const Login = ({ label = "Log In" }) => {
 				setError(err.message);
 			});
 	}, [email, password]);
-	const handleSuccess = useCallback(result => {
+	const handleSuccess = useCallback((result) => {
 		setUser(result.user);
 	});
-	const handleError = useCallback(err => {
+	const handleError = useCallback((err) => {
 		setError(err.message);
-	})
+	});
 	return (
 		<>
 			<Modal show={showModal} onHide={() => setShowModal(false)}>
@@ -45,7 +45,7 @@ const Login = ({ label = "Log In" }) => {
 							<Form.Label>Email</Form.Label>
 							<Form.Control
 								value={email}
-								onChange={(e) => setEmail(e.target.value)}
+								onChange={e => setEmail(e.target.value)}
 								type="email"
 								placeholder="Enter email"
 							/>
@@ -54,7 +54,7 @@ const Login = ({ label = "Log In" }) => {
 							<Form.Label>Password</Form.Label>
 							<Form.Control
 								value={password}
-								onChange={(e) => setPassword(e.target.value)}
+								onChange={e => setPassword(e.target.value)}
 								type="password"
 								placeholder="Password"
 							/>
@@ -65,7 +65,7 @@ const Login = ({ label = "Log In" }) => {
 						borderBottom: "2px rgba(0,0,0,0.1) dashed",
 						height: "1rem",
 						marginBottom: "1rem"
-					}}></div>
+					}} />
 					<Row>
 						<Col md={6}>
 							<LoginButton variant="Google" handleSuccess={handleSuccess} handleError={handleError} />
