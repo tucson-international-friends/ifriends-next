@@ -30,7 +30,7 @@ const NewsLetters = () => {
 			}}>
 
 				<div className="py-4">
-					<h2>Latest - {latest.title}</h2>
+					<h2>Latest Newsletter - {latest.title}</h2>
 					<a rel="noreferrer" className="btn btn-primary" target="_blank" href={getStorageMediaUrl(`newsletters/${latest.path}`)}>View PDF</a>
 
 				</div>
