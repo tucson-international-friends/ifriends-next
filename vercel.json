@@ -1,0 +1,17 @@
+{
+	"version": 2,
+	"redirects": [
+		{
+			"source": "/about-us.html",
+			"destination": "/about"
+		},
+		{
+			"source": "/host-a-student.html",
+			"destination": "/hosts"
+		},
+		{
+			"source": "/chairperson-letter.html",
+			"destination": "/letter"
+		}
+	]
+}

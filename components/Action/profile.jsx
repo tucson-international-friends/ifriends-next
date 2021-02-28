@@ -1,6 +1,6 @@
 import { NavDropdown, Image } from "react-bootstrap";
 import { useGlobal } from "reactn";
-import { useEffect, useCallback } from "react";
+import { useCallback } from "react";
 import { FaSignOutAlt, FaUserCircle } from "react-icons/fa";
 import firebase from "../../lib/firebase";
 
