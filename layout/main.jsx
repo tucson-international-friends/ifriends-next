@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import addReactNDevTools from "reactn-devtools";
 import Meta from "../components/meta";
@@ -7,22 +7,23 @@ import Footer from "../components/Footer";
 import navItems from "./navbarItems.json";
 import footerNavItems from "./footerMenuItems.json";
 import { getPageByName } from "../lib/page";
-import { useEffect } from "react";
+
 import firebase from "../lib/firebase";
 import { ACTIONS } from "../components/Action";
 
 addReactNDevTools();
 
 const MainLayout = ({ children }) => {
-	if (firebase.auth().currentUser)
+	if (firebase.auth().currentUser) {
 		useEffect(() => {
 			firebase
 				.auth()
 				.currentUser.getIdToken(true)
-				.then(token => {
+				.then((token) => {
 					console.log(token);
 				});
 		}, []);
+	}
 	return (
 		<>
 			<Meta />
