@@ -240,12 +240,13 @@ The all-volunteer board is composed of past and present hosts, international stu
 					firstName: "Ye",
 					lastName: "Zhang",
 					title: "Student Representative",
+					profileImg: "profiles/ye_zhang.jpg"
 				},
 				{
 					firstName: "Francisco",
 					lastName: " Villegas",
 					title: "Student Representative",
-					profileImg: "profiles/francisco_villegas.png"
+					profileImg: "profiles/francisco_villegas.jpg"
 				},
 				{
 					firstName: "Youhao",
