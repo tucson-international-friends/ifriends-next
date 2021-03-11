@@ -8,12 +8,12 @@
 				"name": "about"
 			},
 			{
-				"label": "Host A Student",
-				"name": "hosts"
+				"label": "Join",
+				"name": "join"
 			},
 			{
-				"label": "Meet Our Students",
-				"name": "students"
+				"label": "Calendar and Activities",
+				"name": "events"
 			},
 			{
 				"label": "By Laws",

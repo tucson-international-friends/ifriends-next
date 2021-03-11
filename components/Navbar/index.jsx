@@ -23,7 +23,7 @@ const MainNavbar = ({ router, navItems, user }) => {
 	useEffect(() => { }, []);
 	const navbar = (
 		<>
-			<Navbar.Brand className={"brand"}>
+			<Navbar.Brand className="brand">
 				<Logo className="d-none d-sm-block" />
 				<Logo className="d-block d-sm-none" size="sm" />
 			</Navbar.Brand>
@@ -40,7 +40,7 @@ const MainNavbar = ({ router, navItems, user }) => {
 						verticalAlign: "middle",
 						paddingLeft: 5
 					}}>
-					{"Menu"}
+					Menu
 				</span>
 			</Navbar.Toggle>
 			<Navbar.Collapse

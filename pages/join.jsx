@@ -18,7 +18,7 @@ export default class HostPage extends React.Component {
 	static async getInitialProps() {
 		return {
 			banner: {
-				message: "BUILD LASTING FRIENDSHIPS",
+				message: "HOW TO JOIN INTERNATIONAL FRIENDS",
 				image: getStorageMediaUrl(`host-student-banner.jpg`)
 			},
 			sections: [
@@ -128,28 +128,7 @@ Information about group activities and other items of interest are communicated 
 						"Yes!  Many International Friends hosts request being matched with two or three students, and some even host more."
 				}
 			],
-			testimonials: [
-				{
-					quote:
-						"“Serving as a host with International Friends has enriched my life and broadened my horizons immeasurably. It is a real joy to interact with bright, energetic young people from widely divergent cultures and to learn firsthand about the fascinating world we live in.”",
-					from: "Robert Woerner, Host"
-				},
-				{
-					quote:
-						"“We have been involved with hosting international students for about 15 years. It has been such a fun and enriching time for us that I can’t imagine why everyone would not want to participate in the experience!”",
-					from: "Deanne & Bill Lesley, Hosts"
-				},
-				{
-					quote:
-						"“We are relatively new to International Friends and enjoying it tremendously. Our Chinese student has been with us for a year and we can already see him growing and maturing. He provides a connection to the university, as well as to the world. It takes so little to host that it seems like everyone would want a student.”",
-					from: "Holly & Michael Berryhill, Hosts"
-				},
-				{
-					quote:
-						"“My student and I have explored the beautiful mountain canyons and desert trails surrounding Tucson. More importantly, we started learning about our unique backgrounds and experiences. I was able to help him with the transition to life in America and he has enriched my life by becoming part of my family.”",
-					from: "George Binder, Host"
-				}
-			]
+
 		};
 	}
 
@@ -169,18 +148,6 @@ Information about group activities and other items of interest are communicated 
 					<ImageTextBlock {...sections[1][0]} color={COLORS.LIGHT} invert />
 					<ImageTextBlock {...sections[1][1]} />
 
-					<Header
-						className="mt-5 text-center py-5"
-						title="WHAT OUR HOSTS SAY..."
-					/>
-					<Row>
-						{// eslint-disable-next-line react/no-array-index-key
-							testimonials.map((testimonial, i) => (
-								<Col key={i} className="mb-4" md={6}>
-									<Testimonial {...testimonial} />
-								</Col>
-							))}
-					</Row>
 					<div className="text-center py-5 mb-5">
 						<Signup size="lg" label="join us today" />
 					</div>

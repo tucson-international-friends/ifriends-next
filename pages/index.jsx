@@ -54,7 +54,7 @@ export const getStaticProps = async () => {
 				// section 2
 				[
 					{
-						title: "Why Host?",
+						title: "Why Become an International Friends Host?",
 						content: `
 * Learn about other countries and cultures
 * Participate in activities with interesting and eager students
@@ -69,14 +69,13 @@ export const getStaticProps = async () => {
 						]
 					},
 					{
-						title: "What is Expected?",
+						title: "Why Do International Students Participate?",
 						image: getStorageMediaUrl("host.jpg"),
 						content: `
-* Commit to participate for one academic year
-* Hosts and students contact each other within one week of being matched
-* Students and hosts get together at least once a month during the school year for activities that both would enjoy
-* Hosts and students share ideas, customs, and cultures
-* Follow the International Friends Guidelines for hosts and students
+* Learn about and more easily adjust to American culture
+* Participate in the life of the Tucson community
+* Share in sightseeing, dinners, and other activities with community individuals and families
+* Have fun!
 	`,
 						actions: [
 							{
@@ -84,6 +83,25 @@ export const getStaticProps = async () => {
 								href: "/hosts"
 							}
 						]
+					},
+					{
+						title: "WHAT IS EXPECTED OF HOSTS AND STUDENTS?",
+						content: `
+* Commit to participate for one academic year
+* Hosts and students contact each other within one week of being matched
+* Students and hosts get together at least once a month during the school year for activities that both would enjoy
+* Hosts and students share ideas, customs, and cultures
+* Follow the International Friends Guidelines for hosts and students`
+					},
+					{
+						title: "YOUR SUPPORT IS IMPORTANT!",
+						content: `
+* Donate to support International Friends’ mission and our events, programs, and activities
+* Help pay for site rentals, food, and supplies for welcome lunches, picnics, and other events
+* Assist with website, listserv, marketing, and organizational costs
+* Help defray the cost of printed materials, such as brochures, guidelines, newsletters, and banners
+* Contribute to fund important situational expenses like a video for student orientations and a new PA system for events and activities
+						`
 					}
 				],
 				{
@@ -130,6 +148,12 @@ const HomePage = ({ sections, banner }) => (<MainLayout>
 		<ImageTextBlock {...sections[1][0]} extraHeight invert />
 		<ImageTextBlock
 			{...sections[1][1]}
+			extraHeight
+			color={COLORS.LIGHT}
+		/>
+		<ImageTextBlock {...sections[1][2]} extraHeight invert />
+		<ImageTextBlock
+			{...sections[1][3]}
 			extraHeight
 			color={COLORS.LIGHT}
 		/>
