@@ -12,7 +12,7 @@ export const VARIANTS = { CALLOUT: "callout" };
 const TextBlock = ({ title, content, actions, variant, headerAlign, textAlign = "left" }) => {
 	const isCallout = variant === VARIANTS.CALLOUT;
 	const component = (
-		<div className={ classNames("textBlock", { callout: isCallout }, `text-${textAlign}`)}>
+		<div className={classNames("textBlock", { callout: isCallout }, `text-${textAlign}`)}>
 			<h2 className={`title text-${headerAlign || textAlign}`}>{title}</h2>
 			{Array.isArray(content)
 				? (
@@ -35,7 +35,7 @@ const TextBlock = ({ title, content, actions, variant, headerAlign, textAlign = 
 		</div>
 	);
 	return isCallout ? (
-		<Jumbotron className={"callout"}>{component}</Jumbotron>
+		<Jumbotron className="callout">{component}</Jumbotron>
 	) : (
 		component
 	);
