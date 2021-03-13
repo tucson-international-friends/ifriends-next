@@ -33,25 +33,35 @@ export const getStaticProps = async () => {
 International Friends became an Arizona corporation in 2004 and also received official 501(c)(3) tax- exempt status from the IRS. This, along with the support and encouragement of international students, community hosts, and board members, provides a solid foundation for the future.`
 					},
 					{
-						title: "International Friends Board",
+						title: "A TYPICAL YEAR",
+						headerAlign: "center",
 						textAlign: "justify",
 						content: `
+International Friends sponsors a “welcome” event each August and January for new students and hosts. At these events, we describe our program and invite international students to apply to be matched with local hosts.
+
+Students and hosts are encouraged to get together once a month or more. Activities can range from special events like holiday celebrations, sightseeing trips, and hiking outings, to everyday activities like shopping and sharing meals. International Friends also organizes picnics and other fun events during the school year that all are welcome to attend.
+
+While the students’ and hosts’ matched relationships officially end after the first academic year, lifelong friendships and connections are often formed with hosts, students, and the students’ families back home. Many have found their lives immeasurably enriched by these friendships.`
+					}
+				],
+				{
+					textAlign: "justify",
+					content: `
 The all-volunteer board is composed of past and present hosts, international students, and an ex-officio representative from the UA International Student Services office. Board meetings are held five times a year to evaluate the program and plan events. 
 `,
-						actions: [
-							{
-								type: ACTIONS.READMORE,
-								href: "/by-laws",
-								label: "By Laws"
-							},
-							{
-								type: ACTIONS.READMORE,
-								href: "/letter",
-								label: "Letter from Co-Chairs"
-							}
-						]
-					}
-				]
+					actions: [
+						{
+							type: ACTIONS.READMORE,
+							href: "/by-laws",
+							label: "By Laws"
+						},
+						{
+							type: ACTIONS.READMORE,
+							href: "/letter",
+							label: "Letter from Co-Chairs"
+						}
+					]
+				}
 			],
 			eventColumns: [
 				{
@@ -315,7 +325,7 @@ The all-volunteer board is composed of past and present hosts, international stu
 				}
 			],
 			studentStories: [{
-				title: "Momoko'S STORY",
+				title: "MOMOKA SUGIMURA",
 				textAlign: "justify",
 				content: `
 Hi! I’m Momoka from Tokyo, Japan. I’m pursuing my bachelor’s degree in Optical Sciences at the University of Arizona with an aspiration to become an engineer who works globally towards developing eco-friendly technology. 
@@ -325,7 +335,7 @@ Coming to Tucson by myself was exciting but frightening even though I had the ex
 I’m glad that I joined International Friends and met many people along the way. I hope other international students will feel the same way, too
 `
 			}, {
-				title: "Gaurav's Story",
+				title: "GAURAV DESHPANDE",
 				content: `Hi Everyone! I’m Gaurav Deshpande. I joined International Friends more than two years ago when I joined The University of Arizona to pursue a Masters degree in Management Information Systems. Since then my hosts, Paul & Pat, and all the other friends I made at International Friends, have become an important and fun part of this new life that I am building here in the United States.
 
 The first time I heard about International Friends was during the orientation in my first week in Tucson. The promise of a chance to meet people from other cultures & backgrounds and free food drove me to attend the Welcome Lunch the following weekend. I remember being surprised by how friendly and welcoming everyone was, and how genuinely curious they were to know more about my country. I generally tend to stick to interacting with people I already know, but I made it a point to not do that and picked a table that had no one from my program. Fortunately for me, that’s where I met Paul, who just happened to be in the early stages of planning a trip to India later the same year. The trip was going to take him to Rajasthan, which is one of my favorite places to visit, and we hit it off as he picked my brain about all the things to see and do there.
@@ -356,6 +366,24 @@ const AboutPage = ({ banner, sections, studentTestimonials, hostTestimonials, st
 					</Col>
 				</Row>
 
+				<h1 className="text-center">Meet Our Students</h1>
+				<Row>
+					<Col md={4} xl={3} style={{ marginTop: "2em" }}>
+						<Image style={{}} fluid rounded src={getLocalMediaUrl('momoka.jpg')} />
+					</Col>
+					<Col xl={9} md={8}>
+						<TextBlock {...studentStories[0]} />
+					</Col>
+
+
+					<Col md={4} xl={3} style={{ marginTop: "2em" }}>
+						<Image style={{}} fluid rounded src={getLocalMediaUrl('gaurav_deshpande-2.jpg')} />
+					</Col>
+					<Col xl={9} md={8}>
+						<TextBlock {...studentStories[1]} />
+					</Col>
+				</Row>
+
 				<Header
 					className="mt-5 text-center py-5"
 					title="WHAT OUR STUDENTS SAY"
@@ -382,31 +410,18 @@ const AboutPage = ({ banner, sections, studentTestimonials, hostTestimonials, st
 						))}
 				</Row>
 
-				<Row>
-					<Col md={4} xl={3} style={{ marginTop: "2em" }}>
-						<Image style={{}} fluid rounded src={getLocalMediaUrl('momoko.jpg')} />
-					</Col>
-					<Col xl={9} md={8}>
-						<TextBlock {...studentStories[0]} />
-					</Col>
-
-
-					<Col md={4} xl={3} style={{ marginTop: "2em" }}>
-						<Image style={{}} fluid rounded src={getLocalMediaUrl('gaurav_deshpande-2.jpg')} />
-					</Col>
-					<Col xl={9} md={8}>
-						<TextBlock {...studentStories[1]} />
-					</Col>
-				</Row>
-
 
 				{
 					// caledanr can be added back after planning meeting
 					// <Header title="Events" />
 					//<EventList columns={eventColumns} events={events} />
 				}
+				<h1 className="text-center">INTERNATIONAL FRIENDS BOARD</h1>
+				<TextBlock textAlign="center" {...sections[1]} />
+
 				<Header title="Current Board Members" />
-				<p>The all-volunteer board is composed of past and present hosts, international students, and an ex-officio representative from the UA International Student Services office. Board meetings are held five times a year to evaluate the program and plan events.</p>
+
+
 				<BoardList members={boardMembers} />
 
 				<Header title="Previous Members" />

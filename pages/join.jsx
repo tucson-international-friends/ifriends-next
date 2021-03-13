@@ -43,18 +43,7 @@ export const getStaticProps = () => {
 				}
 			],
 			[
-				{
-					title: "A TYPICAL YEAR",
-					headerAlign: "center",
-					textAlign: "justify",
-					content: `
-International Friends sponsors a “welcome” event each August and January for new students and hosts. At these events, we describe our program and invite international students to apply to be matched with local hosts.
 
-Students and hosts are encouraged to get together once a month or more. Activities can range from special events like holiday celebrations, sightseeing trips, and hiking outings, to everyday activities like shopping and sharing meals. International Friends also organizes picnics and other fun events during the school year that all are welcome to attend.
-
-While the students’ and hosts’ matched relationships officially end after the first academic year, lifelong friendships and connections are often formed with hosts, students, and the students’ families back home. Many have found their lives immeasurably enriched by these friendships.
-`
-				}
 			],
 			[
 				{

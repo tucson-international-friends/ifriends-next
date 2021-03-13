@@ -12,8 +12,8 @@
 				"name": "join"
 			},
 			{
-				"label": "Calendar and Activities",
-				"name": "events"
+				"label": "Activities",
+				"name": "activities"
 			},
 			{
 				"label": "By Laws",

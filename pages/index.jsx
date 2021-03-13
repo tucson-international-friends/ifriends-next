@@ -64,7 +64,7 @@ export const getStaticProps = async () => {
 						actions: [
 							{
 								type: ACTIONS.READMORE,
-								href: "/hosts"
+								href: "/about"
 							}
 						]
 					},
@@ -80,7 +80,7 @@ export const getStaticProps = async () => {
 						actions: [
 							{
 								type: ACTIONS.READMORE,
-								href: "/hosts"
+								href: "/about"
 							}
 						]
 					},
@@ -92,11 +92,22 @@ export const getStaticProps = async () => {
 * Students and hosts get together at least once a month during the school year for activities that both would enjoy
 * Hosts and students share ideas, customs, and cultures
 * Follow the International Friends Guidelines for hosts and students`,
+						actions: [
+							{
+								type: ACTIONS.READMORE,
+								href: "/guidelines"
+							}
+						],
 						image: getLocalMediaUrl("46766821_1514707395339433_5267609408078086144_n.jpeg")
 					},
 					{
 						title: "YOUR SUPPORT IS IMPORTANT!",
 						image: getLocalMediaUrl("20190929_120315.jpg"),
+						actions: [
+							{
+								type: ACTIONS.DONATE,
+							}
+						],
 						content: `
 * Donate to support International Friends’ mission and our events, programs, and activities
 * Help pay for site rentals, food, and supplies for welcome lunches, picnics, and other events
@@ -147,17 +158,15 @@ const HomePage = ({ sections, banner }) => (<MainLayout>
 			</Col>
 
 		</Row>
-		<ImageTextBlock {...sections[1][0]} extraHeight invert />
+		<ImageTextBlock {...sections[1][0]} extraHeight invert color={COLORS.LIGHT} />
 		<ImageTextBlock
 			{...sections[1][1]}
 			extraHeight
-			color={COLORS.LIGHT}
 		/>
-		<ImageTextBlock {...sections[1][2]} extraHeight invert />
+		<ImageTextBlock {...sections[1][2]} extraHeight invert color={COLORS.LIGHT} />
 		<ImageTextBlock
 			{...sections[1][3]}
 			extraHeight
-			color={COLORS.LIGHT}
 		/>
 		<TextBlock {...sections[2]} variant={VARIANTS.CALLOUT} />
 	</Container>
