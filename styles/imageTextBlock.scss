@@ -55,8 +55,17 @@ $lgHeight      : 600px;
   width : 100vw;
 
   @include media-breakpoint-up(md) {
-    height: $lgHeight;
-    width : 50vw;
+    height : $lgHeight;
+    width  : 50vw;
+    padding: 1rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 3rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 5rem;
   }
 
   overflow: hidden;
@@ -69,8 +78,6 @@ $lgHeight      : 600px;
   &.invert {
     right: 0;
   }
-
-  padding: 5rem;
 
   img {
     width     : 100%;
