@@ -13,7 +13,7 @@ import TextBlock from "../components/TextBlock";
 import EventList from "../components/Events/List";
 import BoardList from "../components/BoardList";
 import Header from "../components/Header";
-import { getStorageMediaUrl } from "../lib/image";
+import { getStorageMediaUrl, getLocalMediaUrl } from "../lib/image";
 import Testimonial from "../components/Testimonial";
 
 export const getStaticProps = async () => {
@@ -315,19 +315,28 @@ The all-volunteer board is composed of past and present hosts, international stu
 				}
 			],
 			studentStories: [{
-				title: "BRUNA'S STORY",
+				title: "Momoko'S STORY",
 				textAlign: "justify",
 				content: `
-My name is Bruna, and I first came to Tucson in 2014 to teach Portuguese language as a Fulbright Foreign Language Teaching Assistant. As I was going to spend only one academic year at the University of Arizona, International Friends appeared to be the perfect option to help me experience Tucson and American culture fully. My hosts Harold and Nancy welcomed me to their family and, since then, I have felt I have an important support outside my country, Brazil. With their company, I have witnessed beautiful events, such as the family’s Thanksgiving dinner, and visited important sites around Tucson, such as Catalina State Park (awesome for hiking!).
+Hi! I’m Momoka from Tokyo, Japan. I’m pursuing my bachelor’s degree in Optical Sciences at the University of Arizona with an aspiration to become an engineer who works globally towards developing eco-friendly technology. 
 
-As it is so easy to fall in love with Tucson and the community, I decided to apply for a Ph.D. degree in Second Language Acquisition and Teaching to continue my studies in the University of Arizona and create more memories in Tucson. Fortunately, I was invited to be an IF Student Board Member for Fall 2016 and, since then, I have had the opportunity to collaborate with an amazing group of people. It is an honor to help organize events to enrich international students’ experience in the United States. This way, I would like to replicate all great memories of my first year in every new student’s heart living in Tucson.
+Coming to Tucson by myself was exciting but frightening even though I had the experience of living in the US for a year as a high school exchange student. In the first few weeks in Tucson, I was randomly attending events around the campus area, hoping to make friends. Then, I got to know that there would be an event that includes free food close to campus, which happened to be the welcome luncheon for International Friends. I went there without really knowing what that is for. But going there and getting involved with International Friends was one of the best decisions I made since I came to Tucson. At the luncheon, I met many wonderful welcoming hosts and also international students who were just like me, trying to create a network in Tucson. But, most importantly, I met my host (Jack and Virginia Wyly). They always make sure that we feel welcomed and never lonely. Especially during the holiday seasons, they invite us over to their house and have dinner together. It is very heartwarming to have someone and a place you feel welcomed, especially in a place far from your actual home. 
 
-
-I will take the liberty to thank all the Board Members and hosts in the name of the international students who had their lives touched and changed by the IF organization for their tireless effort in organizing so many cultural exchange opportunities.
+I’m glad that I joined International Friends and met many people along the way. I hope other international students will feel the same way, too
 `
 			}, {
-				title: "SOMEONE ELSE's Story",
-				content: `segw`
+				title: "Gaurav's Story",
+				content: `Hi Everyone! I’m Gaurav Deshpande. I joined International Friends more than two years ago when I joined The University of Arizona to pursue a Masters degree in Management Information Systems. Since then my hosts, Paul & Pat, and all the other friends I made at International Friends, have become an important and fun part of this new life that I am building here in the United States.
+
+The first time I heard about International Friends was during the orientation in my first week in Tucson. The promise of a chance to meet people from other cultures & backgrounds and free food drove me to attend the Welcome Lunch the following weekend. I remember being surprised by how friendly and welcoming everyone was, and how genuinely curious they were to know more about my country. I generally tend to stick to interacting with people I already know, but I made it a point to not do that and picked a table that had no one from my program. Fortunately for me, that’s where I met Paul, who just happened to be in the early stages of planning a trip to India later the same year. The trip was going to take him to Rajasthan, which is one of my favorite places to visit, and we hit it off as he picked my brain about all the things to see and do there.
+
+Since then, it’s been a fantastic journey with Paul & Pat as my hosts and the other students that they are hosting. I’ve made some good friends who come not only come from different countries but also from completely different areas of study! Every time we meet, I can always count on having an exciting and interesting conversation with all the different perspectives in the room, that go on for hours over good food and desserts. The trips we’ve taken around Tucson, to various events, parks, and places to visit have been a highlight of my time here and have given me a better sense of living in this city and experiencing it, as opposed to just attending the University and not knowing what it’s like. They’ve also been a large part of some of the milestones of my time here, from advising me when I was going to buy my first car here, to attending my graduation with my family from India, and helping me move from my university apartment. 
+
+In hindsight, the thing that I love most about International Friends is that it provides us, as students from different countries and cultures, with an informal and comfortable space to ask questions about American culture and ways of doing things we don’t understand and haven’t experienced before, or that may seem too silly to ask a peer or faculty at the University. 
+
+When we join the University of Arizona, for most of us, it’s the first time that we are living in another country and for some, it can even be the first time that they are living away from their family and friends. The hosts are one of the best resources we have for support during this period of transition. It’s also one of the best places to meet and interact with people outside of our field of study, from different countries, with different backgrounds and unique perspectives.
+
+Joining International Friends has been one of the best decisions that I’ve made. It has not only given me great friends for life but has also made my experience here richer and a lot more fun. I look forward to many more fun conversations, good food, and milestones together. `
 			}]
 		}
 	};
@@ -375,7 +384,7 @@ const AboutPage = ({ banner, sections, studentTestimonials, hostTestimonials, st
 
 				<Row>
 					<Col md={4} xl={3} style={{ marginTop: "2em" }}>
-						<Image style={{}} fluid rounded src={getStorageMediaUrl('bruna.jpg')} />
+						<Image style={{}} fluid rounded src={getLocalMediaUrl('momoko.jpg')} />
 					</Col>
 					<Col xl={9} md={8}>
 						<TextBlock {...studentStories[0]} />
@@ -383,10 +392,10 @@ const AboutPage = ({ banner, sections, studentTestimonials, hostTestimonials, st
 
 
 					<Col md={4} xl={3} style={{ marginTop: "2em" }}>
-						<Image style={{}} fluid rounded src={getStorageMediaUrl('bruna.jpg')} />
+						<Image style={{}} fluid rounded src={getLocalMediaUrl('gaurav_deshpande-2.jpg')} />
 					</Col>
 					<Col xl={9} md={8}>
-						<TextBlock {...studentStories[0]} />
+						<TextBlock {...studentStories[1]} />
 					</Col>
 				</Row>
 

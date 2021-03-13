@@ -7,7 +7,7 @@ import TextBlock, { VARIANTS } from "../components/TextBlock";
 import ImageTextBlock, { COLORS } from "../components/ImageTextBlock";
 import { ACTIONS } from "../components/Action";
 import { Alert } from "react-bootstrap";
-import { getStorageMediaUrl } from "../lib/image";
+import { getLocalMediaUrl, getStorageMediaUrl } from "../lib/image";
 
 export const getStaticProps = async () => {
 	return {
@@ -60,7 +60,7 @@ export const getStaticProps = async () => {
 * Participate in activities with interesting and eager students
 * Help international students adjust to American culture
 * Have fun!`,
-						image: getStorageMediaUrl("zipline.jpg"),
+						image: getLocalMediaUrl("1622360_693961743984016_1450657539_o.jpeg"),
 						actions: [
 							{
 								type: ACTIONS.READMORE,
@@ -70,7 +70,7 @@ export const getStaticProps = async () => {
 					},
 					{
 						title: "Why Do International Students Participate?",
-						image: getStorageMediaUrl("host.jpg"),
+						image: getLocalMediaUrl("46770484_10215442170621608_1860845059742629888_o.jpeg"),
 						content: `
 * Learn about and more easily adjust to American culture
 * Participate in the life of the Tucson community
@@ -91,10 +91,12 @@ export const getStaticProps = async () => {
 * Hosts and students contact each other within one week of being matched
 * Students and hosts get together at least once a month during the school year for activities that both would enjoy
 * Hosts and students share ideas, customs, and cultures
-* Follow the International Friends Guidelines for hosts and students`
+* Follow the International Friends Guidelines for hosts and students`,
+						image: getLocalMediaUrl("46766821_1514707395339433_5267609408078086144_n.jpeg")
 					},
 					{
 						title: "YOUR SUPPORT IS IMPORTANT!",
+						image: getLocalMediaUrl("20190929_120315.jpg"),
 						content: `
 * Donate to support International Friends’ mission and our events, programs, and activities
 * Help pay for site rentals, food, and supplies for welcome lunches, picnics, and other events

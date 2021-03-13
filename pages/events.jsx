@@ -16,7 +16,7 @@ export const getStaticProps = () => ({
 	props: {
 		banner: {
 			message:
-				"BECOME A FRIEND TO AN INTERNATIONAL STUDENT STUDYING IN TUCSON",
+				"Enjoy activities throughout the year",
 			image: getStorageMediaUrl("meet-student-banner.jpg")
 		},
 		sections: [
@@ -32,25 +32,25 @@ export const getStaticProps = () => ({
 					title: "FALL WELCOME LUNCHEON",
 					content:
 						"Before the beginning of the fall semester, International Friends hosts a lunch for incoming international students in conjunction with the University‘s orientation program. Attendees also include hosts and representatives from International Student Services, and volunteers bring and help prepare food. This is a great opportunity to meet the new students. While at the lunch, students are encouraged to sign up for an International Friends host.  The matching process begins after the lunch.",
-					image: getStorageMediaUrl("welcome-luncheon.jpg")
+					image: "images/13939539_900880586683476_8821876700490256782_n.jpeg"
 				},
 				{
 					title: "FALL PICNIC",
 					content:
 						"International Friends sponsors a fall picnic, usually in late September, for students and hosts. Everyone on our email list is invited to come. We always need volunteers to welcome guests, contribute to the lunch buffet, and help with the activities.",
-					image: getStorageMediaUrl("fall-fiesta.jpg")
+					image: "images/10475610_354846071383228_7607311383060727136_o.jpeg"
 				},
 				{
 					title: "SPRING WELCOME Brunch",
 					content:
 						"Before the spring semester begins, International Friends sponsors a brunch for incoming international students and hosts.  This meet-and-greet event is a great opportunity to welcome the new spring semester students.  While at the brunch, students are encouraged to sign up for an International Friends host. The matching process begins after the brunch.",
-					image: getStorageMediaUrl("welcome-dinner.jpg")
+					image: "images/81514880_1572458986263849_3369518293160296448_n.jpeg"
 				},
 				{
 					title: "RODEO PICNIC",
 					content:
 						"Each spring, International Friends hosts an annual Rodeo Picnic at about the time of the historic Tucson Rodeo. This event features a picnic for all students who have been involved in our activities during the year, their hosts, and other community friends. Traditionally held at Reid Park, this event features music, dancing, games, and food.",
-					image: getStorageMediaUrl("spring-picnic.jpg")
+					image: "/images/17.jpg"
 				}
 			]
 		],

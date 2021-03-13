@@ -20,11 +20,15 @@ const ImageTextBlock = ({
 	extraHeight
 }) => (
 	<Row className="imageTextBox">
+		<div className={classNames("backdrop", color, { invert }, { xh: extraHeight })} />
 		<div
 			className={classNames("imageCol", color, { not_invert: !invert }, { invert }, { xh: extraHeight })}>
-			<Image fluid src={image} />
+			<Image
+				rounded
+				fluid
+				src={image}
+			/>
 		</div>
-		<div className={classNames("backdrop", color, { invert }, { xh: extraHeight })} />
 		<Col
 			md={{ span: 6, offset: invert ? 0 : 6 }}
 			className={classNames("textCol", color, { xh: extraHeight })}>

@@ -12,7 +12,7 @@ import Header from "../components/Header";
 import { FAQList } from "../components/FAQ";
 import Testimonial from "../components/Testimonial";
 import Signup from "../components/Action/signup";
-import { getStorageMediaUrl } from "../lib/image";
+import { getStorageMediaUrl, getLocalMediaUrl } from "../lib/image";
 
 export const getStaticProps = () => {
 	return {
@@ -23,7 +23,7 @@ export const getStaticProps = () => {
 			},
 			sections: [[
 				{
-					title: "For Host",
+					title: "For Hosts",
 					content: `
 * Read and review the IF Guidelines.
 * Click on the “Host Application” button.
@@ -32,7 +32,7 @@ export const getStaticProps = () => {
 * Upon approval, you will be added to our database and then be given access to our list of students available for matching.
 					`
 				}, {
-					title: "For Student",
+					title: "For Students",
 					content: `
 * Read and review the IF Guidelines.
 * Click on the “Student Application” button application.
@@ -58,8 +58,8 @@ While the students’ and hosts’ matched relationships officially end after th
 			],
 			[
 				{
-					title: "LIFE-LONG FRIENDSHIPS ARE FORMED",
-					image: getStorageMediaUrl("halloween.jpg"),
+					title: "LIFELONG FRIENDSHIPS ARE FORMED",
+					image: "/images/46698861_10215442170861614_4665833654675570688_o.jpeg",
 					content: `
 International students describe International Friends as an invaluable asset for learning about American life outside the academic environment. Southern Arizonans who have hosted students have expressed tremendous gratitude for the pleasure these relationships bring, and the goodwill generated affects both students and hosts for the rest of their lives.
 
@@ -73,7 +73,7 @@ International students describe International Friends as an invaluable asset for
 				},
 				{
 					title: "HOW HOSTING WORKS",
-					image: getStorageMediaUrl("cooking2.jpg"),
+					image: getLocalMediaUrl("zipline.jpeg"),
 					content: `
 Students and hosts are matched for one academic year. Although the relationships may continue well beyond this time period, we hope hosts will make themselves available for matching with other first-year students in upcoming years.
 
