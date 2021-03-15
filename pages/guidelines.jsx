@@ -27,7 +27,7 @@ export default class GuidelinePage extends Component {
 
 * Proselytizing is not allowed. If you invite your student to a religious activity, make the nature and sponsorship of the activity clear in advance.  Respect their wishes if they choose not to go. International Friends (IF) is about mutual respect and friendship.
 
-* Do not offer financial loans, guarantees for visas, or loans for purchasing cars, leasing apartments, etc. And, do not ask for loans from students. It is strongly recommended that you do not establish a landlord/tenant relationship with your student.
+* Do not offer financial loans, guarantees for visas, or loans for purchasing cars, leasing apartments, etc. And, do not ask for loans from students.
 
 * It is strongly recommended that you do not establish a landlord/tenant relationship with your student.
 
