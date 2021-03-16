@@ -12,8 +12,8 @@ export const VARIANTS = { CALLOUT: "callout" };
 const TextBlock = ({ title, content, actions, variant, headerAlign, textAlign = "left" }) => {
 	const isCallout = variant === VARIANTS.CALLOUT;
 	const component = (
-		<div className={ classNames("textBlock", { callout: isCallout }, `text-${textAlign}`)}>
-			<h2 className={`title text-${headerAlign || textAlign}`}>{title}</h2>
+		<div className={classNames("textBlock", { callout: isCallout }, `text-${textAlign}`)}>
+			<h2 className={`title text-${headerAlign ?? textAlign}`}>{title}</h2>
 			{Array.isArray(content)
 				? (
 					<Row>
@@ -21,6 +21,7 @@ const TextBlock = ({ title, content, actions, variant, headerAlign, textAlign = 
 							// eslint-disable-next-line react/no-array-index-key
 							<Col key={i}>
 								<ReactMarkDown
+									className={`text-${textAlign}`}
 									source={col} />
 							</Col>
 						))}
@@ -35,7 +36,7 @@ const TextBlock = ({ title, content, actions, variant, headerAlign, textAlign = 
 		</div>
 	);
 	return isCallout ? (
-		<Jumbotron className={"callout"}>{component}</Jumbotron>
+		<Jumbotron className="callout">{component}</Jumbotron>
 	) : (
 		component
 	);

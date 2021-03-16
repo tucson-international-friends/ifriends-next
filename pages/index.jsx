@@ -7,7 +7,7 @@ import TextBlock, { VARIANTS } from "../components/TextBlock";
 import ImageTextBlock, { COLORS } from "../components/ImageTextBlock";
 import { ACTIONS } from "../components/Action";
 import { Alert } from "react-bootstrap";
-import { getStorageMediaUrl } from "../lib/image";
+import { getLocalMediaUrl, getStorageMediaUrl } from "../lib/image";
 
 export const getStaticProps = async () => {
 	return {
@@ -54,36 +54,67 @@ export const getStaticProps = async () => {
 				// section 2
 				[
 					{
-						title: "Why Host?",
+						title: "Why Become an International Friends Host?",
 						content: `
 * Learn about other countries and cultures
 * Participate in activities with interesting and eager students
 * Help international students adjust to American culture
 * Have fun!`,
-						image: getStorageMediaUrl("zipline.jpg"),
+						image: getLocalMediaUrl("1622360_693961743984016_1450657539_o.jpeg"),
 						actions: [
 							{
 								type: ACTIONS.READMORE,
-								href: "/hosts"
+								href: "/about"
 							}
 						]
 					},
 					{
-						title: "What is Expected?",
-						image: getStorageMediaUrl("host.jpg"),
+						title: "Why Do International Students Participate?",
+						image: getLocalMediaUrl("46770484_10215442170621608_1860845059742629888_o.jpeg"),
+						content: `
+* Learn about and more easily adjust to American culture
+* Participate in the life of the Tucson community
+* Share in sightseeing, dinners, and other activities with community individuals and families
+* Have fun!
+	`,
+						actions: [
+							{
+								type: ACTIONS.READMORE,
+								href: "/about"
+							}
+						]
+					},
+					{
+						title: "WHAT IS EXPECTED OF HOSTS AND STUDENTS?",
 						content: `
 * Commit to participate for one academic year
 * Hosts and students contact each other within one week of being matched
 * Students and hosts get together at least once a month during the school year for activities that both would enjoy
 * Hosts and students share ideas, customs, and cultures
-* Follow the International Friends Guidelines for hosts and students
-	`,
+* Follow the International Friends Guidelines for hosts and students`,
 						actions: [
 							{
 								type: ACTIONS.READMORE,
-								href: "/hosts"
+								href: "/guidelines"
 							}
-						]
+						],
+						image: getLocalMediaUrl("46766821_1514707395339433_5267609408078086144_n.jpeg")
+					},
+					{
+						title: "YOUR SUPPORT IS IMPORTANT!",
+						image: getLocalMediaUrl("20190929_120315.jpg"),
+						actions: [
+							{
+								type: ACTIONS.DONATE,
+							}
+						],
+						content: `
+* Donate to support International Friends’ mission and our events, programs, and activities
+* Help pay for site rentals, food, and supplies for welcome lunches, picnics, and other events
+* Assist with website, listserv, marketing, and organizational costs
+* Help defray the cost of printed materials, such as brochures, guidelines, newsletters, and banners
+* Contribute to fund important situational expenses like a video for student orientations and a new PA system for events and activities
+						`
 					}
 				],
 				{
@@ -127,11 +158,15 @@ const HomePage = ({ sections, banner }) => (<MainLayout>
 			</Col>
 
 		</Row>
-		<ImageTextBlock {...sections[1][0]} extraHeight invert />
+		<ImageTextBlock {...sections[1][0]} extraHeight invert color={COLORS.LIGHT} />
 		<ImageTextBlock
 			{...sections[1][1]}
 			extraHeight
-			color={COLORS.LIGHT}
+		/>
+		<ImageTextBlock {...sections[1][2]} extraHeight invert color={COLORS.LIGHT} />
+		<ImageTextBlock
+			{...sections[1][3]}
+			extraHeight
 		/>
 		<TextBlock {...sections[2]} variant={VARIANTS.CALLOUT} />
 	</Container>
