@@ -27,6 +27,13 @@ const MainLayout = ({ children }) => {
 	return (
 		<>
 			<Meta />
+			<noscript><iframe
+				title="google-tag-manager"
+				src="https://www.googletagmanager.com/ns.html?id=GTM-WM8XF8R"
+				height="0"
+				width="0"
+				style={{ display: "none", visibility: "hidden" }} />
+			</noscript>
 			<Navbar
 				navItems={navItems.map(value => getPageByName(value))}
 				navActions={[
