@@ -46,7 +46,7 @@ const NewsLetters = () => {
 					</ul>
 				</div>
 			</Container>
-		</MainLayout >
+		</MainLayout>
 	);
 };
 
