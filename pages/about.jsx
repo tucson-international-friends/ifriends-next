@@ -242,6 +242,12 @@ The all-volunteer board is composed of past and present hosts, international stu
 					profileImg: "profiles/gaurav_deshpande.jpg"
 				},
 				{
+					firstName: "Shermaine",
+					lastName: "Owens",
+					title: "Community Member",
+					profileImg: "profiles/shermaine_owens.jpeg"
+				},
+				{
 					firstName: "Momoka",
 					lastName: "Sugimura",
 					title: "Student Representative",
@@ -264,8 +270,7 @@ The all-volunteer board is composed of past and present hosts, international stu
 					lastName: "Wei",
 					title: "Technical Advisor",
 					email: "youhaowei@ifriends.org",
-					profileImg:
-						"profiles/youhao_wei.jpg"
+					profileImg: "profiles/youhao_wei.jpg"
 				},
 				{
 					firstName: "Sylvia",

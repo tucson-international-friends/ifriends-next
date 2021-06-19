@@ -22,15 +22,17 @@ const TextBlock = ({ title, content, actions, variant, headerAlign, textAlign = 
 							<Col key={i}>
 								<ReactMarkDown
 									className={`text-${textAlign}`}
-									source={col} />
+								>
+									{col}
+								</ReactMarkDown>
 							</Col>
 						))}
 					</Row>
 				)
 				: (
-					<ReactMarkDown
-						source={content}
-					/>
+					<ReactMarkDown>
+						{content}
+					</ReactMarkDown>
 				)}
 			{actions && renderActions(actions, { variant: "text-primary", label: "Read More", icon: GoArrowRight() })}
 		</div>
