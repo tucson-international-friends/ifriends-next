@@ -135,11 +135,11 @@ export default class GuidelinePage extends Component {
 						))}
 					</Nav>
 					<ReactMarkdown
-						className="p-2 mt-2"
-						source={
-							guidelines.find(guildline => guildline.name === active).content
-						}
-					/>
+					className="p-2 mt-2"
+					>
+						{guidelines.find(guildline => guildline.name === active).content}
+					</ReactMarkdown>
+
 				</Container>
 			</MainLayout>
 		);

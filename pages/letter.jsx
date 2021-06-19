@@ -37,8 +37,8 @@ Randy Spalding and Pat Gilman, Co-chairs, International Friends, Inc.
 						paddingTop: "10em",
 						paddingBottom: "10em"
 					}}>
-					<ReactMarkDown source={header} className="text-center" />
-					<ReactMarkDown source={content} />
+					<ReactMarkDown className="text-center">{header}</ReactMarkDown>
+					<ReactMarkDown>{content}</ReactMarkDown>
 				</Container>
 			</MainLayout>
 		);

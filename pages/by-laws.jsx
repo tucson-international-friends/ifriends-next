@@ -142,8 +142,12 @@ Proceedings of the corporation shall be conducted in accordance with the latest 
 						paddingTop: "10em",
 						paddingBottom: "10em"
 					}}>
-					<ReactMarkDown source={header} className="text-center" />
-					<ReactMarkDown source={content} />
+					<ReactMarkDown className="text-center">
+						{header}
+					</ReactMarkDown>
+					<ReactMarkDown>
+						{content}
+					</ReactMarkDown>
 				</Container>
 			</MainLayout>
 		);

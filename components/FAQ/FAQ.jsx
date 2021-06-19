@@ -24,7 +24,9 @@ const FAQ = ({ data }) => {
 				</h5>
 			</a>
 			<Collapse in={expanded}>
-				<ReactMarkDown className={classNames("pl-1")} source={data.answer} />
+				<ReactMarkDown className={classNames("pl-1")}>
+					{data.answer}
+				</ReactMarkDown>
 			</Collapse>
 		</div>
 	);
