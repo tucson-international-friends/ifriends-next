@@ -7,10 +7,8 @@ import Image from "react-bootstrap/Image";
 import { FORMATS } from "../lib/common/format";
 
 import MainLayout from "../layout/main";
-import { ACTIONS } from "../components/Action";
 import Banner from "../components/Banner";
 import TextBlock from "../components/TextBlock";
-import EventList from "../components/Events/List";
 import BoardList from "../components/BoardList";
 import Header from "../components/Header";
 import { getStorageMediaUrl, getLocalMediaUrl } from "../lib/image";
@@ -51,12 +49,12 @@ The all-volunteer board is composed of past and present hosts, international stu
 `,
 					actions: [
 						{
-							type: ACTIONS.READMORE,
+							type: "readmore",
 							href: "/by-laws",
 							label: "By Laws"
 						},
 						{
-							type: ACTIONS.READMORE,
+							type: "readmore",
 							href: "/letter",
 							label: "Letter from Co-Chairs"
 						}
@@ -242,6 +240,12 @@ The all-volunteer board is composed of past and present hosts, international stu
 					profileImg: "profiles/gaurav_deshpande.jpg"
 				},
 				{
+					firstName: "Shermaine",
+					lastName: "Owens",
+					title: "Community Member",
+					profileImg: "profiles/shermaine_owens.jpeg"
+				},
+				{
 					firstName: "Momoka",
 					lastName: "Sugimura",
 					title: "Student Representative",
@@ -264,8 +268,7 @@ The all-volunteer board is composed of past and present hosts, international stu
 					lastName: "Wei",
 					title: "Technical Advisor",
 					email: "youhaowei@ifriends.org",
-					profileImg:
-						"profiles/youhao_wei.jpg"
+					profileImg: "profiles/youhao_wei.jpg"
 				},
 				{
 					firstName: "Sylvia",

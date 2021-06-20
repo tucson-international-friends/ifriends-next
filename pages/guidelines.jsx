@@ -4,9 +4,9 @@ import Nav from "react-bootstrap/Nav";
 import ReactMarkdown from "react-markdown";
 import MainLayout from "../layout/main";
 
-export default class GuidelinePage extends Component {
-	static async getInitialProps() {
-		return {
+export const getStaticProps = async () => {
+	return {
+		props: {
 			guidelines: [
 				{
 					name: "host",
@@ -103,45 +103,42 @@ export default class GuidelinePage extends Component {
 `
 				}
 			]
-		};
-	}
-
-	constructor(props) {
-		super(props);
-		this.state = { active: "host" };
-	}
-
-	render() {
-		const { guidelines } = this.props;
-		const { active } = this.state;
-		return (
-			<MainLayout>
-				<Container className="pt-5 mt-5">
-					<h2>Guiding Principles</h2>
-					<Nav
-						variant="pills"
-						justify
-						fill
-						activeKey={active}
-						onSelect={(eventKey) => {
-							this.setState({ active: eventKey });
-						}}>
-						{guidelines.map(({ name, label, content }) => (
-							<Nav.Item key={name}>
-								<Nav.Link eventKey={name} key={name}>
-									{label}
-								</Nav.Link>
-							</Nav.Item>
-						))}
-					</Nav>
-					<ReactMarkdown
-						className="p-2 mt-2"
-						source={
-							guidelines.find(guildline => guildline.name === active).content
-						}
-					/>
-				</Container>
-			</MainLayout>
-		);
+		}
 	}
 }
+const GuidelinePage = (props) =>  {
+
+	const [active, setActive] = useState("host");
+	const { guidelines } = props;
+	return (
+		<MainLayout>
+			<Container className="pt-5 mt-5">
+				<h2>Guiding Principles</h2>
+				<Nav
+					variant="pills"
+					justify
+					fill
+					activeKey={active}
+					onSelect={(eventKey) => {
+						setActive(eventKey);
+					}}>
+					{guidelines.map(({ name, label, content }) => (
+						<Nav.Item key={name}>
+							<Nav.Link eventKey={name} key={name}>
+								{label}
+							</Nav.Link>
+						</Nav.Item>
+					))}
+				</Nav>
+				<ReactMarkdown
+				className="p-2 mt-2"
+				>
+					{guidelines.find(guildline => guildline.name === active).content}
+				</ReactMarkdown>
+
+			</Container>
+		</MainLayout>
+	);
+}
+
+export default GuidelinePage;

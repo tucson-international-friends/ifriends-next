@@ -1,10 +1,10 @@
-import Link from "next/link";
+import { useMemo, useCallback } from "react";
+import { useRouter } from "next/router";
 import Button from "../Button";
 import Login from "./login";
 import Profile from "./profile";
 import Signup from "./signup";
-import { useRouter } from "next/router";
-import { useMemo, useCallback } from "react";
+
 import Donate from "./donate";
 
 export const ACTIONS = {
@@ -38,12 +38,11 @@ export const renderAction = (actionParam, key, defaultValue) => {
 		case ACTIONS.PROFILE:
 			return <Profile key={key} />;
 		case ACTIONS.DONATE:
-			return <Donate key={key} />
+			return <Donate key={key} />;
 		case ACTIONS.READMORE:
 		default:
 			return <Button key={key} {...action} onClick={gotoHref} />;
 	}
 };
 
-export const renderActions = (actions, defaultValue) =>
-	actions.map((action, i) => renderAction(action, i, defaultValue));
+export const renderActions = (actions, defaultValue) => actions.map((action, i) => renderAction(action, i, defaultValue));
