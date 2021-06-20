@@ -1,12 +1,8 @@
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import MainLayout from "../layout/main";
 import Banner from "../components/Banner";
 import TextBlock, { VARIANTS } from "../components/TextBlock";
 import ImageTextBlock, { COLORS } from "../components/ImageTextBlock";
-import { ACTIONS } from "../components/Action";
-import { Alert } from "react-bootstrap";
+import { Alert, Container, Row, Col } from "react-bootstrap";
 import { getLocalMediaUrl, getStorageMediaUrl } from "../lib/image";
 
 export const getStaticProps = async () => {
@@ -33,7 +29,7 @@ export const getStaticProps = async () => {
 							"International Friends provides opportunities for international students and local hosts to develop close friendships and an understanding of and appreciation for each other's cultures. We offer activities through which international students may participate in the life of the community. We subscribe to the national guidelines set forth by [NAFSA: Association of International Educators](http://www.nafsa.org/) on the rights of international students.",
 						actions: [
 							{
-								type: ACTIONS.READMORE,
+								type: "readmore",
 								href: "/about"
 							}
 						]
@@ -45,7 +41,7 @@ export const getStaticProps = async () => {
 							"Our goal is simple but important. We bring people together to share their cultures, interests, and life experiences. International students and local hosts are matched with the intent of them meeting at least once a month during the school year for socializing, activities, and fun. International Friends is not a live-in hosting program, and we have no religious affiliation. Participation is open to international students attending the University of Arizona and to Southern Arizona residents who serve as hosts.",
 						actions: [
 							{
-								type: ACTIONS.READMORE,
+								type: "readmore",
 								href: "/about"
 							}
 						]
@@ -63,7 +59,7 @@ export const getStaticProps = async () => {
 						image: getLocalMediaUrl("1622360_693961743984016_1450657539_o.jpeg"),
 						actions: [
 							{
-								type: ACTIONS.READMORE,
+								type: "readmore",
 								href: "/about"
 							}
 						]
@@ -79,7 +75,7 @@ export const getStaticProps = async () => {
 	`,
 						actions: [
 							{
-								type: ACTIONS.READMORE,
+								type: "readmore",
 								href: "/about"
 							}
 						]
@@ -94,7 +90,7 @@ export const getStaticProps = async () => {
 * Follow the International Friends Guidelines for hosts and students`,
 						actions: [
 							{
-								type: ACTIONS.READMORE,
+								type: "readmore",
 								href: "/guidelines"
 							}
 						],
@@ -105,7 +101,7 @@ export const getStaticProps = async () => {
 						image: getLocalMediaUrl("20190929_120315.jpg"),
 						actions: [
 							{
-								type: ACTIONS.DONATE,
+								type: "donate",
 							}
 						],
 						content: `
@@ -124,7 +120,7 @@ export const getStaticProps = async () => {
 Make a “world of difference” in the lives of international students and local hosts. It’s fun, it’s easy, and it changes lives.`,
 					actions: [
 						{
-							type: ACTIONS.SIGNUP,
+							type: "signup",
 							label: "join us",
 							size: "lg"
 						}

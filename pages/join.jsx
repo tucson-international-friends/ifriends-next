@@ -5,7 +5,6 @@ import Col from "react-bootstrap/Col";
 
 import ImageTextBlock, { COLORS } from "../components/ImageTextBlock";
 import MainLayout from "../layout/main";
-import { ACTIONS } from "../components/Action";
 import Banner from "../components/Banner";
 import TextBlock from "../components/TextBlock";
 import Header from "../components/Header";
@@ -55,7 +54,7 @@ International students describe International Friends as an invaluable asset for
 `,
 					action: [
 						{
-							type: ACTIONS.SIGNUP,
+							type: "signup",
 							label: "Apply to Host"
 						}
 					]
@@ -74,7 +73,7 @@ Any student inquiries regarding the following should be referred to the Universi
 * Major medical problems`,
 					actions: [
 						{
-							type: ACTIONS.READMORE,
+							type: "readmore",
 							href: "/guidelines"
 						}
 					]

@@ -3,14 +3,13 @@ import ReactMarkDown from "react-markdown";
 import { Container } from "react-bootstrap";
 import MainLayout from "../layout/main";
 
-export default class ByLaws extends Component {
-	static async getInitialProps() {
-		return {
-			letter: {
-				header: `
+export const getStaticProps = () => ({
+	props: {
+		letter: {
+			header: `
 ## Letter from the Co-Chair
 `,
-				content: `Thank you for your interest in International Friends! 
+			content: `Thank you for your interest in International Friends! 
 
 International Friends has been in existence since 1952, and it is one of the oldest organizations of its type in the United States.  We are governed by a Board of Directors composed of international students and citizen representatives, and we work directly with the International Student Services office at the University of Arizona.  Your participation in our organization, either as international students or local hosts, is greatly encouraged and very much appreciated.  
 
@@ -24,23 +23,24 @@ Sincerely,
 
 Randy Spalding and Pat Gilman, Co-chairs, International Friends, Inc.
 `
-			}
-		};
+		}
 	}
+})
 
-	render() {
-		const { letter: { header, content } } = this.props;
-		return (
-			<MainLayout>
-				<Container
-					style={{
-						paddingTop: "10em",
-						paddingBottom: "10em"
-					}}>
-					<ReactMarkDown className="text-center">{header}</ReactMarkDown>
-					<ReactMarkDown>{content}</ReactMarkDown>
-				</Container>
-			</MainLayout>
-		);
-	}
+const LetterPage = (props) => {
+	const { letter: { header, content } } = props;
+	return (
+		<MainLayout>
+			<Container
+				style={{
+					paddingTop: "10em",
+					paddingBottom: "10em"
+				}}>
+				<ReactMarkDown className="text-center">{header}</ReactMarkDown>
+				<ReactMarkDown>{content}</ReactMarkDown>
+			</Container>
+		</MainLayout>
+	);
 }
+
+export default LetterPage;
