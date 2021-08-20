@@ -4,6 +4,9 @@ import MainLayout from "../layout/main";
 import { getStorageMediaUrl } from "../lib/image";
 
 const newsLetters = [{
+	title: "Summer 2021",
+	path: "IFT_SUMMER2021.pdf"
+}, {
 	title: "Summer 2020",
 	path: "SM2020.pdf"
 }, {
