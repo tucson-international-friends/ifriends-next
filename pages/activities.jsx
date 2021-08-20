@@ -1,14 +1,10 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
 
 import ImageTextBlock, { COLORS } from "../components/ImageTextBlock";
 import MainLayout from "../layout/main";
 import Banner from "../components/Banner";
 import TextBlock from "../components/TextBlock";
-import Header from "../components/Header";
 
 import { getStorageMediaUrl } from "../lib/image";
 

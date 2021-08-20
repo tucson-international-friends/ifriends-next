@@ -18,7 +18,7 @@ export const getStaticProps = () => {
 		props: {
 			banner: {
 				message: "BUILD LASTING FRIENDSHIPS",
-				image: getStorageMediaUrl(`host-student-banner.jpg`)
+				image: getStorageMediaUrl("host-student-banner.jpg")
 			},
 			sections: [[
 				{

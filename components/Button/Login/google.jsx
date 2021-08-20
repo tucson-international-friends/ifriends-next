@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { useCallback } from "react";
 import firebase, { googleProvider } from "../../../lib/firebase";
+import Image from "next/image";
 
 const GoogleLoginButton = ({ handleLogin }) => (
 	<Button
@@ -15,7 +16,7 @@ const GoogleLoginButton = ({ handleLogin }) => (
 			textTransform: "none"
 		}}
 		onClick={() => handleLogin()}>
-		<img
+		<Image
 			style={{
 				width: 36,
 				height: 36

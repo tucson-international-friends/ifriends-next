@@ -6,7 +6,7 @@ import { renderActions } from "../Action";
 
 const Banner = ({ message = "Banner Message", actions, image }) => (
 	<Jumbotron fluid className="banner">
-		{image && <Image fluid className={classNames("background")} src={image} />}
+		{image && <Image alt="banner image" fluid className={classNames("background")} src={image} />}
 		<Container className={"container"}>
 			<h1>{message}</h1>
 			{actions && renderActions(actions)}
