@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import React, { useCallback } from "react";
 import { Button } from "react-bootstrap";
 import Image from "next/image";
@@ -49,13 +50,14 @@ const LoginButton = ({ variant, handleSuccess, handleError }) => {
 	}
 	// eslint-disable-next-line react/destructuring-assignment
 	const { provider, color, Icon } = props[variant];
+	// eslint-disable-next-line react-hooks/rules-of-hooks
 	const handleLogin = useCallback(() => {
 		firebase
 			.auth()
 			.signInWithPopup(provider)
 			.then(handleSuccess)
 			.catch(handleError);
-	}, [handleSuccess, handleError, variant]);
+	}, [provider, handleSuccess, handleError]);
 	return (
 		<Button
 			variant={color}

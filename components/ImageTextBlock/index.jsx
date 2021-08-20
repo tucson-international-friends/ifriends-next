@@ -24,6 +24,7 @@ const ImageTextBlock = ({
 		<div
 			className={classNames("imageCol", color, { not_invert: !invert }, { invert }, { xh: extraHeight })}>
 			<Image
+				alt={title + "-image"}
 				rounded
 				fluid
 				src={image}

@@ -20,10 +20,10 @@ const Login = ({ label = "Log In" }) => {
 	}, [email, password]);
 	const handleSuccess = useCallback((result) => {
 		setUser(result.user);
-	});
+	}, [setUser]);
 	const handleError = useCallback((err) => {
 		setError(err.message);
-	});
+	}, []);
 	return (
 		<>
 			<Modal show={showModal} onHide={() => setShowModal(false)}>

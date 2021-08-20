@@ -100,9 +100,7 @@ export const getStaticProps = async () => {
 						title: "YOUR SUPPORT IS IMPORTANT!",
 						image: getLocalMediaUrl("20190929_120315.jpg"),
 						actions: [
-							{
-								type: "donate",
-							}
+							{ type: "donate", }
 						],
 						content: `
 * Donate to support International Friends’ mission and our events, programs, and activities
@@ -143,13 +141,9 @@ const HomePage = ({ sections, banner }) => (<MainLayout>
 				<TextBlock {...sections[0][1]} />
 			</Col>
 			<Col md={6}>
-				<div style={{
-					padding: "calc(2rem * 1.2 + 1rem + 0.83rem + 34px) 0"
-				}}>
+				<div style={{ padding: "calc(2rem * 1.2 + 1rem + 0.83rem + 34px) 0" }}>
 					<p>Watch a video to learn more.</p>
-					<iframe className="embed-video" allow="autoplay" allowFullScreen="" src="https://arizona.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=06dd0cd1-402e-4042-bd61-abf8013f6212&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=false&amp;start=0&amp;interactivity=all" style={{
-						width: "100%"
-					}} />
+					<iframe className="embed-video" allow="autoplay" allowFullScreen="" src="https://arizona.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=06dd0cd1-402e-4042-bd61-abf8013f6212&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=false&amp;start=0&amp;interactivity=all" style={{ width: "100%" }} />
 				</div>
 			</Col>
 

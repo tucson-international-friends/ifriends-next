@@ -6,6 +6,7 @@ const Contact = ({ firstName, lastName, title, profileImg }) => (
 	<div className="contact">
 		<div className="profilePictureWrapper">
 			<Image
+				alt={`${firstName} ${lastName}`}
 				className="profilePicture"
 				src={profileImg ? getStorageMediaUrl(profileImg)
 					: `https://via.placeholder.com/150?text=${firstName[0] + lastName[0]}`}

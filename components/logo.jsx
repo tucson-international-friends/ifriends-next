@@ -1,18 +1,25 @@
+import Image from "next/image";
 import React from "react";
+import logo from "../public/logos/logo.png";
 
 const Logo = ({ size, className }) => {
-	let logoSize = "2em";
+	let logoSize = 2;
 	if (size === "sm" || size === "small" || size === 1) {
-		logoSize = "1.5em";
+		logoSize = 1.5;
 	}
 	return (
-		<span className={className}>
-			<img
-				src="/logos/logo.png"
+		<div className={className} style={{
+			height: logoSize + "em",
+			width: logoSize * 6 + "em",
+			position: "relative"
+		}}>
+			<Image
+				src={logo}
 				alt="logo"
-				style={{ height: logoSize }}
+				layout="fill"
+				objectFit="contain"
 			/>
-		</span>
+		</div>
 	);
 };
 

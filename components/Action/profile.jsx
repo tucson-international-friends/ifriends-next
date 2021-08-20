@@ -20,9 +20,10 @@ const Profile = () => {
 		};
 		return (
 			<div style={{ display: "flex", flexDirection: "row" }}>
-				{ photoURL
+				{photoURL
 					? (
 						<Image
+							alt="profile"
 							fluid
 							style={profileStyle}
 							roundedCircle

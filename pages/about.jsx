@@ -19,7 +19,7 @@ export const getStaticProps = async () => {
 		props: {
 			banner: {
 				message: "LEARN ABOUT EACH OTHER'S CULTURE",
-				image: getStorageMediaUrl('about-banner.jpg')
+				image: getStorageMediaUrl("about-banner.jpg")
 			},
 			sections: [
 				[
@@ -349,7 +349,8 @@ The thing that I love most about International Friends is that it provides us, a
 
 When we join the University of Arizona, for most of us, it’s the first time that we are living in another country and for some, it can even be the first time that they are living away from their family and friends. The hosts are one of the best resources we have for support during this period of transition. It’s also one of the best places to meet and interact with people outside of our field of study, from different countries, with different backgrounds and unique perspectives.
 
-Joining International Friends has been one of the best decisions that I’ve made. It has not only given me great friends for life but has also made my experience here richer and a lot more fun. I look forward to many more fun conversations, good food, and milestones together.`}]
+Joining International Friends has been one of the best decisions that I’ve made. It has not only given me great friends for life but has also made my experience here richer and a lot more fun. I look forward to many more fun conversations, good food, and milestones together.`
+			}]
 		}
 	};
 };
@@ -371,7 +372,7 @@ const AboutPage = ({ banner, sections, studentTestimonials, hostTestimonials, st
 				<h1 className="text-center">Meet Our Students</h1>
 				<Row>
 					<Col md={4} xl={3} style={{ marginTop: "2em" }}>
-						<Image style={{}} fluid rounded src={getLocalMediaUrl('momoka.jpg')} />
+						<Image alt="momoka" style={{}} fluid rounded src={getLocalMediaUrl("momoka.jpg")} />
 					</Col>
 					<Col xl={9} md={8}>
 						<TextBlock {...studentStories[0]} />
@@ -379,7 +380,7 @@ const AboutPage = ({ banner, sections, studentTestimonials, hostTestimonials, st
 
 
 					<Col md={4} xl={3} style={{ marginTop: "2em" }}>
-						<Image style={{}} fluid rounded src={getLocalMediaUrl('gaurav_deshpande-2.jpg')} />
+						<Image alt="gaurav" style={{}} fluid rounded src={getLocalMediaUrl("gaurav_deshpande-2.jpg")} />
 					</Col>
 					<Col xl={9} md={8}>
 						<TextBlock {...studentStories[1]} />

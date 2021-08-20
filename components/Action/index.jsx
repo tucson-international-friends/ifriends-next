@@ -15,7 +15,7 @@ export const ACTIONS = {
 	DONATE: "donate"
 };
 
-export const renderAction = (actionParam, key, defaultValue) => {
+export const Action = ({ actionParam, defaultValue }) => {
 	const router = useRouter();
 	const action = useMemo(
 		() => ({
@@ -25,24 +25,25 @@ export const renderAction = (actionParam, key, defaultValue) => {
 		}),
 		[actionParam, defaultValue]
 	);
+	console.log(actionParam);
 
 	const { type, label, href } = action;
 	const gotoHref = useCallback(() => {
 		router.push(href);
-	}, [href]);
+	}, [href, router]);
 	switch (type) {
 		case ACTIONS.SIGNUP:
-			return <Signup {...action} key={key} />;
+			return <Signup {...action} />;
 		case ACTIONS.LOGIN:
-			return <Login key={key} label={label} />;
+			return <Login label={label} />;
 		case ACTIONS.PROFILE:
-			return <Profile key={key} />;
+			return <Profile />;
 		case ACTIONS.DONATE:
-			return <Donate key={key} />;
+			return <Donate />;
 		case ACTIONS.READMORE:
 		default:
-			return <Button key={key} {...action} onClick={gotoHref} />;
+			return <Button {...action} onClick={gotoHref} />;
 	}
 };
 
-export const renderActions = (actions, defaultValue) => actions.map((action, i) => renderAction(action, i, defaultValue));
+export const renderActions = (actions, defaultValue) => actions.map((action, i) => <Action key={i} actionParam={action} defaultValue={defaultValue} />);

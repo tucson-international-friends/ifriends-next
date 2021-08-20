@@ -104,9 +104,9 @@ export const getStaticProps = async () => {
 				}
 			]
 		}
-	}
-}
-const GuidelinePage = (props) =>  {
+	};
+};
+const GuidelinePage = (props) => {
 
 	const [active, setActive] = useState("host");
 	const { guidelines } = props;
@@ -131,7 +131,7 @@ const GuidelinePage = (props) =>  {
 					))}
 				</Nav>
 				<ReactMarkdown
-				className="p-2 mt-2"
+					className="p-2 mt-2"
 				>
 					{guidelines.find(guildline => guildline.name === active).content}
 				</ReactMarkdown>
@@ -139,6 +139,6 @@ const GuidelinePage = (props) =>  {
 			</Container>
 		</MainLayout>
 	);
-}
+};
 
 export default GuidelinePage;
