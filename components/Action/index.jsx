@@ -25,7 +25,6 @@ export const Action = ({ actionParam, defaultValue }) => {
 		}),
 		[actionParam, defaultValue]
 	);
-	console.log(actionParam);
 
 	const { type, label, href } = action;
 	const gotoHref = useCallback(() => {
