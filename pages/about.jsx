@@ -30,9 +30,10 @@ export const getStaticProps = async () => {
 	});
 	const members = res.results.map(page => {
 		const member = page.properties;
+		const name = member.Name.title[0].plain_text
 		return {
-			name: member.Name.title[0].plain_text,
-			profileUrl: member["Profile Picture"].files[0].file.url,
+			name,
+			profileUrl: member["Profile Picture"].files?.[0]?.file.url ?? `https://ui-avatars.com/api/?name=${name.replace(" ", "+")}&size=200`,
 			title: member.Title.select.name,
 			current: member.Current.checkbox
 		};
