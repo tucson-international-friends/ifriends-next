@@ -2,17 +2,17 @@ import Image from "react-bootstrap/Image";
 import { getStorageMediaUrl } from "../../lib/image";
 
 
-const Contact = ({ firstName, lastName, title, profileImg }) => (
+const Contact = ({ firstName, lastName, title, profileImg, profileUrl, name }) => (
 	<div className="contact">
 		<div className="profilePictureWrapper">
 			<Image
-				alt={`${firstName} ${lastName}`}
+				alt={`${name ?? `${firstName} ${lastName}`}`}
 				className="profilePicture"
 				src={profileImg ? getStorageMediaUrl(profileImg)
-					: `https://via.placeholder.com/150?text=${firstName[0] + lastName[0]}`}
+					: profileUrl ?? `https://via.placeholder.com/150?text=${firstName[0] + lastName[0]}`}
 				roundedCircle />
 		</div>
-		<h6>{firstName} {lastName}</h6>
+		<h6>{name ? name : `${firstName} ${lastName}`}</h6>
 		<p>{title}</p>
 	</div>
 );

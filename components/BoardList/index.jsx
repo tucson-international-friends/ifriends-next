@@ -6,7 +6,7 @@ import Contact from "./contact";
 const BoardList = ({ members }) => (
 	<Row>
 		{members.map(member => (
-			<Col xs={6} md={4} lg={3} xl={2} key={`${member.firstName}-${member.lastName}`}>
+			<Col xs={6} md={4} lg={3} xl={2} key={`${member.name}`}>
 				<Contact {...member} />
 			</Col>
 		))}

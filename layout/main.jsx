@@ -14,16 +14,6 @@ import { ACTIONS } from "../components/Action";
 addReactNDevTools();
 
 const MainLayout = ({ children }) => {
-	if (firebase.auth().currentUser) {
-		useEffect(() => {
-			firebase
-				.auth()
-				.currentUser.getIdToken(true)
-				.then((token) => {
-					console.log(token);
-				});
-		}, []);
-	}
 	return (
 		<>
 			<Meta />
