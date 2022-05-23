@@ -17,7 +17,7 @@ import notion from "../lib/notion";
 
 const memberDatabaseId = "e27149a4729a468c822f1b799ce69e09";
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
 	const res = await notion.databases.query({
 		database_id: memberDatabaseId,
 		sorts: [{
