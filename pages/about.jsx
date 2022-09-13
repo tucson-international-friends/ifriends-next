@@ -17,8 +17,14 @@ import notion from "../lib/notion";
 
 const memberDatabaseId = "e27149a4729a468c822f1b799ce69e09";
 
-export const getStaticProps = async () => {
-	const res = await notion.databases.query({
+export const getServerSideProps = async ({ res }) => {
+
+	res.setHeader(
+		"Cache-Control",
+		"public, s-maxage=60, stale-while-revalidate=59"
+	);
+
+	const notionRes = await notion.databases.query({
 		database_id: memberDatabaseId,
 		sorts: [{
 			property: "Title",
@@ -28,7 +34,7 @@ export const getStaticProps = async () => {
 			direction: "ascending"
 		}]
 	});
-	const members = res.results.map(page => {
+	const members = notionRes.results.map(page => {
 		const member = page.properties;
 		const name = member.Name.title[0].plain_text
 		return {
@@ -38,9 +44,8 @@ export const getStaticProps = async () => {
 			current: member.Current.checkbox
 		};
 	});
+
 	return {
-		// revalidate at most once per minute
-		revalidate: 60,
 		props: {
 			members,
 			banner: {

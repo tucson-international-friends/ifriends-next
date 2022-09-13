@@ -6,16 +6,19 @@ import notion from "../lib/notion";
 
 const newsletterDatabaseId = "71147bd2ca1944e6ae7b433893bb0ba9";
 
-export const getStaticProps = async () => {
-	const res = await notion.databases.query({
+export const getServerSideProps = async ({ res }) => {
+	res.setHeader(
+		"Cache-Control",
+		"public, s-maxage=60, stale-while-revalidate=59"
+	);
+	const notionRes = await notion.databases.query({
 		database_id: newsletterDatabaseId,
 		sorts: [{
 			property: "Year",
 			direction: "descending"
 		}]
 	});
-	console.log(res);
-	const newsLetters = res.results.map(({ properties }) => {
+	const newsLetters = notionRes.results.map(({ properties }) => {
 		return {
 			title: properties.Name.title[0].plain_text,
 			path: properties.PDF.files?.[0]?.file.url
@@ -23,7 +26,6 @@ export const getStaticProps = async () => {
 	});
 
 	return {
-		revalidate: 60,
 		props: { newsLetters }
 	};
 };
