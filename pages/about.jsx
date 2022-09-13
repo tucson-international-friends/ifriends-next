@@ -17,7 +17,7 @@ import notion from "../lib/notion";
 
 const memberDatabaseId = "e27149a4729a468c822f1b799ce69e09";
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
 	const res = await notion.databases.query({
 		database_id: memberDatabaseId,
 		sorts: [{
@@ -39,6 +39,8 @@ export const getServerSideProps = async () => {
 		};
 	});
 	return {
+		// revalidate at most once per minute
+		revalidate: 60,
 		props: {
 			members,
 			banner: {
@@ -202,111 +204,6 @@ The all-volunteer board is composed of past and present hosts, international stu
 					date: "2020-04-18"
 				}
 			],
-			boardMembers: [
-				{
-					firstName: "Patricia",
-					lastName: "Gilman",
-					title: "Co-Chair",
-					profileImg: "profiles/patricia_gilman.jpg"
-				},
-				{
-					firstName: "Randy",
-					lastName: "Spalding",
-					title: "Co-Chair",
-					profileImg: "profiles/randy_spalding.jpeg"
-				},
-				{
-					firstName: "Pam",
-					lastName: "Obando",
-					title: "Secretary",
-					profileImg: "profiles/pam_obando.jpg"
-				},
-				{
-					firstName: "Robert",
-					lastName: "Woerner",
-					title: "Treasurer",
-					profileImg: "profiles/robert_woerner.jpeg"
-				},
-				{
-					firstName: "Jody",
-					lastName: "Friend",
-					title: "Community Member",
-					profileImg: "profiles/jody_friend.jpg"
-				},
-				{
-					firstName: "Pamela",
-					lastName: "Harlan",
-					title: "Community Member",
-					profileImg: "profiles/pamela_harlan.jpg"
-				},
-				{
-					firstName: "Rachel",
-					lastName: "Ivanyi",
-					title: "Community Member",
-					profileImg: "profiles/rachel_Ivanyi.jpg"
-				},
-				{
-					firstName: "LuAnn",
-					lastName: "Haley",
-					title: "Community Member",
-					profileImg: "profiles/luann_haley.jpg"
-				},
-				{
-					firstName: "Michelle",
-					lastName: "Morden",
-					title: "Community Member",
-					profileImg: "profiles/michelle_morden.jpeg"
-				},
-				{
-					firstName: "Gaurav",
-					lastName: "Deshpande",
-					title: "Community Member",
-					profileImg: "profiles/gaurav_deshpande.jpg"
-				},
-				{
-					firstName: "Shermaine",
-					lastName: "Owens",
-					title: "Community Member",
-					profileImg: "profiles/shermaine_owens.jpeg"
-				},
-				{
-					firstName: "Momoka",
-					lastName: "Sugimura",
-					title: "Student Representative",
-					profileImg: "profiles/momoka_sugimura.jpg"
-				},
-				{
-					firstName: "Ye",
-					lastName: "Zhang",
-					title: "Student Representative",
-					profileImg: "profiles/ye_zhang.jpg"
-				},
-				{
-					firstName: "Francisco",
-					lastName: " Villegas",
-					title: "Student Representative",
-					profileImg: "profiles/francisco_villegas.jpg"
-				},
-				{
-					firstName: "Youhao",
-					lastName: "Wei",
-					title: "Technical Advisor",
-					email: "youhaowei@ifriends.org",
-					profileImg: "profiles/youhao_wei.jpg"
-				},
-				{
-					firstName: "Sylvia",
-					lastName: "Ahanonu",
-					title: "ISS Liason",
-					profileImg: "profiles/sylvia_ahanonu.jpg"
-				}
-			],
-			previousMembers: [{
-				firstName: "Siyu",
-				lastName: "Wang",
-				title: "Student Representative",
-				profileImg: "profiles/siyu_wang.jpg"
-			}],
 			studentTestimonials: [
 				{
 					quote:
