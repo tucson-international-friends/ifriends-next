@@ -2,27 +2,34 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import MainLayout from "../layout/main";
 import { getStorageMediaUrl } from "../lib/image";
+import notion from "../lib/notion";
 
-const newsLetters = [{
-	title: "Summer 2021",
-	path: "IFT_SUMMER2021.pdf"
-}, {
-	title: "Summer 2020",
-	path: "SM2020.pdf"
-}, {
-	title: "Spring 2020",
-	path: "SP2020.pdf"
-}, {
-	title: "Fall 2016",
-	path: "IF.Newsletter.2016.pdf"
-}, {
-	title: "Fall 2015",
-	path: "IF.Newsletter.2015.pdf"
-}, { title: "Fall 2013", path: "IF.Newsletter.2013.pdf" },
-{ title: "Fall 2012", path: "If.Newsletter.2012.pdf" }];
+const newsletterDatabaseId = "71147bd2ca1944e6ae7b433893bb0ba9";
+
+export const getStaticProps = async () => {
+	const res = await notion.databases.query({
+		database_id: newsletterDatabaseId,
+		sorts: [{
+			property: "Year",
+			direction: "descending"
+		}]
+	});
+	console.log(res);
+	const newsLetters = res.results.map(({ properties }) => {
+		return {
+			title: properties.Name.title[0].plain_text,
+			path: properties.PDF.files?.[0]?.file.url
+		};
+	});
+
+	return {
+		revalidate: 60,
+		props: { newsLetters }
+	};
+};
 
 
-const NewsLetters = () => {
+const NewsLetters = ({ newsLetters }) => {
 	const latest = newsLetters[0];
 	const past = newsLetters.slice(1);
 	return (
@@ -34,16 +41,16 @@ const NewsLetters = () => {
 
 				<div className="py-4">
 					<h2>Latest Newsletter - {latest.title}</h2>
-					<a rel="noreferrer" className="btn btn-primary" target="_blank" href={getStorageMediaUrl(`newsletters/${latest.path}`)}>View PDF</a>
+					<a rel="noreferrer" className="btn btn-primary" target="_blank" href={latest.path}>View PDF</a>
 
 				</div>
-				<iframe title="latest newsletter" width="100%" style={{ height: "75vh" }} src={getStorageMediaUrl(`newsletters/${latest.path}`)} />
+				<iframe title="latest newsletter" width="100%" style={{ height: "75vh" }} src={latest.path} />
 				<div className="py-4">
 					<h2>Archive</h2>
 					<ul>
 						{past.map(({ path, title }) => (
 							<li key={path}>
-								{title} - <a href={getStorageMediaUrl(`newsletters/${path}`)}>view</a>
+								{title} - <a href={path}>view</a>
 							</li>
 						))}
 					</ul>
