@@ -9,7 +9,7 @@ const newsletterDatabaseId = "71147bd2ca1944e6ae7b433893bb0ba9";
 export const getServerSideProps = async ({ res }) => {
 	res.setHeader(
 		"Cache-Control",
-		"public, s-maxage=60, stale-while-revalidate=59"
+		"public, s-maxage=60, stale-while-revalidate=300"
 	);
 	const notionRes = await notion.databases.query({
 		database_id: newsletterDatabaseId,
@@ -25,9 +25,7 @@ export const getServerSideProps = async ({ res }) => {
 		};
 	});
 
-	return {
-		props: { newsLetters }
-	};
+	return { props: { newsLetters } };
 };
 
 
