@@ -6,6 +6,7 @@ import { FaMapMarked, FaPhone, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import FacebookButton from "../Button/facebook";
 import GithubButton from "../Button/github";
+import InstagramButton from "../Button/instagram";
 
 const Address = () => (
 	<>
@@ -74,9 +75,12 @@ const Footer = ({ menuItems }) => (
 						</Col>
 					</Row>
 					<div className="pt-1">
+						<InstagramButton link="https://www.instagram.com/ifriendstucson/" />
+						<span className="px-4" />
 						<FacebookButton link="https://www.facebook.com/groups/298210727017/" />
 						<span className="px-4" />
 						<GithubButton link="https://github.com/tucson-international-friends/ifriends-next" />
+
 					</div>
 				</Col>
 				<Col md={4} className="pl-5">

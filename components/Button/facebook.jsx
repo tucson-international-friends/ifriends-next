@@ -6,7 +6,7 @@ const FacebookButton = ({ link }) => (
 		className={classNames("social", "facebook")}
 		href={link}>
 		<FaFacebook size={18} />
-		<span> Follow Us!</span>
+		<span> Follow Us On Facebook!</span>
 	</a>
 );
 
