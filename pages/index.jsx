@@ -130,9 +130,6 @@ Make a “world of difference” in the lives of international students and loca
 };
 
 const HomePage = ({ sections, banner }) => (<MainLayout>
-	<Alert id="covid-alert" variant="warning">
-		Please note that all new matches made by International Friends will initially be virtual, and all participants must follow University and CDC COVID-19 guidelines.
-	</Alert>
 	<Banner {...banner} />
 	<Container>
 		<Row>
