@@ -5,13 +5,20 @@ import Image from "react-bootstrap/Image";
 import { renderActions } from "../Action";
 
 const Banner = ({ message = "Banner Message", actions, image }) => (
-	<Jumbotron fluid className="banner">
-		{image && <Image alt="banner image" fluid className={classNames("background")} src={image} />}
-		<Container className={"container"}>
-			<h1>{message}</h1>
-			{actions && renderActions(actions)}
-		</Container>
-	</Jumbotron>
+  <Jumbotron fluid className="banner">
+    {image && (
+      <Image
+        alt="banner image"
+        fluid
+        className={classNames("background")}
+        src={image}
+      />
+    )}
+    <Container className={"container"}>
+      <h1>{message}</h1>
+      {actions && renderActions(actions)}
+    </Container>
+  </Jumbotron>
 );
 
 export default Banner;

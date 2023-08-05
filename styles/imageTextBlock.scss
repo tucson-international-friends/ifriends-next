@@ -1,8 +1,8 @@
 @import "./global";
 
-$smHeight      : 400px;
-$smHeightDouble: $smHeight+$smHeight;
-$lgHeight      : 600px;
+$smHeight: 400px;
+$smHeightDouble: $smHeight + $smHeight;
+$lgHeight: 600px;
 
 .imageTextBox {
   height: $smHeightDouble;
@@ -20,8 +20,8 @@ $lgHeight      : 600px;
   }
 
   position: absolute;
-  left    : 0;
-  right   : 0;
+  left: 0;
+  right: 0;
 
   &.light {
     background-color: $main-brand;
@@ -52,11 +52,11 @@ $lgHeight      : 600px;
 
 .imageCol {
   height: $smHeight;
-  width : 100vw;
+  width: 100vw;
 
   @include media-breakpoint-up(md) {
-    height : $lgHeight;
-    width  : 50vw;
+    height: $lgHeight;
+    width: 50vw;
     padding: 1rem;
   }
 
@@ -80,15 +80,15 @@ $lgHeight      : 600px;
   }
 
   img {
-    width     : 100%;
-    height    : 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    filter    : 0px 3px 6px rgba(0, 0, 0, 0.2);
+    filter: 0px 3px 6px rgba(0, 0, 0, 0.2);
   }
 }
 
 .textCol {
-  height    : $smHeight;
+  height: $smHeight;
   box-sizing: content-box;
   overflow-y: auto;
 
@@ -96,13 +96,13 @@ $lgHeight      : 600px;
     height: $lgHeight;
   }
 
-  padding-left   : 0;
-  padding-right  : 0;
-  display        : flex;
-  flex-direction : column;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  position       : relative;
-  margin-top     : $smHeight;
+  position: relative;
+  margin-top: $smHeight;
 
   @include media-breakpoint-up(md) {
     margin-top: 0;
@@ -112,7 +112,7 @@ $lgHeight      : 600px;
 }
 
 .textContainer {
-  overflow      : hidden;
+  overflow: hidden;
   padding-bottom: 1em;
-  padding-top   : 1em;
+  padding-top: 1em;
 }
