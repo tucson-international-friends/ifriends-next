@@ -2,7 +2,23 @@ import Table from "react-bootstrap/Table";
 import { FaLink } from "react-icons/fa";
 import { wrapFormatValue } from "../../lib/common/format";
 
-const EventListItem = ({ event, columns }) => {
+const eventColumns = [
+  {
+    name: "name",
+    label: "Event",
+  },
+  {
+    name: "when",
+    label: "When",
+  },
+  {
+    name: "location",
+    label: "Where",
+  },
+];
+
+const EventListItem = ({ event }) => {
+  const columns = eventColumns;
   const row = columns.map((column) => {
     const formatted = wrapFormatValue(event[column.name], column.format);
     return (
@@ -18,9 +34,6 @@ const EventListItem = ({ event, columns }) => {
       </td>
     );
   });
-  if (!event.startDatetime) {
-    row.splice(1, 1, <td key={`${event.name}-start`}>TBA</td>);
-  }
   if (event.placeholder) {
     row.splice(
       0,
@@ -33,16 +46,16 @@ const EventListItem = ({ event, columns }) => {
   return <tr key={`row-${event.key || event.name}`}>{row}</tr>;
 };
 
-const EventList = ({ events, columns }) => (
+const EventList = ({ events }) => (
   <Table striped className="table">
     <thead>
       <tr>
-        {columns.map((column) => (
+        {eventColumns.map((column) => (
           <th key={`head-${column.name}`}>{column.label}</th>
         ))}
       </tr>
     </thead>
-    <tbody>{events.map((event) => EventListItem({ event, columns }))}</tbody>
+    <tbody>{events.map((event) => EventListItem({ event }))}</tbody>
   </Table>
 );
 

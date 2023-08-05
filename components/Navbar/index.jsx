@@ -15,7 +15,7 @@ const MainNavbar = ({ router, navItems, user }) => {
     result.push(!user ? { type: ACTIONS.SIGNUP } : { type: ACTIONS.PROFILE });
     return result;
   }, [user]);
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
   const navbar = (
     <>
       <Navbar.Brand className="brand">
@@ -48,6 +48,7 @@ const MainNavbar = ({ router, navItems, user }) => {
           {navItems &&
             navItems.map((navItem, i) => (
               <Link
+                legacyBehavior
                 passHref
                 href={navItem.route}
                 key={navItem.name || navItem.route || i}

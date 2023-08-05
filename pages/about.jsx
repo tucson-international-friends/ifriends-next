@@ -4,8 +4,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 
-import { FORMATS } from "../lib/common/format";
-
 import MainLayout from "../layout/main";
 import Banner from "../components/Banner";
 import TextBlock from "../components/TextBlock";
@@ -96,123 +94,6 @@ The all-volunteer board is composed of past and present hosts, international stu
           ],
         },
       ],
-      eventColumns: [
-        {
-          name: "date",
-          label: "Date",
-          format: FORMATS.DATE,
-        },
-        {
-          name: "startDatetime",
-          label: "Start Time",
-          format: FORMATS.TIME,
-        },
-        {
-          name: "endDatetime",
-          label: "End Time",
-          format: FORMATS.TIME,
-        },
-        {
-          name: "name",
-          label: "Event",
-        },
-        {
-          name: "location",
-          label: "Location",
-        },
-      ],
-      events: [
-        {
-          key: "board-meeting-jun",
-          name: "Board Meeting",
-          startDatetime: "2019-06-27 17:30",
-          date: "2019-06-27",
-          location: "ISS Office",
-        },
-        {
-          name: "Welcome Luncheon",
-          date: "2019-08-24",
-          startDatetime: "2019-08-24 10:00",
-          endDatetime: "2019-08-24 14:00",
-          location: "First United Methodist Church",
-        },
-        {
-          name: "New Host Orientation",
-          date: "2019-09-14",
-          location: "Tucson Visitor's Center",
-        },
-        {
-          key: "board-meeting-sep",
-          name: "Board Meeting",
-          startDatetime: "2019-09-16 17:30",
-          date: "2019-09-16",
-          location: "ISS Office",
-        },
-        {
-          key: "fall-picnic",
-          name: "Fall Picnic",
-          startDatetime: "2019-09-29 12:00",
-          date: "2019-09-29",
-          location: "Reid Park",
-        },
-        {
-          name: "Biosphere Tour",
-          date: "2019-10-20",
-          startDatetime: "2019-10-20 13:45",
-          location: "Biosphere 2",
-        },
-        {
-          name: "Amerind Fall Festival",
-          date: "2019-10-26",
-          startDatetime: "2019-10-26 10:00",
-          endDatetime: "2019-10-26 04:00",
-        },
-        {
-          name: "International Students Talent Show",
-          date: "2019-11-12",
-          startDatetime: "2019-11-12 19:00",
-          endDatetime: "2019-11-12 21:00",
-          location: "Stevie Eller Dance Theater",
-          url: "https://global.arizona.edu/events/global-wildcats-got-talent-8",
-        },
-        {
-          name: "Presidio Living History Day",
-          date: "2019-11-19",
-        },
-        {
-          key: "board-meeting-dec",
-          name: "Board Meeting",
-          startDatetime: "2019-12-02 17:30",
-          date: "2019-12-02",
-          location: "ISS Office",
-        },
-        {
-          name: "Welcome Brunch",
-          date: "2020-01-12",
-          location: "Tucson Visitor's Center",
-        },
-        {
-          name: "Rodeo Picnic",
-          date: "2020-02-23",
-          startDatetime: "2020-02-23 12:00",
-          endDatetime: "2020-02-23 14:00",
-        },
-        {
-          name: "Annual Board Meeting",
-          date: "2020-03-02",
-          startDatetime: "2020-03-02 17:30",
-          location: "ISS Office",
-        },
-        {
-          name: "Desert Museum Tour",
-          date: "2020-04-11",
-          location: "Desert Museum",
-        },
-        {
-          name: "Planning Meeting",
-          date: "2020-04-18",
-        },
-      ],
       studentTestimonials: [
         {
           quote:
@@ -294,8 +175,6 @@ const AboutPage = ({
   studentTestimonials,
   hostTestimonials,
   studentStories,
-  eventColumns,
-  events,
   members,
 }) => {
   return (
