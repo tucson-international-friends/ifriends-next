@@ -9,7 +9,6 @@ import Banner from "../components/Banner";
 import TextBlock from "../components/TextBlock";
 import Header from "../components/Header";
 import { FAQList } from "../components/FAQ";
-import Testimonial from "../components/Testimonial";
 import Signup from "../components/Action/signup";
 import { getStorageMediaUrl, getLocalMediaUrl } from "../lib/image";
 

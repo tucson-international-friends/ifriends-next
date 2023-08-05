@@ -23,7 +23,8 @@
     "react-markdown": "6.0.2",
     "reactn": "^2.2.7",
     "reactn-devtools": "^1.1.0",
-    "sass": "^1.35.1"
+    "sass": "^1.35.1",
+    "sharp": "^0.32.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

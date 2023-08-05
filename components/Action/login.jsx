@@ -1,11 +1,9 @@
 import { Modal, Form, Alert, Row, Col } from "react-bootstrap";
 import { useCallback, useState } from "react";
-import { useGlobal } from "reactn";
 import firebase from "../../lib/firebase";
 import Button, { LoginButton } from "../Button";
 
 const Login = ({ label = "Log In" }) => {
-  const [user, setUser] = useGlobal("user");
   const [showModal, setShowModal] = useState(false);
   const [error, setError] = useState(null);
   const [email, setEmail] = useState("");
@@ -18,15 +16,6 @@ const Login = ({ label = "Log In" }) => {
         setError(err.message);
       });
   }, [email, password]);
-  const handleSuccess = useCallback(
-    (result) => {
-      setUser(result.user);
-    },
-    [setUser],
-  );
-  const handleError = useCallback((err) => {
-    setError(err.message);
-  }, []);
   return (
     <>
       <Modal show={showModal} onHide={() => setShowModal(false)}>

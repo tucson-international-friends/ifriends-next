@@ -1,4 +1,4 @@
-import { Component, useState } from "react";
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import ReactMarkdown from "react-markdown";
@@ -122,7 +122,7 @@ const GuidelinePage = (props) => {
             setActive(eventKey);
           }}
         >
-          {guidelines.map(({ name, label, content }) => (
+          {guidelines.map(({ name, label }) => (
             <Nav.Item key={name}>
               <Nav.Link eventKey={name} key={name}>
                 {label}

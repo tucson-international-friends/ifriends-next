@@ -1,4 +1,3 @@
-import { Component } from "react";
 import ReactMarkDown from "react-markdown";
 import { Container } from "react-bootstrap";
 import MainLayout from "../layout/main";
@@ -28,9 +27,7 @@ Randy Spalding and Pat Gilman, Co-chairs, International Friends, Inc.
 });
 
 const LetterPage = (props) => {
-  const {
-    letter: { header, content },
-  } = props;
+  const { letter: { header, content }, } = props;
   return (
     <MainLayout>
       <Container

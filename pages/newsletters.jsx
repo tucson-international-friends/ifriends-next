@@ -1,7 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import MainLayout from "../layout/main";
-import { getStorageMediaUrl } from "../lib/image";
 import notion from "../lib/notion";
 
 const newsletterDatabaseId = "71147bd2ca1944e6ae7b433893bb0ba9";

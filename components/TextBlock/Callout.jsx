@@ -1,1 +1,0 @@
-const Callout = ({ title, content }) => {};

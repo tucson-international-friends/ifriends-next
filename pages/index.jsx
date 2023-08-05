@@ -2,7 +2,7 @@ import MainLayout from "../layout/main";
 import Banner from "../components/Banner";
 import TextBlock, { VARIANTS } from "../components/TextBlock";
 import ImageTextBlock, { COLORS } from "../components/ImageTextBlock";
-import { Alert, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { getLocalMediaUrl, getStorageMediaUrl } from "../lib/image";
 
 export const getStaticProps = async () => {
