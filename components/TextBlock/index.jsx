@@ -8,40 +8,51 @@ import { renderActions } from "../Action";
 
 export const VARIANTS = { CALLOUT: "callout" };
 
-
-const TextBlock = ({ title, content, actions, variant, headerAlign, textAlign = "left" }) => {
-	const isCallout = variant === VARIANTS.CALLOUT;
-	const component = (
-		<div className={classNames("textBlock", { callout: isCallout }, `text-${textAlign}`)}>
-			<h2 className={`title text-${headerAlign ?? textAlign}`}>{title}</h2>
-			{Array.isArray(content)
-				? (
-					<Row>
-						{content.map((col, i) => (
-							// eslint-disable-next-line react/no-array-index-key
-							<Col key={i}>
-								<ReactMarkDown
-									className={`text-${textAlign}`}
-								>
-									{col}
-								</ReactMarkDown>
-							</Col>
-						))}
-					</Row>
-				)
-				: (
-					<ReactMarkDown>
-						{content}
-					</ReactMarkDown>
-				)}
-			{actions && renderActions(actions, { variant: "text-primary", label: "Read More", icon: GoArrowRight() })}
-		</div>
-	);
-	return isCallout ? (
-		<Jumbotron className="callout">{component}</Jumbotron>
-	) : (
-		component
-	);
+const TextBlock = ({
+  title,
+  content,
+  actions,
+  variant,
+  headerAlign,
+  textAlign = "left",
+}) => {
+  const isCallout = variant === VARIANTS.CALLOUT;
+  const component = (
+    <div
+      className={classNames(
+        "textBlock",
+        { callout: isCallout },
+        `text-${textAlign}`,
+      )}
+    >
+      <h2 className={`title text-${headerAlign ?? textAlign}`}>{title}</h2>
+      {Array.isArray(content) ? (
+        <Row>
+          {content.map((col, i) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <Col key={i}>
+              <ReactMarkDown className={`text-${textAlign}`}>
+                {col}
+              </ReactMarkDown>
+            </Col>
+          ))}
+        </Row>
+      ) : (
+        <ReactMarkDown>{content}</ReactMarkDown>
+      )}
+      {actions &&
+        renderActions(actions, {
+          variant: "text-primary",
+          label: "Read More",
+          icon: GoArrowRight(),
+        })}
+    </div>
+  );
+  return isCallout ? (
+    <Jumbotron className="callout">{component}</Jumbotron>
+  ) : (
+    component
+  );
 };
 
 export default TextBlock;

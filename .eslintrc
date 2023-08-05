@@ -1,57 +1,40 @@
 {
-	"env": {
-		"browser": true,
-		"es6": true,
-		"node": true
-	},
-	"extends": "next",
-	"parser": "babel-eslint",
-	"parserOptions": {
-		"ecmaFeatures": {
-			"jsx": true
-		},
-		"ecmaVersion": 2018
-	},
-	"plugins": [
-		"react"
-	],
-	"rules": {
-		"indent": [
-			2,
-			"tab",
-			{
-				"SwitchCase": 1,
-				"VariableDeclarator": 1
-			}
-		],
-		"no-tabs": 0,
-		"comma-dangle": "off",
-		"object-curly-newline": [
-			"error",
-			{
-				"multiline": true
-			}
-		],
-		"no-param-reassign": "off",
-		"react/prop-types": 0,
-		"react/jsx-indent": [
-			2,
-			"tab"
-		],
-		"react/jsx-indent-props": [
-			2,
-			"tab"
-		],
-		"react/react-in-jsx-scope": "off",
-		"quotes": [
-			"error",
-			"double",
-			{
-				"avoidEscape": true
-			}
-		],
-		"react/jsx-one-expression-per-line": "off",
-		"react/jsx-closing-bracket-location": 0,
-		"jsx-a11y/interactive-supports-focus": "off"
-	}
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": ["next", "prettier"],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018
+    },
+    "plugins": ["react"],
+    "rules": {
+        "no-console": "warn",
+        "no-unused-vars": "warn",
+        "comma-dangle": "off",
+        "object-curly-newline": [
+            "error",
+            {
+                "multiline": true
+            }
+        ],
+        "no-param-reassign": "off",
+        "react/prop-types": 0,
+        "react/react-in-jsx-scope": "off",
+        "quotes": [
+            "error",
+            "double",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "react/jsx-one-expression-per-line": "off",
+        "react/jsx-closing-bracket-location": 0,
+        "jsx-a11y/interactive-supports-focus": "off"
+    }
 }

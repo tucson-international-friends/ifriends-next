@@ -1,36 +1,36 @@
 [
-	{
-		"label": "Home",
-		"name": "index",
-		"sub": [
-			{
-				"label": "About Us",
-				"name": "about"
-			},
-			{
-				"label": "Join",
-				"name": "join"
-			},
-			{
-				"label": "Activities",
-				"name": "activities"
-			},
-			{
-				"label": "By Laws",
-				"name": "by-laws"
-			},
-			{
-				"label": "Letter from Co-Chairs",
-				"name": "letter"
-			},
-			{
-				"label": "Guiding Principles",
-				"name": "guidelines"
-			},
-			{
-				"label": "Newsletters",
-				"name": "newsletters"
-			}
-		]
-	}
+  {
+    "label": "Home",
+    "name": "index",
+    "sub": [
+      {
+        "label": "About Us",
+        "name": "about"
+      },
+      {
+        "label": "Join",
+        "name": "join"
+      },
+      {
+        "label": "Activities",
+        "name": "activities"
+      },
+      {
+        "label": "By Laws",
+        "name": "by-laws"
+      },
+      {
+        "label": "Letter from Co-Chairs",
+        "name": "letter"
+      },
+      {
+        "label": "Guiding Principles",
+        "name": "guidelines"
+      },
+      {
+        "label": "Newsletters",
+        "name": "newsletters"
+      }
+    ]
+  }
 ]

@@ -24,11 +24,11 @@ $theme-colors: (
   "important": $highlight,
   "primary": $main-brand,
   // oxford blue
-    "info": $light-accent,
+  "info": $light-accent,
   // Bastille
-    "success": #468e4f,
+  "success": #468e4f,
   "warning": #c47e17,
-  "danger": #f44336
+  "danger": #f44336,
 );
 
 $grid-breakpoints: (
@@ -36,13 +36,13 @@ $grid-breakpoints: (
   sm: 460px,
   md: 850px,
   lg: 1024px,
-  xl: 1440px
+  xl: 1440px,
 );
 
 $container-max-widths: (
   md: 850px,
   lg: 1000px,
-  xl: 1400px
+  xl: 1400px,
 );
 
 $enable-responsive-font-sizes: true;

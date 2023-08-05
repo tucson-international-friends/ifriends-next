@@ -6,17 +6,17 @@
 
 body {
   background-color: $off-white;
-  transition      : 1s ease;
+  transition: 1s ease;
 }
 
 #__next {
-  min-height    : 100vh;
-  display       : flex;
+  min-height: 100vh;
+  display: flex;
   flex-direction: column;
 }
 
 .container {
-  padding-left : 25px;
+  padding-left: 25px;
   padding-right: 25px;
 }
 
@@ -25,18 +25,18 @@ body {
 }
 
 .dropdown-menu {
-  border    : 0;
+  border: 0;
   box-shadow: elavation(2);
 }
 
 .dropdown-item {
-  display       : flex;
+  display: flex;
   flex-direction: row;
 
   svg {
-    margin   : auto 0.5rem;
+    margin: auto 0.5rem;
     flex-grow: 0;
-    height   : 100%;
+    height: 100%;
   }
 }
 
@@ -52,7 +52,7 @@ body {
   z-index: 2;
 
   @include media-breakpoint-up(md) {
-    top: 6rem
+    top: 6rem;
   }
   @include media-breakpoint-up(xl) {
     top: 3rem;
@@ -71,24 +71,24 @@ h3,
 h4,
 h5,
 h6 {
-  font-family   : $action-font;
+  font-family: $action-font;
   text-transform: uppercase;
-  font-weight   : 700;
+  font-weight: 700;
 }
 
 .btn {
-  font-family   : $action-font;
-  font-weight   : bold;
+  font-family: $action-font;
+  font-weight: bold;
   text-transform: uppercase;
-  border-width  : 2px;
-  box-shadow    : elavation(1);
+  border-width: 2px;
+  box-shadow: elavation(1);
 }
 
 .form-control {
-  border          : none;
-  border-bottom   : 1px solid #ced4da;
+  border: none;
+  border-bottom: 1px solid #ced4da;
   background-color: transparent;
-  border-radius   : 0;
+  border-radius: 0;
 
   &:focus {
     box-shadow: none;
@@ -108,11 +108,9 @@ a {
 .embed-video {
   height: 214px;
 
- 
-
   @include media-breakpoint-up(sm) {
     height: 405px;
-  }  
+  }
 
   @include media-breakpoint-up(md) {
     height: 218px;
@@ -125,7 +123,6 @@ a {
   @include media-breakpoint-up(xl) {
     height: 375px;
   }
-
 }
 
 @import "../banner.scss";

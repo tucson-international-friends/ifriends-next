@@ -1,17 +1,17 @@
-import { Component, useState } from "react";
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import ReactMarkdown from "react-markdown";
 import MainLayout from "../layout/main";
 
 export const getStaticProps = async () => {
-	return {
-		props: {
-			guidelines: [
-				{
-					name: "host",
-					label: "For Host",
-					content: `
+  return {
+    props: {
+      guidelines: [
+        {
+          name: "host",
+          label: "For Host",
+          content: `
 * Students are matched with hosts for a period of one year, as long as it is mutually satisfying, with an obligation to get together a minimum of once a month.  Although the relationships may continue well beyond the year, we hope hosts will make themselves available to other first year students in subsequent years.
 
 * Call or email your student to introduce yourself within one week of being matched.
@@ -55,12 +55,12 @@ export const getStaticProps = async () => {
 
 * While graduate and undergraduate students may not serve as IF hosts, they are welcome to participate as volunteers at IF events.
 
-* Promotion of non-International Friends organizations, programs, events, membership, and sales of non-IF-related materials are strictly prohibited at IF events unless participation has been requested/approved by the IF board.`
-				},
-				{
-					name: "student",
-					label: "For Students",
-					content: `
+* Promotion of non-International Friends organizations, programs, events, membership, and sales of non-IF-related materials are strictly prohibited at IF events unless participation has been requested/approved by the IF board.`,
+        },
+        {
+          name: "student",
+          label: "For Students",
+          content: `
 * The period of matching to a host is for one year, as long as it is mutually satisfying.  Your relationship may continue well beyond the year.  In fact, you and your host may want to welcome another student at the beginning of the next academic year.
 
 * Call or email your host to introduce yourself within one week of assignment.
@@ -100,45 +100,42 @@ export const getStaticProps = async () => {
 * Don’t ignore your host!  Spend time with them and learn about life in Tucson and in the US.  If you find you do not have time to participate, notify International Friends, info@ifriendstucson.org, so another student can be matched with your host.
 
 * If you have problems establishing a relationship with your host or no longer wish to participate, please notify International Friends, info@ifriendstucson.org.
-`
-				}
-			]
-		}
-	};
+`,
+        },
+      ],
+    },
+  };
 };
 const GuidelinePage = (props) => {
-
-	const [active, setActive] = useState("host");
-	const { guidelines } = props;
-	return (
-		<MainLayout>
-			<Container className="pt-5 mt-5">
-				<h2>Guiding Principles</h2>
-				<Nav
-					variant="pills"
-					justify
-					fill
-					activeKey={active}
-					onSelect={(eventKey) => {
-						setActive(eventKey);
-					}}>
-					{guidelines.map(({ name, label, content }) => (
-						<Nav.Item key={name}>
-							<Nav.Link eventKey={name} key={name}>
-								{label}
-							</Nav.Link>
-						</Nav.Item>
-					))}
-				</Nav>
-				<ReactMarkdown
-					className="p-2 mt-2"
-				>
-					{guidelines.find(guildline => guildline.name === active).content}
-				</ReactMarkdown>
-
-			</Container>
-		</MainLayout>
-	);
+  const [active, setActive] = useState("host");
+  const { guidelines } = props;
+  return (
+    <MainLayout>
+      <Container className="pt-5 mt-5">
+        <h2>Guiding Principles</h2>
+        <Nav
+          variant="pills"
+          justify
+          fill
+          activeKey={active}
+          onSelect={(eventKey) => {
+            setActive(eventKey);
+          }}
+        >
+          {guidelines.map(({ name, label }) => (
+            <Nav.Item key={name}>
+              <Nav.Link eventKey={name} key={name}>
+                {label}
+              </Nav.Link>
+            </Nav.Item>
+          ))}
+        </Nav>
+        <ReactMarkdown className="p-2 mt-2">
+          {guidelines.find((guildline) => guildline.name === active).content}
+        </ReactMarkdown>
+      </Container>
+    </MainLayout>
+  );
 };
 
 export default GuidelinePage;
