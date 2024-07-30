@@ -68,7 +68,7 @@ International Friends became an Arizona corporation in 2004 and also received of
             headerAlign: "center",
             textAlign: "justify",
             content: `
-International Friends sponsors a “welcome” event each August and January for new students and hosts. At these events, we describe our program and invite international students to apply to be matched with local hosts.
+International Friends sponsors a “welcome picnic” event each Fall and Spring Terms for participating students and hosts. At these events held at a local park, we describe our program, welcome new participants, enjoy delicious food and drinks, participate in ‘competitive fun’ games and group dances, and engage in casual conversation to get to know each other better.
 
 Students and hosts are encouraged to get together once a month or more. Activities can range from special events like holiday celebrations, sightseeing trips, and hiking outings, to everyday activities like shopping and sharing meals. International Friends also organizes picnics and other fun events during the school year that all are welcome to attend.
 
