@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import moment from "moment";
-import { FaMapMarked, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaMapMarked, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import FacebookButton from "../Button/facebook";
 import GithubButton from "../Button/github";

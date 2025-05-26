@@ -5,10 +5,7 @@ import ImageTextBlock, { COLORS } from "../components/ImageTextBlock";
 import MainLayout from "../layout/main";
 import Banner from "../components/Banner";
 import TextBlock from "../components/TextBlock";
-import notion from "../lib/notion";
-import { getStorageMediaUrl } from "../lib/image";
-import Header from "../components/Header";
-import EventList from "../components/Events/List";
+
 
 export const getStaticProps = async () => {
   return {
