@@ -72,9 +72,9 @@ International Friends sponsors a “welcome picnic” event each Fall and Spring
 
 Students and hosts get together at least once a month over the course of a year.  Activities can range from special events like holiday celebrations, sightseeing trips, and hiking outings, to everyday activities like shopping and sharing meals.  International Friends also organizes picnics and other fun events during the school year that all are welcome to attend.
 
-While the students’ and hosts’ matched relationships officially end after one year, lifelong friendships and connections are often formed with hosts, students, and the students’ families back home.  Many have found their lives immeasurably enriched by these friendships.
+While the students’ and hosts’ matched relationships officially end after the first academic year, lifelong friendships and connections are often formed with hosts, students, and the students’ families back home. Many have found their lives immeasurably enriched by these friendships.
 
-For a closer look, listen to this podcast episode below where two hosts and a student share their experiences with International Friends.`,
+For a closer look, listen to this podcast episode where two hosts and a student share their experiences with International Friends, available on [Spotify](https://open.spotify.com/episode/4XIcCwshH1jtjr6a7IBHVW?si=rAaOHDfCTK2O1lrfkc_DTg) or [Apple Music](https://podcasts.apple.com/us/podcast/international-friends/id1741840611?i=1000692074849)`,
           },
         ],
         {
