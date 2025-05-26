@@ -10,46 +10,10 @@ import { getStorageMediaUrl } from "../lib/image";
 import Header from "../components/Header";
 import EventList from "../components/Events/List";
 
-const eventDatabaseId = "bbb168dc0a1244dfbc7a3e8b9f5eed0c";
-
-const getEventWhen = (start, end) => {
-  if (!start) {
-    return "TBA";
-  }
-  const startDate = new Date(start);
-  if (!end) {
-    return `${startDate.toLocaleDateString()} ${startDate.toLocaleTimeString}`;
-  }
-  const endDate = new Date(end);
-  if (startDate.toLocaleDateString() === endDate.toLocaleDateString()) {
-    return `${startDate.toLocaleDateString()} ${startDate.toLocaleTimeString(
-      [],
-      {
-        hour: "2-digit",
-        minute: "2-digit",
-      }
-    )} - ${endDate.toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-    })}`;
-  }
-  return "TBA";
-  return `${startDate.toLocaleDateString()} ${startDate.toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  })} - ${endDate.toLocaleDateString()}
- ${endDate.toLocaleTimeString([], {
-   hour: "2-digit",
-   minute: "2-digit",
- })}`;
-};
-
 export const getStaticProps = async () => {
-  const events = null;
   return {
     revalidate: 60,
     props: {
-      events,
       banner: {
         message: "Enjoy activities throughout the year",
         image: "/images/activities_header.png",
