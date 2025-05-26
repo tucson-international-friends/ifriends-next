@@ -6,7 +6,7 @@ export const getStaticProps = () => ({
   props: {
     letter: {
       header: `
-## Letter from the Co-Chair
+## Letter from the Co-Chairs
 `,
       content: `Thank you for your interest in International Friends! 
 
@@ -27,15 +27,16 @@ Randy Spalding and Pat Gilman, Co-chairs, International Friends, Inc.
 });
 
 const LetterPage = (props) => {
-  const { letter: { header, content }, } = props;
+  const {
+    letter: { header, content },
+  } = props;
   return (
     <MainLayout>
       <Container
         style={{
           paddingTop: "10em",
           paddingBottom: "10em",
-        }}
-      >
+        }}>
         <ReactMarkDown className="text-center">{header}</ReactMarkDown>
         <ReactMarkDown>{content}</ReactMarkDown>
       </Container>

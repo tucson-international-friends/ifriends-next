@@ -17,7 +17,7 @@ export const getStaticProps = () => {
     props: {
       banner: {
         message: "BUILD LASTING FRIENDSHIPS",
-        image: getStorageMediaUrl("host-student-banner.jpg"),
+        image: "/images/join_header.png",
       },
       sections: [
         [
@@ -27,7 +27,7 @@ export const getStaticProps = () => {
 * Read and review the IF Guidelines.
 * Click on the “Host Application” button.
 * Fill out and submit the application online.
-* Your references will be checked, so please provide current and complete information.
+* Your references will be checked, so provide current information.  Please inform your references that they will be contacted by International Friends.
 * Upon approval, you will be added to our database and then be given access to our list of students available for matching.
 					`,
           },
@@ -37,8 +37,7 @@ export const getStaticProps = () => {
 * Read and review the IF Guidelines.
 * Click on the “Student Application” button application.
 * Complete and submit the application, answering every question. The more information you can provide about yourself, the easier it is to match you with a host having similar interests.
-* You will be matched with a community host as soon as possible.
-					
+* You will be matched with a community host as soon as possible.	
 					`,
           },
         ],
@@ -46,8 +45,7 @@ export const getStaticProps = () => {
         [
           {
             title: "LIFELONG FRIENDSHIPS ARE FORMED",
-            image:
-              "/images/46698861_10215442170861614_4665833654675570688_o.jpeg",
+            image: "/images/join_image2.png",
             content: `
 International students describe International Friends as an invaluable asset for learning about American life outside the academic environment. Southern Arizonans who have hosted students have expressed tremendous gratitude for the pleasure these relationships bring, and the goodwill generated affects both students and hosts for the rest of their lives.
 
@@ -63,7 +61,7 @@ International students describe International Friends as an invaluable asset for
             title: "HOW HOSTING WORKS",
             image: getLocalMediaUrl("zipline.jpeg"),
             content: `
-Students and hosts are matched for one academic year. Although the relationships may continue well beyond this time period, we hope hosts will make themselves available for matching with other first-year students in upcoming years.
+Students and hosts are matched for one year. Although the relationships may continue well beyond this time period, we hope hosts will make themselves available for matching with other students in upcoming years.
 
 Any student inquiries regarding the following should be referred to the University of Arizona’s International Student Services office at 520-621-4627:
 * Employment instructions
@@ -90,18 +88,18 @@ Any student inquiries regarding the following should be referred to the Universi
         {
           question: " Why do students participate?",
           answer: `
-* To become better acquainted with Americans on a personal basis
-* To learn about the many cultures and ways of life in Tucson and Southern Arizona
-* To share their own cultures and customs
-* To participate in the life of the Tucson community`,
+* To become better acquainted with Americans on a personal basis.
+* To learn about the many cultures and ways of life in Tucson and Southern Arizona.
+* To share their own cultures and customs.
+* To participate in the life of the Tucson community.`,
         },
         {
           question: "Why do Hosts participate?",
           answer: `
-* To become better acquainted with international students on a personal basis
-* To learn about others’ cultures and ways of life
-* To share their own cultures and customs
-* To participate in the lives of international students in Tucson`,
+* To become better acquainted with international students on a personal basis.
+* To learn about others’ cultures and ways of life.
+* To share their own cultures and customs.
+* To participate in the lives of international students in Tucson.`,
         },
         {
           question: "WHO COORDINATES ACTIVITIES AND HOW DO I LEARN ABOUT THEM?",
@@ -114,19 +112,19 @@ Information about group activities and other items of interest are communicated 
         {
           question: "WHAT IS REQUIRED OF An international friends HOST?",
           answer: `
-* Complete application and be approved as a host
-* Contact student within one week of being matched 
-* Continue monthly contact the first year the student is here. Plan to have a meal together, participate in community events, go sightseeing, attend International Friends activities, or just share coffee and conversation
-* Follow the International Friends Guidelines for hosts`,
+* Complete application and be approved as a host.
+* Contact student within days of being matched.
+* Continue monthly contact for one year.  Plan to have a meal together, participate in community events, go sightseeing, attend International Friends activities, or just share coffee and conversation.
+* Follow the International Friends Guidelines for hosts.`,
         },
         {
           question: "WHAT IS REQUIRED OF An international friends STUDENT?",
           answer: `
-* Complete application for matching with hosts
-* Communicate with your host within one week of matching assignment 
-* Invite your host to get together with you and your friends, or just invite them for coffee
-* Share information about your country, family, and traditions
-* Follow the International Friends Guidelines for students`,
+* Complete application for matching with hosts.
+* Communicate with your host within days of being matched.
+* Invite your host to get together with you and your friends, or just invite them for coffee.
+* Share information about your country, family, and traditions.
+* Follow the International Friends Guidelines for students.`,
         },
         {
           question: "IS THERE A COST TO BECOME A MEMBER?",
@@ -149,7 +147,6 @@ const JoinPage = ({ banner, sections, faqs }) => {
       <Banner {...banner} />
 
       <Container>
-        <h1 className="text-center">How to join International Friends?</h1>
         <Row>
           <Col md={6}>
             <TextBlock headerAlign="center" {...sections[0][0]} />
@@ -166,7 +163,7 @@ const JoinPage = ({ banner, sections, faqs }) => {
         <Header title="Frequently Asked Questions" />
         <FAQList data={faqs} />
         <ImageTextBlock {...sections[2][0]} color={COLORS.LIGHT} invert />
-        <ImageTextBlock {...sections[2][1]} />
+        <ImageTextBlock {...sections[2][1]} buttonTitle={"Guidelines"} />
 
         <div className="text-center py-5 mb-5">
           <Signup size="lg" label="join us today" />

@@ -18,6 +18,7 @@ const ImageTextBlock = ({
   color = COLORS.DARK,
   actions,
   extraHeight,
+  buttonTitle,
 }) => (
   <Row className="imageTextBox">
     <div
@@ -29,22 +30,20 @@ const ImageTextBlock = ({
         color,
         { not_invert: !invert },
         { invert },
-        { xh: extraHeight },
-      )}
-    >
+        { xh: extraHeight }
+      )}>
       <Image alt={title + "-image"} rounded fluid src={image} />
     </div>
     <Col
       md={{ span: 6, offset: invert ? 0 : 6 }}
-      className={classNames("textCol", color, { xh: extraHeight })}
-    >
+      className={classNames("textCol", color, { xh: extraHeight })}>
       <div className={classNames("textContainer")}>
         <h2>{title}</h2>
         <ReactMarkdown>{content}</ReactMarkdown>
         {actions &&
           renderActions(actions, {
             variant: "outline-light",
-            label: "Learn More",
+            label: buttonTitle ? buttonTitle : "Learn More",
           })}
       </div>
     </Col>
