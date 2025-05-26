@@ -1,52 +1,50 @@
 {
-  "name": "ifriends-next",
-  "version": "1.0.0",
-  "description": "The Next.js project for international friends",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tucson-international-friends/ifriends-next.git"
-  },
-  "dependencies": {
-    "@notionhq/client": "^2.2.10",
-    "bootstrap": "^5.3.6",
-    "classnames": "^2.2.6",
-    "firebase": "^11.8.1",
-    "firebase-admin": "^13.4.0",
-    "lodash": "^4.17.21",
-    "moment": "^2.29.1",
-    "next": "^15.3.2",
-    "react": "^18.2.0",
-    "react-bootstrap": "1.6.1",
-    "react-dom": "^18.2.0",
-    "react-icons": "4.2.0",
-    "react-markdown": "6.0.2",
-    "reactn": "^2.2.7",
-    "reactn-devtools": "^1.1.0",
-    "sass": "^1.35.1",
-    "sharp": "^0.32.4"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "babel-eslint": "^10.0.1",
-    "eslint": "7.29.0",
-    "eslint-config-next": "^11.0.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.22.0",
-    "postcss": "^8.4.27",
-    "prettier": "^3.0.1",
-    "redux": "^4.2.0",
-    "tailwindcss": "^3.3.3",
-    "typescript": "5.1.6"
-  },
-  "scripts": {
-    "dev": "NODE_OPTIONS=\"--inspect\" next",
-    "build": "next build",
-    "now-build": "next build",
-    "start": "next start"
-  },
-  "author": "Youhao Wei",
-  "license": "MIT"
+    "name": "ifriends-next",
+    "version": "1.0.0",
+    "description": "The Next.js project for international friends",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tucson-international-friends/ifriends-next.git"
+    },
+    "dependencies": {
+        "@notionhq/client": "^2.2.10",
+        "bootstrap": "^4.6.0",
+        "classnames": "^2.2.6",
+        "lodash": "^4.17.21",
+        "moment": "^2.29.1",
+        "next": "^15.3.2",
+        "react": "^18.2.0",
+        "react-bootstrap": "1.6.1",
+        "react-dom": "^18.2.0",
+        "react-icons": "4.2.0",
+        "react-markdown": "6.0.2",
+        "reactn": "^2.2.7",
+        "reactn-devtools": "^1.1.0",
+        "sass": "^1.35.1",
+        "sharp": "^0.32.4"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.14",
+        "babel-eslint": "^10.0.1",
+        "eslint": "7.29.0",
+        "eslint-config-next": "^11.0.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-react": "^7.22.0",
+        "postcss": "^8.4.27",
+        "prettier": "^3.0.1",
+        "redux": "^4.2.0",
+        "tailwindcss": "^3.3.3",
+        "typescript": "5.1.6"
+    },
+    "scripts": {
+        "dev": "NODE_OPTIONS=\"--inspect\" next",
+        "build": "next build",
+        "now-build": "next build",
+        "start": "next start"
+    },
+    "author": "Youhao Wei",
+    "license": "MIT"
 }
