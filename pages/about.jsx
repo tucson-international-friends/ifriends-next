@@ -9,7 +9,7 @@ import Banner from "../components/Banner";
 import TextBlock from "../components/TextBlock";
 import BoardList from "../components/BoardList";
 import Header from "../components/Header";
-import { getStorageMediaUrl, getLocalMediaUrl } from "../lib/image";
+import { getLocalMediaUrl } from "../lib/image";
 import Testimonial from "../components/Testimonial";
 import notion from "../lib/notion";
 
@@ -198,7 +198,7 @@ const AboutPage = ({
           height="352"
           frameBorder="0"
           allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          allowFullScreen="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"></iframe>
         <h1 className="text-center">Meet Our Students</h1>
         <Row>

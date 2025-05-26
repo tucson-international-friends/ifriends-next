@@ -27,9 +27,7 @@ Randy Spalding and Pat Gilman, Co-chairs, International Friends, Inc.
 });
 
 const LetterPage = (props) => {
-  const {
-    letter: { header, content },
-  } = props;
+  const { letter: { header, content }, } = props;
   return (
     <MainLayout>
       <Container
