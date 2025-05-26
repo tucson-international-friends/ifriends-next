@@ -12,15 +12,22 @@ export const getStaticProps = async () => {
           name: "host",
           label: "For Host",
           content: `
-* Students are matched with hosts for a period of one year, as long as it is mutually satisfying, with an obligation to get together a minimum of once a month.  Although the relationships may continue well beyond the year, we hope hosts will make themselves available to other first year students in subsequent years.
+* Hosts and students are matched for one year, as long as it is mutually satisfying, with an obligation to get together a minimum of once a month.  Although the relationships may continue well beyond the year, we hope hosts will make themselves available to other first year students in subsequent years.
 
-* Call or email your student to introduce yourself within one week of being matched.
+* Call or email your student to introduce yourself within three days of being matched.
+
+* Return your student’s calls, texts, and emails in a timely manner.
 
 * Any student inquiries regarding the following should be referred to the International Student Services (ISS) office, 520 621-4627:
+
   * Employment instructions
+
   * Immigration and Visa Issues
+
   * Academic problems with professors, advisors and administrators
+
   * Financial problems
+
   * Major medical problems
 
 * School work and study are every student’s first priority.
@@ -63,18 +70,23 @@ export const getStaticProps = async () => {
           content: `
 * The period of matching to a host is for one year, as long as it is mutually satisfying.  Your relationship may continue well beyond the year.  In fact, you and your host may want to welcome another student at the beginning of the next academic year.
 
-* Call or email your host to introduce yourself within one week of assignment.
+* Call or email your host to introduce yourself within three days of assignment.
 
 * If you have any questions regarding the following, contact the International Student Services (ISS) office, 520 621-4627:
+
   * Employment instructions
+
   * Immigration and Visa Issues
+
   * Academic problems with professors, advisors and administrators
+
   * Financial problems
+
   * Major medical problems
 
 * School work and study are every student’s first priority.
 
-* Proselytizing is not allowed. If you invite your host to a religious activity, make the nature and sponsorship of the activity clear in advance.  Respect their wishes if they choose not to go.  International Friends is about mutual respect and friendship.
+* Proselytizing is not allowed. If you invite your host and/or other students to a religious activity, make the nature and sponsorship of the activity clear in advance.  Respect their wishes if they choose not to go.  International Friends is about mutual respect and friendship.
 
 * Do not ask for financial loans, guarantees for visas, or loans for purchasing cars, leasing apartments, etc.  This is an imposition and places hosts in an uncomfortable position, especially since hosts may not be able to afford this risk and cannot offer this for every student.
 
@@ -84,7 +96,7 @@ export const getStaticProps = async () => {
 
 * Clarify special requirements, such as dietary, religious, or other customary practices to avoid problems and confusion.
 
-* Return your host’s calls and emails in a timely manner.
+* Return your host’s calls, texts, and emails in a timely manner.
 
 * Advise your host if you are allergic to or afraid of any pets.
 
@@ -112,7 +124,7 @@ const GuidelinePage = (props) => {
   return (
     <MainLayout>
       <Container className="pt-5 mt-5">
-        <h2>Guiding Principles</h2>
+        <h2>Guidelines</h2>
         <Nav
           variant="pills"
           justify
@@ -120,8 +132,7 @@ const GuidelinePage = (props) => {
           activeKey={active}
           onSelect={(eventKey) => {
             setActive(eventKey);
-          }}
-        >
+          }}>
           {guidelines.map(({ name, label }) => (
             <Nav.Item key={name}>
               <Nav.Link eventKey={name} key={name}>

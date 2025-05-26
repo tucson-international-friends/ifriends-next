@@ -3,7 +3,7 @@ import Button from "../Button";
 import { Modal } from "react-bootstrap";
 import React, { useState } from "react";
 
-const Signup = ({ label = "Sign Up", size }) => {
+const Signup = ({ label = "Join Us", size }) => {
   const [user] = useGlobal("user");
   const [modalOpen, setModalOpen] = useState(false);
   const handleHostApplication = () => {
@@ -17,7 +17,7 @@ const Signup = ({ label = "Sign Up", size }) => {
   return (
     <>
       <Modal show={modalOpen} onHide={() => setModalOpen(false)}>
-        <Modal.Header closeButton>Sign Up</Modal.Header>
+        <Modal.Header closeButton>Join Us</Modal.Header>
         <Modal.Body>
           <p>Choose one of the following applications:</p>
           <Button

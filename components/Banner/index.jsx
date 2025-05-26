@@ -15,7 +15,7 @@ const Banner = ({ message = "Banner Message", actions, image }) => (
       />
     )}
     <Container className={"container"}>
-      <h1>{message}</h1>
+      <h1 style={{}}>{message}</h1>
       {actions && renderActions(actions)}
     </Container>
   </Jumbotron>

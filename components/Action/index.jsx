@@ -1,8 +1,6 @@
 import { useMemo, useCallback } from "react";
 import { useRouter } from "next/router";
 import Button from "../Button";
-import Login from "./login";
-import Profile from "./profile";
 import Signup from "./signup";
 
 import Donate from "./donate";
@@ -26,17 +24,13 @@ export const Action = ({ actionParam, defaultValue }) => {
     [actionParam, defaultValue],
   );
 
-  const { type, label, href } = action;
+  const { type, href } = action;
   const gotoHref = useCallback(() => {
     router.push(href);
   }, [href, router]);
   switch (type) {
     case ACTIONS.SIGNUP:
       return <Signup {...action} />;
-    case ACTIONS.LOGIN:
-      return <Login label={label} />;
-    case ACTIONS.PROFILE:
-      return <Profile />;
     case ACTIONS.DONATE:
       return <Donate />;
     case ACTIONS.READMORE:

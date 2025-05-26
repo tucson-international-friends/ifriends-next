@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import addReactNDevTools from "reactn-devtools";
 import Meta from "../components/meta";
@@ -8,7 +8,6 @@ import navItems from "./navbarItems.json";
 import footerNavItems from "./footerMenuItems.json";
 import { getPageByName } from "../lib/page";
 
-import firebase from "../lib/firebase";
 import { ACTIONS } from "../components/Action";
 
 addReactNDevTools();

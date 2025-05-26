@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import moment from "moment";
-import { FaMapMarked, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaMapMarked, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import FacebookButton from "../Button/facebook";
 import GithubButton from "../Button/github";
@@ -19,22 +19,9 @@ const Address = () => (
         International Student Services (ISS)
         <br />
         615 N Park Avenue, AZ 85719
+        <br />
+        (520) 621-4627
       </a>
-    </p>
-  </>
-);
-
-const Phone = () => (
-  <>
-    <h6>
-      <FaPhone
-        style={{ transform: "rotateY(180deg)" }}
-        className="headerIcon"
-      />
-      <span>Phone Number</span>
-    </h6>
-    <p>
-      <a href="">(520) 621-4627</a>
     </p>
   </>
 );
@@ -69,9 +56,7 @@ const Footer = ({ menuItems }) => (
             <Col sm={5}>
               <Address />
             </Col>
-            <Col sm={4}>
-              <Phone />
-            </Col>
+
             <Col sm={3}>
               <Email />
             </Col>

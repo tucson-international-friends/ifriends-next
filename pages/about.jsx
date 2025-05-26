@@ -9,7 +9,7 @@ import Banner from "../components/Banner";
 import TextBlock from "../components/TextBlock";
 import BoardList from "../components/BoardList";
 import Header from "../components/Header";
-import { getStorageMediaUrl, getLocalMediaUrl } from "../lib/image";
+import { getLocalMediaUrl } from "../lib/image";
 import Testimonial from "../components/Testimonial";
 import notion from "../lib/notion";
 
@@ -52,7 +52,7 @@ export const getServerSideProps = async ({ res }) => {
       members,
       banner: {
         message: "LEARN ABOUT EACH OTHER'S CULTURE",
-        image: getStorageMediaUrl("about-banner.jpg"),
+        image: "/images/about-header.jpeg",
       },
       sections: [
         [
@@ -70,11 +70,11 @@ International Friends became an Arizona corporation in 2004 and also received of
             content: `
 International Friends sponsors a “welcome picnic” event each Fall and Spring Terms for participating students and hosts. At these events held at a local park, we describe our program, welcome new participants, enjoy delicious food and drinks, participate in ‘competitive fun’ games and group dances, and engage in casual conversation to get to know each other better.
 
-Students and hosts are encouraged to get together once a month or more. Activities can range from special events like holiday celebrations, sightseeing trips, and hiking outings, to everyday activities like shopping and sharing meals. International Friends also organizes picnics and other fun events during the school year that all are welcome to attend.
+Students and hosts get together at least once a month over the course of a year.  Activities can range from special events like holiday celebrations, sightseeing trips, and hiking outings, to everyday activities like shopping and sharing meals.  International Friends also organizes picnics and other fun events during the school year that all are welcome to attend.
 
-While the students’ and hosts’ matched relationships officially end after the first academic year, lifelong friendships and connections are often formed with hosts, students, and the students’ families back home. Many have found their lives immeasurably enriched by these friendships.
+While the students’ and hosts’ matched relationships officially end after one year, lifelong friendships and connections are often formed with hosts, students, and the students’ families back home.  Many have found their lives immeasurably enriched by these friendships.
 
-For a closer look, listen to this podcast episode where two hosts and a student share their experiences with International Friends, available on [Spotify](https://open.spotify.com/episode/4XIcCwshH1jtjr6a7IBHVW?si=rAaOHDfCTK2O1lrfkc_DTg) or [Apple Music](https://podcasts.apple.com/us/podcast/international-friends/id1741840611?i=1000692074849)`,
+For a closer look, listen to this podcast episode below where two hosts and a student share their experiences with International Friends.`,
           },
         ],
         {
@@ -86,7 +86,7 @@ The all-volunteer board is composed of past and present hosts, international stu
             {
               type: "readmore",
               href: "/by-laws",
-              label: "By Laws",
+              label: "Bylaws",
             },
             {
               type: "readmore",
@@ -191,7 +191,14 @@ const AboutPage = ({
             <TextBlock {...sections[0][1]} />
           </Col>
         </Row>
-
+        <iframe
+          style={{ marginBottom: "2rem", display: "block" }}
+          src="https://open.spotify.com/embed/episode/4XIcCwshH1jtjr6a7IBHVW?utm_source=generator&theme=0"
+          width="100%"
+          height="352"
+          frameBorder="0"
+          allowFullScreen="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
         <h1 className="text-center">Meet Our Students</h1>
         <Row>
           <Col md={4} xl={3} style={{ marginTop: "2em" }}>

@@ -3,14 +3,14 @@ import Banner from "../components/Banner";
 import TextBlock, { VARIANTS } from "../components/TextBlock";
 import ImageTextBlock, { COLORS } from "../components/ImageTextBlock";
 import { Container, Row, Col } from "react-bootstrap";
-import { getLocalMediaUrl, getStorageMediaUrl } from "../lib/image";
+import { getLocalMediaUrl } from "../lib/image";
 
 export const getStaticProps = async () => {
   return {
     props: {
       banner: {
-        message: "EVERY STUDENT NEEDS A SENSE OF HOME, WHEREVER THEY ARE FROM.",
-        image: getStorageMediaUrl("home-banner.jpg"),
+        message: "EVERY STUDENT NEEDS A SENSE OF HOME",
+        image: "/images/home_header1.jpeg",
         actions: [
           {
             type: "signup",
@@ -26,7 +26,7 @@ export const getStaticProps = async () => {
             title: "Who We Are",
             textAlign: "justify",
             content:
-              "International Friends provides opportunities for international students and local hosts to develop close friendships and an understanding of and appreciation for each other's cultures. We offer activities through which international students may participate in the life of the community. We subscribe to the national guidelines set forth by [NAFSA: Association of International Educators](http://www.nafsa.org/) on the rights of international students.",
+              "International Friends provides opportunities for international students and local hosts to develop close friendships and an understanding of and appreciation for each other's cultures. We offer activities through which international students may participate in the life of the community. ",
             actions: [
               {
                 type: "readmore",
@@ -38,7 +38,7 @@ export const getStaticProps = async () => {
             title: "What We Do",
             textAlign: "justify",
             content:
-              "Our goal is simple but important. We bring people together to share their cultures, interests, and life experiences. International students and local hosts are matched with the intent of them meeting at least once a month during the school year for socializing, activities, and fun. International Friends is not a live-in hosting program, and we have no religious affiliation. Participation is open to international students attending the University of Arizona and to Southern Arizona residents who serve as hosts.",
+              "Our goal is simple but important.  We bring people together to share their cultures, interests, and life experiences.  Local hosts match with international students, and then meet at least once a month for one year.  International Friends is not a live-in hosting program, and we have no religious affiliation.  Participation is open to international students attending the University of Arizona and to Southern Arizona residents who serve as hosts.",
             actions: [
               {
                 type: "readmore",
@@ -50,15 +50,13 @@ export const getStaticProps = async () => {
         // section 2
         [
           {
-            title: "Why Become an International Friends Host?",
+            title: "Why Become an International Friends Host",
             content: `
 * Learn about other countries and cultures
 * Participate in activities with interesting and eager students
 * Help international students adjust to American culture
 * Have fun!`,
-            image: getLocalMediaUrl(
-              "1622360_693961743984016_1450657539_o.jpeg",
-            ),
+            image: getLocalMediaUrl("pat_paul.png"),
             actions: [
               {
                 type: "readmore",
@@ -67,9 +65,9 @@ export const getStaticProps = async () => {
             ],
           },
           {
-            title: "Why Do International Students Participate?",
+            title: "Why Do International Students Participate",
             image: getLocalMediaUrl(
-              "46770484_10215442170621608_1860845059742629888_o.jpeg",
+              "46770484_10215442170621608_1860845059742629888_o.jpeg"
             ),
             content: `
 * Learn about and more easily adjust to American culture
@@ -85,10 +83,10 @@ export const getStaticProps = async () => {
             ],
           },
           {
-            title: "WHAT IS EXPECTED OF HOSTS AND STUDENTS?",
+            title: "WHAT IS EXPECTED OF HOSTS AND STUDENTS",
             content: `
-* Commit to participate for one academic year
-* Hosts and students contact each other within one week of being matched
+* Commit to participate for one year
+* Hosts and students contact each other within days of being matched
 * Students and hosts get together at least once a month during the school year for activities that both would enjoy
 * Hosts and students share ideas, customs, and cultures
 * Follow the International Friends Guidelines for hosts and students`,
@@ -99,7 +97,7 @@ export const getStaticProps = async () => {
               },
             ],
             image: getLocalMediaUrl(
-              "46766821_1514707395339433_5267609408078086144_n.jpeg",
+              "46766821_1514707395339433_5267609408078086144_n.jpeg"
             ),
           },
           {
@@ -108,7 +106,7 @@ export const getStaticProps = async () => {
             actions: [{ type: "donate" }],
             content: `
 * Donate to support International Friends’ mission and our events, programs, and activities
-* Help pay for site rentals, food, and supplies for welcome lunches, picnics, and other events
+* Help pay for event space rental costs, supplies, food for picnics, and other events
 * Assist with website, listserv, marketing, and organizational costs
 * Help defray the cost of printed materials, such as brochures, guidelines, newsletters, and banners
 * Contribute to fund important situational expenses like a video for student orientations and a new PA system for events and activities
@@ -144,9 +142,7 @@ const HomePage = ({ sections, banner }) => (
         </Col>
         <Col md={6}>
           <div
-            style={{ padding: "calc(2rem * 1.2 + 1rem + 0.83rem + 34px) 0" }}
-          >
-            <p>Watch a video to learn more.</p>
+            style={{ padding: "calc(2rem * 1.2 + 1rem + 0.83rem + 34px) 0" }}>
             <iframe
               className="embed-video"
               allow="autoplay"
@@ -169,6 +165,7 @@ const HomePage = ({ sections, banner }) => (
         extraHeight
         invert
         color={COLORS.LIGHT}
+        buttonTitle={"Guidelines"}
       />
       <ImageTextBlock {...sections[1][3]} extraHeight />
       <TextBlock {...sections[2]} variant={VARIANTS.CALLOUT} />
