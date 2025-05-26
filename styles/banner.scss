@@ -5,6 +5,7 @@
   text-transform: uppercase;
   position: relative;
   height: 450px;
+  padding: 0;
   padding-bottom: 0;
   overflow: hidden;
   background-color: transparent;
@@ -39,6 +40,7 @@
   content: "";
   height: 100%;
   width: 100%;
+
   top: 0;
   left: 0;
   background: linear-gradient(to bottom left, $light-to-accent);
