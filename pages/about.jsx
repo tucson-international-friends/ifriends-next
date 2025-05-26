@@ -197,7 +197,6 @@ const AboutPage = ({
           width="100%"
           height="352"
           frameBorder="0"
-          allowfullscreen=""
           allowFullScreen="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"></iframe>
         <h1 className="text-center">Meet Our Students</h1>
