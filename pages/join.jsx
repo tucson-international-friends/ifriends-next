@@ -10,7 +10,7 @@ import TextBlock from "../components/TextBlock";
 import Header from "../components/Header";
 import { FAQList } from "../components/FAQ";
 import Signup from "../components/Action/signup";
-import { getStorageMediaUrl, getLocalMediaUrl } from "../lib/image";
+import { getLocalMediaUrl } from "../lib/image";
 
 export const getStaticProps = () => {
   return {

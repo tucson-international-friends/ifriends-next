@@ -49,7 +49,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const EventsPage = ({ banner, sections, events }) => (
+const EventsPage = ({ banner, sections }) => (
   <MainLayout>
     <Banner {...banner} />
     <Container>
