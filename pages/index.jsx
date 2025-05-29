@@ -11,13 +11,6 @@ export const getStaticProps = async () => {
       banner: {
         message: "EVERY STUDENT NEEDS A SENSE OF HOME",
         image: "/images/home_header1.jpeg",
-        actions: [
-          {
-            type: "signup",
-            label: "join us",
-            size: "lg",
-          },
-        ],
       },
       sections: [
         // section 1
