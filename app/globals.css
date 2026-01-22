@@ -1,0 +1,394 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 96%;
+    --foreground: 20 25% 12%;
+
+    --card: 38 30% 94%;
+    --card-foreground: 20 25% 12%;
+
+    --popover: 40 33% 96%;
+    --popover-foreground: 20 25% 12%;
+
+    --primary: 14 55% 42%;
+    --primary-foreground: 40 33% 96%;
+
+    --secondary: 38 25% 88%;
+    --secondary-foreground: 20 25% 20%;
+
+    --muted: 35 18% 90%;
+    --muted-foreground: 20 15% 40%;
+
+    --accent: 175 45% 35%;
+    --accent-foreground: 40 33% 96%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --highlight: 145 35% 45%;
+    --highlight-foreground: 145 40% 98%;
+
+    --gold: 35 85% 52%;
+    --gold-foreground: 35 90% 8%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 14 55% 42%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display tracking-tight;
+    font-variation-settings: "opsz" 72, "WONK" 1, "SOFT" 50;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold;
+    line-height: 1.15;
+  }
+
+  p {
+    @apply leading-relaxed text-lg;
+  }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.3);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  .animate-in-delayed {
+    opacity: 0;
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    opacity: 0;
+    animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-scale-in {
+    opacity: 0;
+    animation: scale-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .grain {
+    position: relative;
+  }
+
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .accent-line {
+    position: relative;
+  }
+
+  .accent-line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -0.75rem;
+    width: 4rem;
+    height: 4px;
+    background: hsl(var(--accent));
+    border-radius: 0;
+  }
+
+  .editorial-border {
+    position: relative;
+  }
+
+  .editorial-border::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+
+  .image-glow {
+    position: relative;
+  }
+
+  .image-glow::before {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.12), hsl(var(--accent) / 0.08));
+    border-radius: 0.5rem;
+    filter: blur(40px);
+    z-index: -1;
+  }
+
+  .hover-lift {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px -16px hsl(var(--foreground) / 0.18);
+  }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
+  }
+
+  .editorial-divider {
+    position: relative;
+    height: 120px;
+  }
+
+  .editorial-divider::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, hsl(var(--border)), transparent);
+  }
+
+  .wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px;
+  }
+
+  .wave-divider-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .wave-divider-top svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px;
+  }
+
+  .split-bg {
+    position: relative;
+  }
+
+  .split-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    background: hsl(var(--primary));
+    z-index: -1;
+  }
+
+  .diagonal-slice {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .editorial-caption {
+    @apply uppercase tracking-[0.2em] text-xs font-medium text-muted-foreground;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+
+  .container-editorial {
+    @apply max-w-6xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-36;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 font-display font-semibold uppercase tracking-widest text-sm;
+  }
+
+  .btn-highlight {
+    @apply bg-accent text-accent-foreground hover:bg-accent/90 font-display font-semibold uppercase tracking-widest text-sm;
+  }
+
+  .btn-editorial {
+    @apply inline-flex items-center gap-3 font-display font-semibold uppercase tracking-widest text-sm border-b-2 border-current pb-1 hover:gap-4 transition-all duration-300;
+  }
+
+  button,
+  [role="button"],
+  .btn-primary,
+  .btn-highlight {
+    font-optical-sizing: none;
+    font-variation-settings: "opsz" 72, "WONK" 1;
+  }
+
+  .link-underline {
+    @apply relative inline-block;
+  }
+
+  .link-underline::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  .editorial-heading {
+    @apply font-display font-bold tracking-tight;
+    font-variation-settings: "opsz" 72, "WONK" 1, "SOFT" 30;
+  }
+
+  .pull-quote {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight text-primary;
+    font-variation-settings: "opsz" 48, "WONK" 1, "SOFT" 80;
+  }
+}
+
+.prose {
+  @apply text-foreground/85 text-lg leading-relaxed;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  @apply font-display text-foreground;
+}
+
+.prose a {
+  @apply text-accent hover:text-accent/80 transition-colors underline underline-offset-4;
+}
+
+.prose ul {
+  @apply list-none pl-0 space-y-3;
+}
+
+.prose ul li {
+  @apply relative pl-6;
+}
+
+.prose ul li::before {
+  content: "";
+  @apply absolute left-0 top-3 w-2 h-2 bg-accent/60 rounded-full;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 space-y-3;
+}
+
+.prose li {
+  @apply leading-relaxed text-lg;
+}
+
+.prose p {
+  @apply mb-5 last:mb-0;
+}
+
+.prose strong {
+  @apply font-semibold text-foreground;
+}
