@@ -1,0 +1,10 @@
+---
+// Mirrors components/Header/index.jsx: <h2 className="text-center py-4">
+interface Props {
+  title: string;
+  class?: string;
+}
+const { title, class: className = "" } = Astro.props;
+---
+
+<h2 class={`text-center py-4 ${className}`}>{title}</h2>

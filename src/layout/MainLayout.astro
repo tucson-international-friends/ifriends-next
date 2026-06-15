@@ -1,0 +1,68 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import navItems from "../data/navbarItems.json";
+import footerNavItems from "../data/footerMenuItems.json";
+import { getPageByName } from "../lib/page.js";
+
+const navPages = navItems.map((name) => getPageByName(name));
+const footerPages = footerNavItems.map((name) => getPageByName(name));
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tucson International Friends</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WM8XF8R");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      is:inline
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-106394359-1"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-106394359-1");
+    </script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        title="google-tag-manager"
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WM8XF8R"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <Navbar navItems={navPages} />
+    <div class="flex-auto">
+      <slot />
+    </div>
+    <Footer menuItems={footerPages} />
+  </body>
+</html>

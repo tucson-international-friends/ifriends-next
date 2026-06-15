@@ -1,0 +1,89 @@
+---
+import Logo from "./Logo.astro";
+import Signup from "./Signup.svelte";
+
+interface NavItem {
+  name: string;
+  route: string;
+  label: string;
+}
+interface Props {
+  navItems: NavItem[];
+}
+const { navItems } = Astro.props;
+const current = Astro.url.pathname;
+const isActive = (route: string) =>
+  route === "/" ? current === "/" : current.startsWith(route);
+---
+
+<nav
+  class="fixed top-0 inset-x-0 z-50 bg-dark-shades text-white shadow-elevation-2"
+>
+  <div class="container-if flex flex-wrap md:flex-nowrap items-center py-2">
+    <!-- Brand. ~5px vertical padding matches Bootstrap's .navbar-brand so
+         the bar height equals the live site (58px in hamburger mode). -->
+    <a href="/" class="brand mr-0 flex-shrink-0 py-[5px]">
+      <Logo class="hidden sm:block" />
+      <Logo size="sm" class="block sm:hidden" />
+    </a>
+
+    <!-- Mobile toggle (CSS-only collapse) -->
+    <input type="checkbox" id="nav-toggle" class="peer hidden" />
+    <label
+      for="nav-toggle"
+      class="ml-auto md:hidden cursor-pointer flex items-center select-none px-2 py-1"
+      aria-label="Toggle menu"
+    >
+      <svg width="20" height="20" viewBox="0 0 448 512" fill="currentColor">
+        <path
+          d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+        ></path>
+      </svg>
+      <span class="inline-block align-middle pl-1">Menu</span>
+    </label>
+
+    <!-- Collapsible content. Sits to the RIGHT of the brand (container is a
+         row). Matches the original navbar-expand-md + flex-md-column
+         flex-xl-row: below md = hamburger; md–xl = column inside the
+         collapse (buttons row on top, links row below); xl+ = single row. -->
+    <div
+      class="hidden peer-checked:flex md:flex w-full md:flex-1 flex-col xl:flex-row xl:items-center mt-2 md:mt-0"
+    >
+      <ul
+        class="flex flex-col md:flex-row md:flex-wrap md:justify-end xl:ml-auto xl:mr-auto md:order-2 xl:order-1 items-center list-none m-0 p-0"
+      >
+        {
+          navItems.map((item) => (
+            <li>
+              <a
+                href={item.route}
+                class:list={[
+                  "block font-heading px-3 py-2 text-white/50 hover:text-white",
+                  { "font-bold !text-white": isActive(item.route) },
+                ]}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="flex items-center justify-end gap-3 md:order-1 xl:order-2 xl:ml-auto py-1 xl:py-0">
+        <!-- Donate (Support) — static link + Donorbox popup script -->
+        <script
+          is:inline
+          type="text/javascript"
+          defer
+          src="https://donorbox.org/install-popup-button.js"></script>
+        <a
+          href="https://donorbox.org/ongoing-support-for-international-friends"
+          class="dbox-donation-button inline-block font-heading font-bold uppercase border-2 rounded px-3 py-[6px] bg-main-brand border-main-brand text-white hover:bg-main-brand/90 shadow-elevation-1"
+        >
+          Support
+        </a>
+        <!-- Signup (Join Us) — the one Svelte island -->
+        <Signup label="Join Us" client:idle />
+      </div>
+    </div>
+  </div>
+</nav>

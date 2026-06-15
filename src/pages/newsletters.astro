@@ -1,0 +1,71 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+import notion from "../lib/notion.js";
+
+// Live Notion fetch — opt out of prerendering (SSR on Vercel).
+export const prerender = false;
+
+Astro.response.headers.set(
+  "Cache-Control",
+  "public, s-maxage=60, stale-while-revalidate=300",
+);
+
+const newsletterDatabaseId = "71147bd2ca1944e6ae7b433893bb0ba9";
+
+let newsLetters: { title: string; path: string }[] = [];
+try {
+  const notionRes = await notion.databases.query({
+    database_id: newsletterDatabaseId,
+    sorts: [{ property: "Year", direction: "descending" }],
+  });
+  newsLetters = notionRes.results.map(({ properties }: any) => ({
+    title: properties.Name.title[0].plain_text,
+    path: properties.PDF.files?.[0]?.file.url,
+  }));
+} catch (e) {
+  console.error("Notion newsletter fetch failed:", e);
+}
+
+const latest = newsLetters[0];
+const past = newsLetters.slice(1);
+---
+
+<MainLayout>
+  <div class="container-if" style="padding-top:10em;padding-bottom:10em">
+    {
+      latest && (
+        <>
+          <div class="py-4">
+            <h2>Latest Newsletter - {latest.title}</h2>
+            <a
+              rel="noreferrer"
+              class="inline-block font-heading font-bold uppercase border-2 rounded px-4 py-2 bg-main-brand border-main-brand text-white hover:bg-main-brand/90 shadow-elevation-1"
+              target="_blank"
+              href={latest.path}
+            >
+              View PDF
+            </a>
+          </div>
+          <iframe
+            title="latest newsletter"
+            width="100%"
+            style="height:75vh"
+            src={latest.path}
+          />
+        </>
+      )
+    }
+    <div class="py-4">
+      <h2>Archive</h2>
+      <ul class="list-disc pl-8">
+        {
+          past.map(({ path, title }) => (
+            <li>
+              {title} - <a class="text-main-brand underline" href={path}>view</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</MainLayout>

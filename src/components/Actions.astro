@@ -1,0 +1,72 @@
+---
+import Button from "./Button.astro";
+import TextButton from "./TextButton.astro";
+import Signup from "./Signup.svelte";
+
+// Mirrors components/Action/index.jsx renderActions().
+// action.type: "readmore" (link), "signup" (modal island), "donate" (link).
+// A `text-*` variant renders the borderless TextButton (master's Button
+// wrapper: variant.startsWith("text-") → <TextButton>).
+interface ActionDef {
+  type?: string;
+  href?: string;
+  label?: string;
+  size?: "sm" | "lg";
+  variant?: string;
+}
+interface Props {
+  actions?: ActionDef[];
+  defaultVariant?: string;
+  defaultLabel?: string;
+}
+const { actions = [], defaultVariant = "primary", defaultLabel } = Astro.props;
+---
+
+{
+  actions.map((action) => {
+    const variant = (action.variant ?? defaultVariant) as any;
+    const label = action.label ?? defaultLabel ?? "Learn More";
+    if (action.type === "signup") {
+      return <Signup label={label} size={action.size} client:idle />;
+    }
+    if (action.type === "donate") {
+      return (
+        <>
+          <script
+            is:inline
+            type="text/javascript"
+            defer
+            src="https://donorbox.org/install-popup-button.js"
+          />
+          <Button
+            href="https://donorbox.org/ongoing-support-for-international-friends"
+            class="dbox-donation-button"
+            size={action.size}
+            label="Support"
+          />
+        </>
+      );
+    }
+    // text-* variant → borderless TextButton (master's TextBlock readmore).
+    // readmore shows a trailing arrow, matching the live site.
+    if (typeof variant === "string" && variant.startsWith("text-")) {
+      return (
+        <TextButton
+          href={action.href}
+          type={variant.split("-")[1]}
+          label={label}
+          icon={action.type === "readmore" || action.type === undefined}
+        />
+      );
+    }
+    // readmore / default → filled link button (master's ImageTextBlock readmore)
+    return (
+      <Button
+        href={action.href}
+        variant={variant}
+        size={action.size}
+        label={label}
+      />
+    );
+  })
+}

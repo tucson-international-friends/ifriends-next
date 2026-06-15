@@ -1,0 +1,102 @@
+---
+import Actions from "./Actions.astro";
+import { renderMarkdown } from "../lib/markdown.js";
+
+// Mirrors components/TextBlock/index.jsx + styles/textBlock.scss.
+interface Action {
+  type?: string;
+  href?: string;
+  label?: string;
+  size?: "sm" | "lg";
+}
+interface Props {
+  title?: string;
+  content?: string;
+  textAlign?: "left" | "right" | "center" | "justify";
+  headerAlign?: "left" | "right" | "center";
+  variant?: "callout";
+  actions?: Action[];
+}
+const {
+  title,
+  content = "",
+  textAlign = "left",
+  headerAlign,
+  variant,
+  actions,
+} = Astro.props;
+
+const isCallout = variant === "callout";
+const html = renderMarkdown(content);
+
+// text-align lives on the .textBlock parent (inherited by children), so the
+// mobile `text-align:left !important` rule overrides it — matching master,
+// where the prop was an inline style beaten by the !important media query.
+const needsHeaderOverride = headerAlign && headerAlign !== textAlign;
+---
+
+<div
+  class:list={["textBlock", { callout: isCallout }]}
+  style={`text-align:${textAlign}`}
+>
+  {
+    title && (
+      <h2
+        class="title"
+        style={needsHeaderOverride ? `text-align:${headerAlign}` : undefined}
+      >
+        {title}
+      </h2>
+    )
+  }
+  <div class="prose-content" set:html={html} />
+  {
+    actions && (
+      <div class="mt-2">
+        <Actions
+          actions={actions}
+          defaultVariant="text-primary"
+          defaultLabel="Read More"
+        />
+      </div>
+    )
+  }
+</div>
+
+<style>
+  /* styles/textBlock.scss */
+  .textBlock {
+    padding: 2em 0;
+  }
+  @media (max-width: 849px) {
+    .textBlock {
+      text-align: left !important;
+    }
+  }
+  .title {
+    margin-bottom: 1em;
+  }
+  .callout {
+    background: transparent;
+    font-size: 1.25em;
+  }
+  .callout :global(p) {
+    color: #47789e; /* $main-brand */
+  }
+  /* Markdown list spacing to match react-markdown defaults */
+  .prose-content :global(ul) {
+    list-style: disc;
+    padding-left: 2rem;
+    margin: 0.5rem 0;
+  }
+  .prose-content :global(ul ul) {
+    list-style: circle;
+  }
+  .prose-content :global(p) {
+    margin: 0 0 1rem;
+  }
+  .prose-content :global(a) {
+    color: #47789e;
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,118 @@
+/* Fonts — match master (styles/global/main.scss). Must precede other rules. */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700");
+@import "tailwindcss";
+
+/*
+  Tailwind v4 theme reproducing master's styles/_variables.scss.
+  Custom breakpoints differ from Tailwind defaults — they mirror the
+  Bootstrap grid breakpoints the original site used.
+*/
+@theme {
+  /* Brand palette */
+  --color-light-shades: #f7f5f4; /* DESERT STORM */
+  --color-light-accent: #90afc1; /* NEPAL */
+  --color-main-brand: #47789e; /* WEDGEWOOD */
+  --color-dark-accent: #7c7e7e; /* BOULDER */
+  --color-dark-shades: #212b40; /* EBONY CLAY */
+  --color-off-white: #fefefe;
+  --color-highlight: #c2e078; /* Bootstrap "important" */
+
+  /* Typography */
+  --font-sans: "Open Sans", sans-serif;
+  --font-heading: "Poppins", sans-serif;
+
+  /* Breakpoints — mirror master's $grid-breakpoints */
+  --breakpoint-sm: 460px;
+  --breakpoint-md: 850px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+
+  /* Elevation shadows — match scss elavation($height) helper:
+     0px (h*2) (|h|*4) rgba(0,0,0,.15) */
+  --shadow-elevation-1: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  --shadow-elevation-2: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Global base rules ported from styles/global/main.scss */
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: var(--color-off-white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Bootstrap 4 $body-color */
+    color: #212529;
+    line-height: 1.5;
+  }
+
+  /* Headings: Poppins, uppercase, bold (master applied to h1–h6 + .h1–.h6).
+     Sizes reproduce Bootstrap 4's default heading scale (h1 2.5rem … h6 1rem),
+     which Tailwind's preflight otherwise resets to inherit. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  /* Responsive font sizes — reproduce Bootstrap 4's RFS (the original site
+     had $enable-responsive-font-sizes: true). Headings scale down with the
+     viewport below ~1200px and cap at their full rem size above it. The
+     calc() values match Bootstrap's RFS output exactly (verified against
+     the live site at 375–1440px). min() applies the cap. */
+  h1 {
+    font-size: min(2.5rem, calc(1.375rem + 1.5vw));
+  }
+  h2 {
+    font-size: min(2rem, calc(1.325rem + 0.9vw));
+  }
+  h3 {
+    font-size: min(1.75rem, calc(1.3rem + 0.6vw));
+  }
+  h4 {
+    font-size: min(1.5rem, calc(1.275rem + 0.3vw));
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+/*
+  Container — master used Bootstrap .container with 25px side padding and
+  custom max-widths (md 850, lg 1000, xl 1400). Reproduced as a utility.
+*/
+@utility container-if {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 25px;
+  @media (min-width: 850px) {
+    max-width: 850px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 1000px;
+  }
+  @media (min-width: 1440px) {
+    max-width: 1400px;
+  }
+}

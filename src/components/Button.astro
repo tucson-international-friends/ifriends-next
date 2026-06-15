@@ -1,0 +1,59 @@
+---
+// Reproduces master's Bootstrap .btn + theme-color variants.
+// Base: Poppins bold uppercase, 2px border, 4px radius, elevation shadow.
+interface Props {
+  label?: string;
+  href?: string;
+  variant?: "primary" | "important" | "outline-light" | "dark";
+  size?: "sm" | "lg";
+  class?: string;
+  target?: string;
+  rel?: string;
+  id?: string;
+}
+
+const {
+  label,
+  href,
+  variant = "primary",
+  size,
+  class: className = "",
+  target,
+  rel,
+  id,
+} = Astro.props;
+
+const base =
+  "inline-block font-heading font-bold uppercase border-2 rounded transition-colors cursor-pointer text-center";
+
+const sizes: Record<string, string> = {
+  sm: "px-3 py-1 text-sm",
+  lg: "px-6 py-3 text-lg",
+};
+const sizeClass = size ? sizes[size] : "px-4 py-2";
+
+const variants: Record<string, string> = {
+  primary: "bg-main-brand border-main-brand text-white hover:bg-main-brand/90",
+  important:
+    "bg-highlight border-highlight text-dark-shades hover:bg-highlight/90",
+  dark: "bg-dark-shades border-dark-shades text-white hover:bg-dark-shades/90",
+  "outline-light":
+    "bg-transparent border-white text-white hover:bg-white hover:text-dark-shades",
+};
+
+const cls = `${base} ${sizeClass} ${variants[variant]} shadow-elevation-1 ${className}`;
+---
+
+{
+  href ? (
+    <a id={id} href={href} target={target} rel={rel} class={cls}>
+      {label}
+      <slot />
+    </a>
+  ) : (
+    <button id={id} class={cls}>
+      {label}
+      <slot />
+    </button>
+  )
+}

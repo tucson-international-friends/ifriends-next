@@ -1,0 +1,34 @@
+---
+// Mirrors components/BoardList/contact.jsx + styles/boardList.scss
+interface Props {
+  name?: string;
+  firstName?: string;
+  lastName?: string;
+  title?: string;
+  profileUrl?: string;
+}
+const { name, firstName, lastName, title, profileUrl } = Astro.props;
+const displayName = name ?? `${firstName ?? ""} ${lastName ?? ""}`.trim();
+const src =
+  profileUrl ??
+  `https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&size=200`;
+---
+
+<div class="contact text-center p-4 rounded-[10px] cursor-pointer transition-colors">
+  <div class="inline-block mb-2 w-auto">
+    <img
+      alt={displayName}
+      class="w-[150px] h-[150px] object-cover mb-2 rounded-full"
+      src={src}
+    />
+  </div>
+  <h6>{displayName}</h6>
+  <p>{title}</p>
+</div>
+
+<style>
+  /* styles/boardList.scss .contact:hover → lighten($light-accent, 30%) */
+  .contact:hover {
+    background-color: #d4e2ea;
+  }
+</style>

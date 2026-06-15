@@ -1,0 +1,43 @@
+---
+// Mirrors components/Button/textButton.jsx + styles/button.scss .textButton
+// Transparent text-style link: bold uppercase Poppins, colored by `type`.
+interface Props {
+  type?: string; // e.g. "primary" → text-primary color
+  href?: string;
+  label?: string;
+  icon?: boolean; // render the trailing arrow (matches readmore on the live site)
+}
+const { type = "primary", href, label, icon = false } = Astro.props;
+
+const colors: Record<string, string> = {
+  primary: "#47789e",
+  light: "#fefefe",
+  dark: "#212b40",
+};
+const color = colors[type] ?? colors.primary;
+---
+
+<a
+  href={href}
+  role="button"
+  class="textButton font-heading font-bold uppercase border-0 cursor-pointer mr-8 inline-flex items-center whitespace-nowrap"
+  style={`color:${color}`}
+>
+  <span class="pr-1">{label}</span>
+  {
+    icon && (
+      <svg
+        class="align-middle"
+        stroke="currentColor"
+        fill="currentColor"
+        stroke-width="0"
+        viewBox="0 0 10 16"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path fill-rule="evenodd" d="M10 8L4 3v3H0v4h4v3l6-5z" />
+      </svg>
+    )
+  }
+</a>

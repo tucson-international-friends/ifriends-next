@@ -1,0 +1,22 @@
+---
+// Mirrors components/Testimonial/index.jsx + styles/testimonial.scss
+interface Props {
+  quote: string;
+  from?: string;
+  source?: string;
+}
+const { quote, from, source } = Astro.props;
+---
+
+<blockquote class="pl-4 border-l-4 border-light-accent">
+  <p>{quote}</p>
+  {
+    from && (
+      <footer class="text-gray-600">
+        {from}
+        {source && " in "}
+        {source && <cite title={source}>{source}</cite>}
+      </footer>
+    )
+  }
+</blockquote>

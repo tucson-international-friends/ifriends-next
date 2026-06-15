@@ -1,0 +1,50 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+import Banner from "../components/Banner.astro";
+import TextBlock from "../components/TextBlock.astro";
+import ImageTextBlock from "../components/ImageTextBlock.astro";
+
+const banner = {
+  message: "Enjoy activities throughout the year",
+  image: "/images/activities_header.png",
+};
+
+const intro = {
+  title: "ORGANIZED ACTIVITIES FOR STUDENTS AND HOSTS",
+  content:
+    "While most activities shared by hosts and students are planned by them on an individual basis, International Friends sponsors two yearly group activities that all are welcome to attend.  We also organize one or two special events each semester, visiting local attractions such as the Southern Arizona Heritage and Visitor Center, the Biosphere, and the Arizona Sonora Desert Museum.",
+  headerAlign: "center" as const,
+  textAlign: "justify" as const,
+};
+
+const blocks = [
+  {
+    title: "FALL PICNIC",
+    content:
+      "International Friends sponsors a fall picnic, usually in late September, for students and hosts. Everyone on our email list is invited to come.",
+    image: "/images/10475610_354846071383228_7607311383060727136_o.jpeg",
+  },
+  {
+    title: "NEW HOST ORIENTATIONS",
+    content:
+      "At the beginning of each semester, International Friends offers an orientation for new hosts to both inform and answer questions.",
+    image: "/images/81514880_1572458986263849_3369518293160296448_n.jpeg",
+  },
+  {
+    title: "RODEO PICNIC",
+    content:
+      "In the Spring, International Friends holds an annual Rodeo Picnic at about the time of the historic Tucson Rodeo for all IF students and their hosts.  Traditionally held at Reid Park, the picnic features music, dancing, games, food, and fun!",
+    image: "/images/activities_image2.png",
+  },
+];
+---
+
+<MainLayout>
+  <Banner {...banner} />
+  <div class="container-if">
+    <TextBlock {...intro} />
+  </div>
+  <ImageTextBlock {...blocks[0]} color="light" />
+  <ImageTextBlock {...blocks[1]} invert />
+  <ImageTextBlock {...blocks[2]} color="light" />
+</MainLayout>

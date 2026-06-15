@@ -1,0 +1,19 @@
+---
+interface Props {
+  size?: "sm" | "small" | number;
+  class?: string;
+}
+const { size, class: className = "" } = Astro.props;
+const logoSize = size === "sm" || size === "small" || size === 1 ? 1.5 : 2;
+---
+
+<div
+  class={className}
+  style={`height:${logoSize}em;width:${logoSize * 6}em;position:relative`}
+>
+  <img
+    src="/logos/logo.png"
+    alt="logo"
+    style="width:100%;height:100%;object-fit:contain"
+  />
+</div>

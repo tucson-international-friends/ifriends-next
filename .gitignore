@@ -61,14 +61,12 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
-# next.js build output
-.next
+# Astro build output
+dist/
+.astro/
 
-# nuxt.js build output
-.nuxt
-
-# vuepress build output
-.vuepress/dist
+# Vercel adapter output
+.vercel/
 
 # Serverless directories
 .serverless

@@ -1,0 +1,79 @@
+---
+interface Props {
+  message?: string;
+  image?: string;
+}
+const { message = "Banner Message", image } = Astro.props;
+---
+
+<div class="banner">
+  {
+    image && (
+      <img alt="banner image" class="background" src={image} />
+    )
+  }
+  <div class="container-if banner-inner">
+    <h1>{message}</h1>
+  </div>
+</div>
+
+<style>
+  /* Ported from styles/banner.scss */
+  .banner {
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    height: 450px;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+  }
+  @media (min-width: 850px) {
+    .banner {
+      height: 500px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .banner {
+      height: 550px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .banner {
+      height: 600px;
+    }
+  }
+
+  .banner-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .banner-inner h1 {
+    color: #212529;
+    /* Bootstrap RFS h1 — matches the live banner (40px desktop → ~27.6px @375). */
+    font-size: min(2.5rem, calc(1.375rem + 1.5vw));
+    margin: 0 0 0.5rem; /* match master h1 margin-bottom for identical centering */
+  }
+
+  .background {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    filter: blur(1px);
+  }
+
+  .banner::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* $light-to-accent: #f7f5f4, #90afc1 */
+    background: linear-gradient(to bottom left, #f7f5f4, #90afc1);
+  }
+</style>

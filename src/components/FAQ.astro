@@ -1,0 +1,65 @@
+---
+import { renderMarkdown } from "../lib/markdown.js";
+
+// Mirrors components/FAQ/* — collapsible Q&A.
+// Master used react-bootstrap Collapse + useState; here zero-JS <details>.
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+interface Props {
+  data: FaqItem[];
+}
+const { data } = Astro.props;
+---
+
+<div class="mb-5">
+  {
+    data.map((faq) => (
+      <details class="faq-item p-2">
+        <summary class="question list-none cursor-pointer">
+          <svg
+            class="caret inline-block align-middle mr-1"
+            width="16"
+            height="16"
+            viewBox="0 0 192 512"
+            fill="currentColor"
+          >
+            <path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z" />
+          </svg>
+          <h5 class="question inline">{faq.question}</h5>
+        </summary>
+        <div
+          class="pl-1 prose-content"
+          set:html={renderMarkdown(faq.answer)}
+        />
+      </details>
+    ))
+  }
+</div>
+
+<style>
+  /* styles/faq.scss — rotating caret, blue when expanded */
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .caret {
+    transition: 0.5s;
+  }
+  .faq-item[open] .caret {
+    color: #47789e; /* $main-brand */
+    transform: rotate(90deg);
+  }
+  .prose-content :global(ul) {
+    list-style: disc;
+    padding-left: 2rem;
+    margin: 0.5rem 0;
+  }
+  .prose-content :global(p) {
+    margin: 0 0 1rem;
+  }
+  .prose-content :global(a) {
+    color: #47789e;
+    text-decoration: underline;
+  }
+</style>

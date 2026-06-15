@@ -1,0 +1,58 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+
+// The original Google Drive document (file id 18eOqpZ9YtkMvrIv1_9KsK8hHcesaHY0x)
+// was deleted upstream and 404s. When the organization provides a working
+// link, set BYLAWS_DOC_URL to the Drive "/preview" URL (or a PDF in /public)
+// and the embed below renders automatically. Until then, a fallback shows.
+const BYLAWS_DOC_URL: string | null = null;
+---
+
+<MainLayout>
+  <div class="container-if" style="padding-top:10em;padding-bottom:10em">
+    <h2>Bylaws</h2>
+    {
+      BYLAWS_DOC_URL ? (
+        <iframe
+          title="Bylaws"
+          width="100%"
+          style="height:75vh"
+          src={BYLAWS_DOC_URL}
+        />
+      ) : (
+        <div class="bylaws-fallback">
+          <p>
+            The International Friends, Inc. bylaws are currently being updated
+            and are temporarily unavailable here.
+          </p>
+          <p>
+            For a copy of the current bylaws, please contact us at{" "}
+            <a href="mailto:info@ifriendstucson.org">info@ifriendstucson.org</a>.
+          </p>
+        </div>
+      )
+    }
+  </div>
+</MainLayout>
+
+<style>
+  .bylaws-fallback {
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    background-color: #f7f5f4; /* light-shades */
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: #212b40; /* dark-shades */
+  }
+  .bylaws-fallback p {
+    margin: 0 0 1rem;
+    font-size: 1.05rem;
+  }
+  .bylaws-fallback p:last-child {
+    margin-bottom: 0;
+  }
+  .bylaws-fallback a {
+    color: #47789e; /* main-brand */
+    text-decoration: underline;
+  }
+</style>

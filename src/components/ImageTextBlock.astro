@@ -1,0 +1,196 @@
+---
+import Actions from "./Actions.astro";
+import { renderMarkdown } from "../lib/markdown.js";
+
+// Mirrors components/ImageTextBlock/index.jsx + styles/imageTextBlock.scss.
+// Full-bleed split layout: a solid colored backdrop spans the row, the image
+// is absolutely positioned over one half (50vw), and the text sits in a
+// half-width column on the other half. `invert` flips image to the right.
+interface Action {
+  type?: string;
+  href?: string;
+  label?: string;
+  size?: "sm" | "lg";
+}
+interface Props {
+  title?: string;
+  content?: string;
+  image?: string;
+  invert?: boolean;
+  color?: "dark" | "light";
+  actions?: Action[];
+  extraHeight?: boolean;
+  buttonTitle?: string;
+}
+const {
+  title,
+  content = "",
+  image,
+  invert = false,
+  color = "dark",
+  actions,
+  extraHeight = false,
+  buttonTitle,
+} = Astro.props;
+
+const html = renderMarkdown(content);
+---
+
+<div class:list={["imageTextBox", { xh: extraHeight }]}>
+  <div class:list={["backdrop", `c-${color}`, { "is-invert": invert, xh: extraHeight }]}></div>
+  <div
+    class:list={[
+      "imageCol",
+      `c-${color}`,
+      { "not-invert": !invert, "is-invert": invert, xh: extraHeight },
+    ]}
+  >
+    <img alt={`${title}-image`} src={image} />
+  </div>
+  <!-- Text lives inside the centered container (mirrors Bootstrap
+       container → row → col-6 with offset), so its inset tracks the same
+       max-widths as the rest of the page across every breakpoint. -->
+  <div class="container-if textRow">
+    <div class:list={["textCol", `c-${color}`, { "is-invert": invert, xh: extraHeight }]}>
+      <div class="textContainer">
+        <h2>{title}</h2>
+        <div class="prose-content" set:html={html} />
+        {
+          actions && (
+            <div class="mt-3">
+              <Actions
+                actions={actions}
+                defaultVariant="outline-light"
+                defaultLabel={buttonTitle ?? "Learn More"}
+              />
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Ported from styles/imageTextBlock.scss
+     $smHeight: 400px; $smHeightDouble: 800px; $lgHeight: 600px;
+     $main-brand #47789e; $dark-shades #212b40; $off-white #fefefe */
+  /* Height comes from the in-flow .textRow child; backdrop and image are
+     absolutely positioned and don't contribute to flow (matches master). */
+  .imageTextBox {
+    position: relative;
+  }
+
+  .backdrop {
+    height: 800px;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  @media (min-width: 850px) {
+    .backdrop {
+      height: 600px;
+    }
+  }
+  .backdrop.c-light {
+    background-color: #47789e;
+  }
+  .backdrop.c-dark {
+    background-color: #212b40;
+  }
+
+  .imageCol {
+    height: 400px;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+  }
+  @media (min-width: 850px) {
+    .imageCol {
+      height: 600px;
+      width: 50vw;
+      padding: 1rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .imageCol {
+      padding: 3rem;
+    }
+  }
+  @media (min-width: 1440px) {
+    .imageCol {
+      padding: 5rem;
+    }
+  }
+  .imageCol.not-invert {
+    left: 0;
+  }
+  .imageCol.is-invert {
+    right: 0;
+  }
+  .imageCol img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* The centered container that positions the text column. The original
+     site nested a Bootstrap .row inside .container so the text content
+     started ~10px in from the container edge at every width. Our
+     container-if defaults to 25px padding; override it to a 10px gutter
+     here so the text column matches the original (490px @ 1280 desktop,
+     355px @ 375 mobile). */
+  .textRow {
+    position: relative;
+    height: 800px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @media (min-width: 850px) {
+    .textRow {
+      height: 600px;
+    }
+  }
+
+  /* Text column — Bootstrap col-md-6 with offset on non-invert. */
+  .textCol {
+    height: 400px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 400px; /* stack below the image on mobile (avoids margin collapse) */
+    width: 100%;
+    color: #fefefe;
+  }
+  @media (min-width: 850px) {
+    .textCol {
+      height: 600px;
+      top: 0;
+      width: 50%;
+      /* non-invert: image left, text right (offset). invert: text left. */
+      margin-left: 50%;
+    }
+    .textCol.is-invert {
+      margin-left: 0;
+    }
+  }
+
+  .textContainer {
+    overflow: hidden;
+    padding: 1em 0;
+  }
+  .textContainer :global(h2) {
+    color: #fefefe;
+  }
+  .prose-content :global(ul) {
+    list-style: disc;
+    padding-left: 2rem;
+    margin: 0.5rem 0;
+  }
+  .prose-content :global(p) {
+    margin: 0 0 1rem;
+  }
+</style>
