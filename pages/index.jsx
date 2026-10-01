@@ -12,6 +12,15 @@ export const getStaticProps = async () => {
         message: "EVERY STUDENT NEEDS A SENSE OF HOME",
         image: "/images/home_header1.jpeg",
       },
+      featuredStory: {
+        title: "International Friends in the News",
+        content: `
+### [Local hosts help international students adjust to life in Tucson](https://arizonasonorannews.com/42949/community/local-hosts-help-international-students-adjust-to-life-in-tucson/)
+
+By Nujood Alahmari · Arizona Sonoran News · September 23, 2026
+
+Read how International Friends connects international students with local hosts to share cultures and feel at home in Tucson.`,
+      },
       sections: [
         // section 1
         [
@@ -124,7 +133,7 @@ Make a “world of difference” in the lives of international students and loca
   };
 };
 
-const HomePage = ({ sections, banner }) => (
+const HomePage = ({ sections, banner, featuredStory }) => (
   <MainLayout>
     <Banner {...banner} />
     <Container>
@@ -146,6 +155,7 @@ const HomePage = ({ sections, banner }) => (
           </div>
         </Col>
       </Row>
+      <TextBlock {...featuredStory} />
       <ImageTextBlock
         {...sections[1][0]}
         extraHeight
